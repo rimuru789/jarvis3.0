@@ -50,6 +50,21 @@
       }
     ],
     "lunchBreak": "13:00-14:00",
+    "semesterLunchDefaults": {
+      "1": {
+        "startTime": "13:00",
+        "endTime": "14:00"
+      },
+      "2": {
+        "startTime": "13:00",
+        "endTime": "14:00"
+      },
+      "3": {
+        "startTime": "13:00",
+        "endTime": "14:00"
+      }
+    },
+    "cohortLunchOverrides": {},
     "cohortSize": 30,
     "cohorts": [
       "CE-S1-A",

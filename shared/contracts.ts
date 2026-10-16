@@ -100,10 +100,21 @@ export interface TimetableEntry {
 
 // ─── Results ────────────────────────────────────────────────────────
 
+export interface ConflictDetail {
+  code: string;
+  message: string;
+  entryIds: string[];
+  cohortId?: string;
+  sessionId?: string;
+  dayCode?: string;
+  time?: string;
+  constraint?: string;
+}
+
 export interface ValidationResult {
   valid: boolean;
   hardConflictCount: number;
-  conflicts: Array<{ code: string; message: string; entryIds: string[] }>;
+  conflicts: ConflictDetail[];
 }
 
 export interface Metrics {
@@ -125,6 +136,41 @@ export interface TimetableResult {
   unscheduledSessions?: SessionRequirement[];
 }
 
+// ─── Disruption & Repair ────────────────────────────────────────────
+
+export interface Disruption {
+  type: DisruptionType;
+  targetId: string;
+  dayCode: DayCode;
+  slotIds: string[];
+  reason?: string;
+}
+
+export interface TimetableChange {
+  entryId: string;
+  sessionId: string;
+  cohortId: string;
+  oldDayCode: DayCode;
+  oldStartSlotId: string;
+  oldRoomId: string;
+  newDayCode: DayCode;
+  newStartSlotId: string;
+  newRoomId: string;
+  reason: string;
+}
+
+export interface RepairProposal {
+  changeSetId: string;
+  timetableId: string;
+  disruption: Disruption;
+  entries: TimetableEntry[];
+  changes: TimetableChange[];
+  metrics: Metrics;
+  unscheduledSessions: SessionRequirement[];
+  warnings: string[];
+  validation: ValidationResult;
+}
+
 // ─── Schedule Settings ──────────────────────────────────────────────
 
 export interface PeriodDefinition {
@@ -133,15 +179,35 @@ export interface PeriodDefinition {
   endTime: string;
 }
 
+export interface LunchBreakInterval {
+  startTime: string; // "HH:mm"
+  endTime: string;   // "HH:mm"
+}
+
 export interface ScheduleSettings {
   days: DayCode[];
   periodsPerDay: number;
   periods: PeriodDefinition[];
   lunchBreak: string;
+  semesterLunchDefaults?: Record<string, LunchBreakInterval>;
+  cohortLunchOverrides?: Record<string, LunchBreakInterval>;
   cohortSize: number;
   cohorts: string[];
   teacherMaxCourseAssignments: number;
   generationMode: string;
+}
+
+export interface ScheduleSettingsPatch {
+  days?: DayCode[];
+  periodsPerDay?: number;
+  periods?: PeriodDefinition[];
+  lunchBreak?: string;
+  semesterLunchDefaults?: Record<string, LunchBreakInterval>;
+  cohortLunchOverrides?: Record<string, LunchBreakInterval | null>;
+  cohortSize?: number;
+  cohorts?: string[];
+  teacherMaxCourseAssignments?: number;
+  generationMode?: string;
 }
 
 export interface SemesterSummary {

@@ -4,11 +4,13 @@
  * Renders the actual sample data from bootstrap.json.
  */
 import { useState, useEffect, useCallback } from 'react';
-import type { BootstrapPayload, TimetableEntry } from './lib/api.ts';
+import type { BootstrapPayload, TimetableEntry, ScheduleSettings, TimetableResult } from './lib/api.ts';
 import { getBootstrap, ApiError } from './lib/api.ts';
 import { TimetableGrid } from './components/TimetableGrid.tsx';
 import { SemesterFilter } from './components/SemesterFilter.tsx';
 import { MetricsPanel } from './components/MetricsPanel.tsx';
+import { ScheduleSettingsModal } from './components/ScheduleSettingsModal.tsx';
+import { GenerateTimetableModal } from './components/GenerateTimetableModal.tsx';
 
 type AppState = 'loading' | 'ready' | 'error';
 
@@ -19,6 +21,16 @@ export function App() {
   const [selectedSemesters, setSelectedSemesters] = useState<Set<number>>(
     new Set([1, 2, 3])
   );
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isGenerateOpen, setIsGenerateOpen] = useState(false);
+
+  const handleSettingsUpdated = useCallback((updated: ScheduleSettings) => {
+    setData((prev) => (prev ? { ...prev, scheduleSettings: updated } : prev));
+  }, []);
+
+  const handleTimetableGenerated = useCallback((generated: TimetableResult) => {
+    setData((prev) => (prev ? { ...prev, sampleTimetable: generated } : prev));
+  }, []);
 
   const loadData = useCallback(async () => {
     setState('loading');
@@ -138,15 +150,77 @@ export function App() {
         )}
         {state === 'ready' && data && (
           <>
-            {/* Dashboard Title */}
-            <div className="dashboard-header">
-              <h1 className="dashboard-header__title">
-                Timetable Dashboard
-              </h1>
-              <p className="dashboard-header__desc">
-                Computer Engineering — Academic Year 2026–27 — SLRTCE R-2025
-                Curriculum
-              </p>
+            {/* Dashboard Title & Actions */}
+            <div className="dashboard-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
+              <div>
+                <h1 className="dashboard-header__title">
+                  Timetable Dashboard
+                </h1>
+                <p className="dashboard-header__desc">
+                  Computer Engineering — Academic Year 2026–27 — SLRTCE R-2025
+                  Curriculum
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <button
+                  type="button"
+                  onClick={() => setIsSettingsOpen(true)}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    padding: '0.55rem 1.1rem',
+                    background: 'rgba(15, 30, 54, 0.9)',
+                    color: 'var(--text-primary)',
+                    border: '1px solid rgba(148, 163, 184, 0.3)',
+                    borderRadius: 'var(--radius-md)',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--emerald-500)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(148, 163, 184, 0.3)';
+                  }}
+                >
+                  <span>🍱</span>
+                  <span>Lunch Settings</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setIsGenerateOpen(true)}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    padding: '0.55rem 1.25rem',
+                    background: 'var(--emerald-500)',
+                    color: 'var(--navy-950)',
+                    border: 'none',
+                    borderRadius: 'var(--radius-md)',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    boxShadow: '0 2px 4px rgba(16, 185, 129, 0.25)',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'var(--emerald-400)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'var(--emerald-500)';
+                  }}
+                >
+                  <span>⚡</span>
+                  <span>Generate Timetable</span>
+                </button>
+              </div>
             </div>
 
             {/* Info Banner */}
@@ -190,6 +264,25 @@ export function App() {
                 teacherNameMap={teacherNameMap}
                 roomNameMap={roomNameMap}
                 getSessionType={getSessionType}
+              />
+            )}
+
+            {/* Settings & Generation Modals */}
+            {isSettingsOpen && (
+              <ScheduleSettingsModal
+                isOpen={isSettingsOpen}
+                onClose={() => setIsSettingsOpen(false)}
+                settings={data.scheduleSettings}
+                onSettingsUpdated={handleSettingsUpdated}
+              />
+            )}
+
+            {isGenerateOpen && (
+              <GenerateTimetableModal
+                isOpen={isGenerateOpen}
+                onClose={() => setIsGenerateOpen(false)}
+                settings={data.scheduleSettings}
+                onTimetableGenerated={handleTimetableGenerated}
               />
             )}
           </>

@@ -4,7 +4,7 @@
  * Shows session cards colored by type (Lecture/Tutorial/Practical).
  * Displays one grid per cohort when multiple semesters are selected.
  */
-import type { TimetableEntry } from '../lib/api.ts';
+import type { TimetableEntry, ScheduleSettings } from '../lib/api.ts';
 import { useMemo } from 'react';
 
 interface TimeSlotInfo {
@@ -18,17 +18,10 @@ interface TimeSlotInfo {
   nextSlotId: string | null;
 }
 
-interface ScheduleSettingsInfo {
-  days: string[];
-  periodsPerDay: number;
-  periods: Array<{ periodId: string; startTime: string; endTime: string }>;
-  lunchBreak: string;
-}
-
 interface TimetableGridProps {
   entries: TimetableEntry[];
   timeSlots: TimeSlotInfo[];
-  scheduleSettings: ScheduleSettingsInfo;
+  scheduleSettings: ScheduleSettings;
   courseNameMap: Record<string, string>;
   courseCodeMap: Record<string, string>;
   teacherNameMap: Record<string, string>;
@@ -101,10 +94,41 @@ export function TimetableGrid({
     return { slotMap, occupiedByMultiSlot };
   };
 
-  // Determine lunch period (P4 → 12:00-13:00 is the last before lunch)
-  const lunchPeriodIndex = periods.findIndex(
-    (p) => p.endTime === '13:00'
-  );
+  // Helper to parse "HH:mm"
+  const parseMin = (t: string) => {
+    const [h, m] = t.split(':').map(Number);
+    return h * 60 + m;
+  };
+
+  const isOverlap = (s1: string, e1: string, s2: string, e2: string) => {
+    return parseMin(s1) < parseMin(e2) && parseMin(e1) > parseMin(s2);
+  };
+
+  // Helper to resolve effective lunch for a cohort
+  const resolveCohortLunch = (cohortId: string, semester?: number) => {
+    if (scheduleSettings.cohortLunchOverrides?.[cohortId]) {
+      const o = scheduleSettings.cohortLunchOverrides[cohortId];
+      if (o && o.startTime && o.endTime) {
+        return { startTime: o.startTime, endTime: o.endTime, isOverride: true };
+      }
+    }
+    let sem = semester;
+    if (!sem && cohortId) {
+      const m = cohortId.match(/S(\d)/i);
+      if (m) sem = Number(m[1]);
+    }
+    if (sem && scheduleSettings.semesterLunchDefaults?.[String(sem)]) {
+      const def = scheduleSettings.semesterLunchDefaults[String(sem)];
+      if (def && def.startTime && def.endTime) {
+        return { startTime: def.startTime, endTime: def.endTime, isOverride: false };
+      }
+    }
+    if (scheduleSettings.lunchBreak && scheduleSettings.lunchBreak.includes('-')) {
+      const [start, end] = scheduleSettings.lunchBreak.split('-').map((s) => s.trim());
+      return { startTime: start, endTime: end, isOverride: false };
+    }
+    return { startTime: '13:00', endTime: '14:00', isOverride: false };
+  };
 
   const sortedCohorts = Array.from(entriesByCohort.keys()).sort();
 
@@ -117,16 +141,41 @@ export function TimetableGrid({
 
         // Extract semester from cohortId: "CE-S1-A" → 1
         const semMatch = cohortId.match(/S(\d)/);
-        const semLabel = semMatch ? `Semester ${toRoman(Number(semMatch[1]))}` : cohortId;
+        const semNumber = semMatch ? Number(semMatch[1]) : undefined;
+        const semLabel = semMatch ? `Semester ${toRoman(semNumber!)}` : cohortId;
+
+        const effectiveLunch = resolveCohortLunch(cohortId, semNumber);
+        const { startTime: lunchStart, endTime: lunchEnd, isOverride } = effectiveLunch;
 
         return (
           <div key={cohortId} className="timetable-section" style={{ marginBottom: '1.5rem' }}>
-            <div className="timetable-section__header">
+            <div className="timetable-section__header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem' }}>
               <div className="timetable-section__title">
                 📅 {semLabel} — {cohortId}
               </div>
-              <div className="timetable-section__badge">
-                {cohortEntries.length} sessions
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <div className="timetable-section__badge">
+                  {cohortEntries.length} sessions
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    padding: '0.2rem 0.65rem',
+                    borderRadius: 'var(--radius-sm)',
+                    background: isOverride ? 'rgba(16, 185, 129, 0.15)' : 'rgba(59, 130, 246, 0.15)',
+                    color: isOverride ? 'var(--emerald-400)' : '#93c5fd',
+                    border: `1px solid ${isOverride ? 'rgba(16, 185, 129, 0.35)' : 'rgba(59, 130, 246, 0.3)'}`,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.35rem',
+                  }}
+                  title={isOverride ? `Cohort override applied: ${lunchStart}–${lunchEnd}` : `Inheriting Semester ${semNumber || ''} default: ${lunchStart}–${lunchEnd}`}
+                >
+                  <span>🍱</span>
+                  <span>Lunch: <strong>{lunchStart}–{lunchEnd}</strong></span>
+                  <span style={{ opacity: 0.85, fontSize: '0.7rem' }}>({isOverride ? 'Cohort Override' : 'Semester Default'})</span>
+                </div>
               </div>
             </div>
 
@@ -139,25 +188,43 @@ export function TimetableGrid({
               >
                 {/* ─── Header row: corner + periods ──── */}
                 <div className="grid-header" />
-                {periods.map((p, i) => (
-                  <div key={p.periodId} className="grid-header">
-                    <div>{p.periodId}</div>
-                    <div style={{ fontSize: '0.6rem', opacity: 0.7 }}>
-                      {p.startTime}–{p.endTime}
-                    </div>
-                    {i === lunchPeriodIndex && (
-                      <div
-                        style={{
-                          fontSize: '0.5rem',
-                          color: 'var(--color-warning)',
-                          marginTop: '1px',
-                        }}
-                      >
-                        ↓ Lunch
+                {periods.map((p) => {
+                  const isLunchBoundary = p.endTime === lunchStart;
+                  const isPeriodDuringLunch = isOverlap(p.startTime, p.endTime, lunchStart, lunchEnd);
+
+                  return (
+                    <div key={p.periodId} className="grid-header">
+                      <div>{p.periodId}</div>
+                      <div style={{ fontSize: '0.6rem', opacity: 0.7 }}>
+                        {p.startTime}–{p.endTime}
                       </div>
-                    )}
-                  </div>
-                ))}
+                      {isLunchBoundary && (
+                        <div
+                          style={{
+                            fontSize: '0.5rem',
+                            color: 'var(--color-warning)',
+                            marginTop: '1px',
+                            fontWeight: 600,
+                          }}
+                        >
+                          ↓ Lunch ({lunchStart}–{lunchEnd})
+                        </div>
+                      )}
+                      {isPeriodDuringLunch && (
+                        <div
+                          style={{
+                            fontSize: '0.5rem',
+                            color: 'var(--emerald-400)',
+                            marginTop: '1px',
+                            fontWeight: 600,
+                          }}
+                        >
+                          🍱 Lunch
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
 
                 {/* ─── Day rows ──── */}
                 {days.map((dayCode) => (
@@ -173,16 +240,15 @@ export function TimetableGrid({
                     </div>
 
                     {/* Period cells */}
-                    {periods.map((p, _pIdx) => {
+                    {periods.map((p) => {
                       const slotId = `${dayCode}_${p.periodId}`;
-                      const isLunch = p.endTime === '13:00';
+                      const isLunch = isOverlap(p.startTime, p.endTime, lunchStart, lunchEnd);
                       const entry = slotMap.get(slotId);
                       const isOccupiedByPrev =
                         occupiedByMultiSlot.has(slotId);
 
                       if (isOccupiedByPrev && !entry) {
                         // This slot is the second hour of a 2-slot session
-                        // Don't render a separate card — handled by the first slot spanning
                         return (
                           <div
                             key={slotId}
