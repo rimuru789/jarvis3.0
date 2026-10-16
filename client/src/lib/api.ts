@@ -13,6 +13,7 @@ import type {
   ConflictDetail,
   Metrics,
   Disruption,
+  DisruptionType,
   TimetableChange,
   RepairProposal,
   ScheduleSettings,
@@ -24,6 +25,7 @@ import type {
   Room,
   TimeSlot,
   SessionRequirement,
+  SemesterSummary,
 } from './contracts.js';
 
 export type {
@@ -34,6 +36,7 @@ export type {
   ConflictDetail,
   Metrics,
   Disruption,
+  DisruptionType,
   TimetableChange,
   RepairProposal,
   ScheduleSettings,
@@ -45,6 +48,7 @@ export type {
   Room,
   TimeSlot,
   SessionRequirement,
+  SemesterSummary,
 };
 
 const API_BASE = '/api/v1';

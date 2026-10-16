@@ -1,16 +1,29 @@
 /**
- * SlotShield — Main Application
- * Dashboard with weekly timetable grid, semester filters, and metrics.
- * Renders the actual sample data from bootstrap.json.
+ * SlotShield — Main Application shell
+ *
+ * Four primary views share one bootstrap payload:
+ *   master      — Master Timetable (weekly grid, semester filter, metrics)
+ *   generate    — Generate Timetable (scope, lunch hard constraints, solver)
+ *   disruption  — Disruption Simulator (stage a faculty/room disruption)
+ *   repair      — Repair Proposal (review and apply the staged repair)
  */
-import { useState, useEffect, useCallback } from 'react';
-import type { BootstrapPayload, TimetableEntry, ScheduleSettings, TimetableResult } from './lib/api.ts';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import type {
+  BootstrapPayload,
+  RepairProposal as RepairProposalType,
+  ScheduleSettings,
+  TimetableEntry,
+  TimetableResult,
+} from './lib/api.ts';
 import { getBootstrap, ApiError } from './lib/api.ts';
+import { buildLookups } from './lib/lookups.ts';
+import { AppHeader, type ViewId } from './components/AppHeader.tsx';
 import { TimetableGrid } from './components/TimetableGrid.tsx';
 import { SemesterFilter } from './components/SemesterFilter.tsx';
 import { MetricsPanel } from './components/MetricsPanel.tsx';
-import { ScheduleSettingsModal } from './components/ScheduleSettingsModal.tsx';
-import { GenerateTimetableModal } from './components/GenerateTimetableModal.tsx';
+import { GenerateScreen } from './components/GenerateScreen.tsx';
+import { DisruptionSimulator } from './components/DisruptionSimulator.tsx';
+import { RepairProposal } from './components/RepairProposal.tsx';
 
 type AppState = 'loading' | 'ready' | 'error';
 
@@ -18,11 +31,9 @@ export function App() {
   const [state, setState] = useState<AppState>('loading');
   const [data, setData] = useState<BootstrapPayload | null>(null);
   const [error, setError] = useState<string>('');
-  const [selectedSemesters, setSelectedSemesters] = useState<Set<number>>(
-    new Set([1, 2, 3])
-  );
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isGenerateOpen, setIsGenerateOpen] = useState(false);
+  const [view, setView] = useState<ViewId>('master');
+  const [proposal, setProposal] = useState<RepairProposalType | null>(null);
+  const [selectedSemesters, setSelectedSemesters] = useState<Set<number>>(new Set([1, 2, 3]));
 
   const handleSettingsUpdated = useCallback((updated: ScheduleSettings) => {
     setData((prev) => (prev ? { ...prev, scheduleSettings: updated } : prev));
@@ -30,6 +41,12 @@ export function App() {
 
   const handleTimetableGenerated = useCallback((generated: TimetableResult) => {
     setData((prev) => (prev ? { ...prev, sampleTimetable: generated } : prev));
+    // A proposal belongs to the timetable it was computed against.
+    setProposal(null);
+  }, []);
+
+  const handleRepairApplied = useCallback((updated: TimetableResult) => {
+    setData((prev) => (prev ? { ...prev, sampleTimetable: updated } : prev));
   }, []);
 
   const loadData = useCallback(async () => {
@@ -41,11 +58,7 @@ export function App() {
       setState('ready');
     } catch (err) {
       const message =
-        err instanceof ApiError
-          ? err.message
-          : err instanceof Error
-            ? err.message
-            : 'Failed to load data';
+        err instanceof ApiError ? err.message : err instanceof Error ? err.message : 'Failed to load data';
       setError(message);
       setState('error');
     }
@@ -74,215 +87,120 @@ export function App() {
     setSelectedSemesters(new Set([1, 2, 3]));
   }, []);
 
-  // Filter entries by selected semesters
-  const filteredEntries: TimetableEntry[] = data
-    ? data.sampleTimetable.entries.filter((e) =>
-        selectedSemesters.has(e.semester)
-      )
-    : [];
+  const lookups = useMemo(() => (data ? buildLookups(data) : null), [data]);
 
-  // Build course name lookup
-  const courseNameMap: Record<string, string> = {};
-  const courseCodeMap: Record<string, string> = {};
-  if (data) {
-    for (const c of data.courses) {
-      courseNameMap[c.courseId] = c.courseName;
-      courseCodeMap[c.courseId] = c.courseCode;
-    }
-  }
+  const filteredEntries: TimetableEntry[] = useMemo(
+    () =>
+      data
+        ? data.sampleTimetable.entries.filter((e) => selectedSemesters.has(e.semester))
+        : [],
+    [data, selectedSemesters]
+  );
 
-  // Build teacher name lookup
-  const teacherNameMap: Record<string, string> = {};
-  if (data) {
-    for (const t of data.teachers) {
-      // Extract short name: "Demo Faculty 01 — Mathematics" → "Mathematics"
-      const parts = t.displayName.split('—');
-      teacherNameMap[t.teacherId] =
-        parts.length > 1 ? parts[1].trim() : t.displayName;
-    }
-  }
+  const headerStats = data
+    ? {
+        semesters: Object.keys(data.summary).length,
+        faculty: data.teachers.length,
+        courses: data.courses.length,
+      }
+    : null;
 
-  // Build room name lookup
-  const roomNameMap: Record<string, string> = {};
-  if (data) {
-    for (const r of data.rooms) {
-      roomNameMap[r.roomId] = r.displayName;
-    }
-  }
-
-  // Determine session type from session ID
-  const getSessionType = (entry: TimetableEntry): string => {
-    const sid = entry.sessionId;
-    if (sid.includes('-LEC-')) return 'LECTURE';
-    if (sid.includes('-TUT-')) return 'TUTORIAL';
-    if (sid.includes('-PRA-')) return 'PRACTICAL';
-    return 'LECTURE';
-  };
+  const headerStatus: 'live' | 'connecting' | 'offline' =
+    state === 'ready' ? 'live' : state === 'error' ? 'offline' : 'connecting';
 
   return (
     <div className="app-layout">
-      {/* ─── Header ──────────────────────────────────────────── */}
-      <header className="app-header">
-        <div className="app-header__left">
-          <div className="app-header__logo">
-            <div className="app-header__icon">S</div>
-            <div>
-              <div className="app-header__title">SlotShield</div>
-              <div className="app-header__subtitle">
-                Self-Healing Timetable
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="app-header__right">
-          <div className="demo-badge">
-            <span className="demo-badge__dot" />
-            Demo Data
-          </div>
-        </div>
-      </header>
+      <AppHeader view={view} onNavigate={setView} stats={headerStats} status={headerStatus} />
 
-      {/* ─── Main Content ────────────────────────────────────── */}
-      <main className="app-main">
+      <main className="app-main" id="main">
         {state === 'loading' && <LoadingState />}
-        {state === 'error' && (
-          <ErrorState message={error} onRetry={loadData} />
-        )}
-        {state === 'ready' && data && (
+        {state === 'error' && <ErrorState message={error} onRetry={loadData} />}
+
+        {state === 'ready' && data && lookups && (
           <>
-            {/* Dashboard Title & Actions */}
-            <div className="dashboard-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
-              <div>
-                <h1 className="dashboard-header__title">
-                  Timetable Dashboard
-                </h1>
-                <p className="dashboard-header__desc">
-                  Computer Engineering — Academic Year 2026–27 — SLRTCE R-2025
-                  Curriculum
-                </p>
-              </div>
+            {view === 'master' && (
+              <section className="screen" aria-labelledby="master-title">
+                <div className="screen-header">
+                  <div>
+                    <h1 id="master-title" className="screen-title">
+                      Master Timetable
+                    </h1>
+                    <p className="screen-subtitle">
+                      Computer Engineering · Academic Year 2026–27 · SLRTCE R-2025 curriculum
+                    </p>
+                  </div>
+                </div>
 
-              {/* Action Buttons */}
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                <button
-                  type="button"
-                  onClick={() => setIsSettingsOpen(true)}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    padding: '0.55rem 1.1rem',
-                    background: 'rgba(15, 30, 54, 0.9)',
-                    color: 'var(--text-primary)',
-                    border: '1px solid rgba(148, 163, 184, 0.3)',
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--emerald-500)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(148, 163, 184, 0.3)';
-                  }}
-                >
-                  <span>🍱</span>
-                  <span>Lunch Settings</span>
-                </button>
+                <div className="info-banner" role="note">
+                  <span className="info-banner__icon" aria-hidden="true">
+                    i
+                  </span>
+                  <span>
+                    Displaying pre-validated demo schedule with {data.sampleTimetable.metrics.scheduledSessionCount}{' '}
+                    sessions across {Object.keys(data.summary).length} semesters. Teacher assignments and room
+                    allocations are synthetic demo data.
+                  </span>
+                </div>
 
-                <button
-                  type="button"
-                  onClick={() => setIsGenerateOpen(true)}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    padding: '0.55rem 1.25rem',
-                    background: 'var(--emerald-500)',
-                    color: 'var(--navy-950)',
-                    border: 'none',
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: '0.85rem',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    boxShadow: '0 2px 4px rgba(16, 185, 129, 0.25)',
-                    transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'var(--emerald-400)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'var(--emerald-500)';
-                  }}
-                >
-                  <span>⚡</span>
-                  <span>Generate Timetable</span>
-                </button>
-              </div>
-            </div>
+                <MetricsPanel
+                  metrics={data.sampleTimetable.metrics}
+                  validation={data.sampleTimetable.validation}
+                  summary={data.summary}
+                  selectedSemesters={selectedSemesters}
+                  filteredEntryCount={filteredEntries.length}
+                />
 
-            {/* Info Banner */}
-            <div className="info-banner">
-              <span className="info-banner__icon">ℹ️</span>
-              <span>
-                Displaying pre-validated demo schedule with{' '}
-                {data.sampleTimetable.metrics.scheduledSessionCount} sessions
-                across {Object.keys(data.summary).length} semesters. Teacher
-                assignments and room allocations are synthetic demo data.
-              </span>
-            </div>
+                <SemesterFilter
+                  selected={selectedSemesters}
+                  summary={data.summary}
+                  onToggle={handleSemesterToggle}
+                  onSelectAll={handleSelectAll}
+                />
 
-            {/* Metrics */}
-            <MetricsPanel
-              metrics={data.sampleTimetable.metrics}
-              validation={data.sampleTimetable.validation}
-              summary={data.summary}
-              selectedSemesters={selectedSemesters}
-              filteredEntryCount={filteredEntries.length}
-            />
-
-            {/* Semester Filter */}
-            <SemesterFilter
-              selected={selectedSemesters}
-              summary={data.summary}
-              onToggle={handleSemesterToggle}
-              onSelectAll={handleSelectAll}
-            />
-
-            {/* Timetable Grid */}
-            {filteredEntries.length === 0 ? (
-              <EmptyState />
-            ) : (
-              <TimetableGrid
-                entries={filteredEntries}
-                timeSlots={data.timeSlots}
-                scheduleSettings={data.scheduleSettings}
-                courseNameMap={courseNameMap}
-                courseCodeMap={courseCodeMap}
-                teacherNameMap={teacherNameMap}
-                roomNameMap={roomNameMap}
-                getSessionType={getSessionType}
-              />
+                {filteredEntries.length === 0 ? (
+                  <EmptyState />
+                ) : (
+                  <TimetableGrid
+                    entries={filteredEntries}
+                    scheduleSettings={data.scheduleSettings}
+                    lookups={lookups}
+                  />
+                )}
+              </section>
             )}
 
-            {/* Settings & Generation Modals */}
-            {isSettingsOpen && (
-              <ScheduleSettingsModal
-                isOpen={isSettingsOpen}
-                onClose={() => setIsSettingsOpen(false)}
+            {view === 'generate' && (
+              <GenerateScreen
                 settings={data.scheduleSettings}
+                summary={data.summary}
+                sessions={data.sessions}
+                timetable={data.sampleTimetable}
                 onSettingsUpdated={handleSettingsUpdated}
+                onTimetableGenerated={handleTimetableGenerated}
+                onClose={() => setView('master')}
               />
             )}
 
-            {isGenerateOpen && (
-              <GenerateTimetableModal
-                isOpen={isGenerateOpen}
-                onClose={() => setIsGenerateOpen(false)}
-                settings={data.scheduleSettings}
-                onTimetableGenerated={handleTimetableGenerated}
+            {view === 'disruption' && (
+              <DisruptionSimulator
+                data={data}
+                timetable={data.sampleTimetable}
+                lookups={lookups}
+                proposal={proposal}
+                onProposal={setProposal}
+                onProceed={() => setView('repair')}
+              />
+            )}
+
+            {view === 'repair' && (
+              <RepairProposal
+                data={data}
+                timetable={data.sampleTimetable}
+                lookups={lookups}
+                proposal={proposal}
+                onApplied={handleRepairApplied}
+                onGoSimulate={() => setView('disruption')}
+                onGoMaster={() => setView('master')}
               />
             )}
           </>
@@ -296,43 +214,23 @@ export function App() {
 
 function LoadingState() {
   return (
-    <div className="state-container">
+    <div className="state-container" role="status">
       <div className="spinner" />
       <div className="state-container__title">Loading SlotShield</div>
-      <div className="state-container__message">
-        Fetching timetable data and course catalogue…
-      </div>
+      <div className="state-container__message">Fetching timetable data and course catalogue…</div>
     </div>
   );
 }
 
-function ErrorState({
-  message,
-  onRetry,
-}: {
-  message: string;
-  onRetry: () => void;
-}) {
+function ErrorState({ message, onRetry }: { message: string; onRetry: () => void }) {
   return (
-    <div className="state-container">
-      <div className="state-container__icon">⚠️</div>
-      <div className="state-container__title">Unable to Load Data</div>
+    <div className="state-container" role="alert">
+      <div className="state-container__icon" aria-hidden="true">
+        !
+      </div>
+      <div className="state-container__title">Unable to load data</div>
       <div className="state-container__message">{message}</div>
-      <button
-        onClick={onRetry}
-        style={{
-          marginTop: '1rem',
-          padding: '0.5rem 1.5rem',
-          background: 'var(--emerald-500)',
-          color: 'var(--navy-950)',
-          border: 'none',
-          borderRadius: 'var(--radius-md)',
-          fontFamily: 'inherit',
-          fontWeight: 600,
-          fontSize: '0.85rem',
-          cursor: 'pointer',
-        }}
-      >
+      <button type="button" className="btn btn--primary" onClick={onRetry}>
         Retry
       </button>
     </div>
@@ -342,11 +240,9 @@ function ErrorState({
 function EmptyState() {
   return (
     <div className="state-container">
-      <div className="state-container__icon">📅</div>
-      <div className="state-container__title">No Sessions Found</div>
+      <div className="state-container__title">No sessions found</div>
       <div className="state-container__message">
-        No timetable entries match the current filter. Try selecting a
-        different semester.
+        No timetable entries match the current filter. Try selecting a different semester.
       </div>
     </div>
   );

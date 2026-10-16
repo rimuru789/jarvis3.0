@@ -2,6 +2,7 @@
  * SlotShield — MetricsPanel
  * Dashboard metric cards showing schedule statistics.
  */
+import { IconAlert, IconBook, IconCalendar, IconCheck, IconCheckCircle, IconClock, IconEye, IconX } from './Icon.tsx';
 
 interface MetricsPanelProps {
   metrics: {
@@ -51,13 +52,13 @@ export function MetricsPanel({
   return (
     <div className="metrics-grid">
       <div className="metric-card">
-        <div className="metric-card__icon metric-card__icon--emerald">📊</div>
+        <div className="metric-card__icon metric-card__icon--emerald"><IconCalendar /></div>
         <div className="metric-card__value">{metrics.scheduledSessionCount}</div>
         <div className="metric-card__label">Scheduled Sessions</div>
       </div>
 
       <div className="metric-card">
-        <div className="metric-card__icon metric-card__icon--indigo">📚</div>
+        <div className="metric-card__icon metric-card__icon--indigo"><IconBook /></div>
         <div className="metric-card__value">{totalCourses}</div>
         <div className="metric-card__label">
           Courses ({Array.from(selectedSemesters).sort().join(', ')} Sem)
@@ -65,13 +66,13 @@ export function MetricsPanel({
       </div>
 
       <div className="metric-card">
-        <div className="metric-card__icon metric-card__icon--cyan">⏱️</div>
+        <div className="metric-card__icon metric-card__icon--cyan"><IconClock /></div>
         <div className="metric-card__value">{totalHours}</div>
         <div className="metric-card__label">Contact Hours / Week</div>
       </div>
 
       <div className="metric-card">
-        <div className="metric-card__icon metric-card__icon--amber">👁️</div>
+        <div className="metric-card__icon metric-card__icon--amber"><IconEye /></div>
         <div className="metric-card__value">{filteredEntryCount}</div>
         <div className="metric-card__label">Filtered Entries</div>
       </div>
@@ -84,7 +85,7 @@ export function MetricsPanel({
               : 'metric-card__icon--error'
           }`}
         >
-          {validation.valid ? '✅' : '❌'}
+          {validation.valid ? <IconCheckCircle /> : <IconX />}
         </div>
         <div className="metric-card__value">
           {validation.hardConflictCount}
@@ -102,7 +103,7 @@ export function MetricsPanel({
               : 'metric-card__icon--error'
           }`}
         >
-          {metrics.unscheduledSessionCount === 0 ? '🎯' : '⚠️'}
+          {metrics.unscheduledSessionCount === 0 ? <IconCheck /> : <IconAlert />}
         </div>
         <div className="metric-card__value">
           {metrics.unscheduledSessionCount}
