@@ -1,0 +1,1001 @@
+[
+  {
+    "courseId": "12111101",
+    "courseCode": "12111101",
+    "courseType": "BSC",
+    "courseName": "Linear Algebra and Calculus",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T01",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 1,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12121102",
+    "courseCode": "12121102",
+    "courseType": "ESC",
+    "courseName": "Engineering Mechanics",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T02",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "MECHANICS_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12121103",
+    "courseCode": "12121103",
+    "courseType": "ESC",
+    "courseName": "Digital Logic and Computer Organization Architecture",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T03",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12121104",
+    "courseCode": "12121104",
+    "courseType": "ESC",
+    "courseName": "Internet Technology",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T04",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12121105",
+    "courseCode": "12121105",
+    "courseType": "ESC",
+    "courseName": "C and C++ Programming",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T05",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122106",
+    "courseCode": "12122106",
+    "courseType": "ESCL",
+    "courseName": "Engineering Mechanics Lab",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T02",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 1
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "MECHANICS_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122107",
+    "courseCode": "12122107",
+    "courseType": "ESCL",
+    "courseName": "Digital Logic and Computer Organization Architecture Lab",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T03",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122108",
+    "courseCode": "12122108",
+    "courseType": "ESCL",
+    "courseName": "Internet Technology Lab",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T04",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122109",
+    "courseCode": "12122109",
+    "courseType": "ESCL",
+    "courseName": "C and C++ Programming Lab",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T05",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122110",
+    "courseCode": "12122110",
+    "courseType": "ESCL",
+    "courseName": "IDEA LAB -1 (Innovation Design Engineering and Apply)",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T06",
+    "weeklyHours": {
+      "lecture": 1,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "IDEA_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12412111",
+    "courseCode": "12412111",
+    "courseType": "VSEC",
+    "courseName": "Workshop-I",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T13",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "WORKSHOP"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98461112",
+    "courseCode": "98461112",
+    "courseType": "CC",
+    "courseName": "Universal Human Values",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T08",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98421113",
+    "courseCode": "98421113",
+    "courseType": "AEC",
+    "courseName": "Corporate Communication",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T07",
+    "weeklyHours": {
+      "lecture": 1,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98422114",
+    "courseCode": "98422114",
+    "courseType": "AECL",
+    "courseName": "Corporate Communication Lab",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "assignedTeacherId": "T07",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12111201",
+    "courseCode": "12111201",
+    "courseType": "BSC",
+    "courseName": "Probability, Statistics, and Differential Equations",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T01",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 1,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12111202",
+    "courseCode": "12111202",
+    "courseType": "BSC",
+    "courseName": "Modern Physics",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T09",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "PHYSICS_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12121203",
+    "courseCode": "12121203",
+    "courseType": "ESC",
+    "courseName": "Engineering Graphics",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T15",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "GRAPHICS_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12211204",
+    "courseCode": "12211204",
+    "courseType": "PCC",
+    "courseName": "Data Structure",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T10",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12112205",
+    "courseCode": "12112205",
+    "courseType": "BSCL",
+    "courseName": "Modern Physics Lab",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T09",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 1
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "PHYSICS_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122206",
+    "courseCode": "12122206",
+    "courseType": "ESCL",
+    "courseName": "Engineering Graphics Lab",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T15",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "GRAPHICS_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122207",
+    "courseCode": "12122207",
+    "courseType": "ESCL",
+    "courseName": "Modern Programming Paradigms Lab",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T04",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12122208",
+    "courseCode": "12122208",
+    "courseType": "ESCL",
+    "courseName": "IDEA LAB -2 (Innovation Design Engineering and Apply)",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T06",
+    "weeklyHours": {
+      "lecture": 1,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "IDEA_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12212209",
+    "courseCode": "12212209",
+    "courseType": "PCCL",
+    "courseName": "Data Structure Lab",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T10",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12412210",
+    "courseCode": "12412210",
+    "courseType": "VSEC",
+    "courseName": "Workshop-II",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T13",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "WORKSHOP"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98441211",
+    "courseCode": "98441211",
+    "courseType": "IKS",
+    "courseName": "Indian Knowledge System",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T08",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98462212",
+    "courseCode": "98462212",
+    "courseType": "CC",
+    "courseName": "NSS & Civil Defense",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T13",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 4
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "MULTIPURPOSE"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98471213",
+    "courseCode": "98471213",
+    "courseType": "AUDIT",
+    "courseName": "Audit Course",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "assignedTeacherId": "T08",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12211301",
+    "courseCode": "12211301",
+    "courseType": "PCC",
+    "courseName": "Discrete Mathematics and Graph Theory",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T01",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 1,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12211302",
+    "courseCode": "12211302",
+    "courseType": "PCC",
+    "courseName": "Analysis of Algorithm",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T10",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12211303",
+    "courseCode": "12211303",
+    "courseType": "PCC",
+    "courseName": "Database Management System",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T11",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12211304",
+    "courseCode": "12211304",
+    "courseType": "PCC",
+    "courseName": "Object Oriented Programming",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T12",
+    "weeklyHours": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12212305",
+    "courseCode": "12212305",
+    "courseType": "PCCL",
+    "courseName": "Integrated Lab - 1",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T11",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12212306",
+    "courseCode": "12212306",
+    "courseType": "PCCL",
+    "courseName": "Object Oriented Programming Lab",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T12",
+    "weeklyHours": {
+      "lecture": 0,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "COMPUTER_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "9951137WW",
+    "courseCode": "9951137WW",
+    "courseType": "OE",
+    "courseName": "Open Elective",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T14",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98431308",
+    "courseCode": "98431308",
+    "courseType": "ENTREPRENEURSHIP",
+    "courseName": "Entrepreneurship Development",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T07",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "98451309",
+    "courseCode": "98451309",
+    "courseType": "VEC",
+    "courseName": "Environmental Science",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T14",
+    "weeklyHours": {
+      "lecture": 2,
+      "tutorial": 0,
+      "practical": 0
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "CLASSROOM"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  },
+  {
+    "courseId": "12812310",
+    "courseCode": "12812310",
+    "courseType": "CEP",
+    "courseName": "IDEA LAB -3 (Innovation Design Engineering and Apply)",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "assignedTeacherId": "T06",
+    "weeklyHours": {
+      "lecture": 1,
+      "tutorial": 0,
+      "practical": 2
+    },
+    "roomRequirements": {
+      "LECTURE": [
+        "CLASSROOM"
+      ],
+      "TUTORIAL": [
+        "CLASSROOM"
+      ],
+      "PRACTICAL": [
+        "IDEA_LAB"
+      ]
+    },
+    "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+    "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+  }
+]

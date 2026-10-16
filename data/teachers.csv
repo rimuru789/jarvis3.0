@@ -1,0 +1,16 @@
+﻿teacherId,displayName,specialty,maxCourseAssignments,assignedCourseCount,isSyntheticDemoData
+T01,Demo Faculty 01 — Mathematics,Mathematics and statistics,3,3,True
+T02,Demo Faculty 02 — Mechanics,Engineering mechanics,3,2,True
+T03,Demo Faculty 03 — Digital systems,Digital logic and computer organization,3,2,True
+T04,Demo Faculty 04 — IT and programming labs,Internet technology and programming labs,3,3,True
+T05,Demo Faculty 05 — Programming,C/C++ programming,3,2,True
+T06,Demo Faculty 06 — IDEA Lab,IDEA Lab mentoring,3,3,True
+T07,Demo Faculty 07 — Communication and entrepreneurship,Communication and entrepreneurship,3,3,True
+T08,Demo Faculty 08 — Humanities,"Human values, Indian knowledge system and audit course",3,3,True
+T09,Demo Faculty 09 — Physics,Physics,3,2,True
+T10,Demo Faculty 10 — Data structures and algorithms,Data structures and algorithms,3,3,True
+T11,Demo Faculty 11 — Databases and integrated labs,Database management and integrated labs,3,2,True
+T12,Demo Faculty 12 — Object-oriented programming,Object-oriented programming,3,2,True
+T13,Demo Faculty 13 — Workshop and common activities,Workshop and NSS/Civil Defense,3,3,True
+T14,Demo Faculty 14 — Environment and electives,Environmental science and open electives,3,2,True
+T15,Demo Faculty 15 — Engineering graphics,Engineering graphics,3,2,True

@@ -1,0 +1,60 @@
+{
+  "courseCount": 37,
+  "teacherCount": 15,
+  "roomCount": 15,
+  "timeSlotCount": 42,
+  "sessionRequirementCount": 72,
+  "teacherCourseCounts": {
+    "T01": 3,
+    "T02": 2,
+    "T03": 2,
+    "T04": 3,
+    "T05": 2,
+    "T06": 3,
+    "T07": 3,
+    "T08": 3,
+    "T09": 2,
+    "T10": 3,
+    "T11": 2,
+    "T12": 2,
+    "T13": 3,
+    "T14": 2,
+    "T15": 2
+  },
+  "semesterSummary": {
+    "1": {
+      "courseCount": 14,
+      "weeklyHours": {
+        "lecture": 16,
+        "tutorial": 1,
+        "practical": 13,
+        "total": 30
+      }
+    },
+    "2": {
+      "courseCount": 13,
+      "weeklyHours": {
+        "lecture": 17,
+        "tutorial": 1,
+        "practical": 15,
+        "total": 33
+      }
+    },
+    "3": {
+      "courseCount": 10,
+      "weeklyHours": {
+        "lecture": 18,
+        "tutorial": 1,
+        "practical": 6,
+        "total": 25
+      }
+    }
+  },
+  "hardChecks": {
+    "allTeacherAssignmentsAtMostThree": true,
+    "allSyllabusLTPWeeklyTotalsMatch": true,
+    "courseIdsUnique": true,
+    "teacherIdsUnique": true,
+    "timeSlotIdsUnique": true
+  }
+}

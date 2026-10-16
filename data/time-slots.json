@@ -1,0 +1,422 @@
+[
+  {
+    "slotId": "MON_P1",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P1",
+    "periodIndex": 1,
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "nextSlotId": "MON_P2"
+  },
+  {
+    "slotId": "MON_P2",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P2",
+    "periodIndex": 2,
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "nextSlotId": "MON_P3"
+  },
+  {
+    "slotId": "MON_P3",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P3",
+    "periodIndex": 3,
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "nextSlotId": "MON_P4"
+  },
+  {
+    "slotId": "MON_P4",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P4",
+    "periodIndex": 4,
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "MON_P5",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P5",
+    "periodIndex": 5,
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "nextSlotId": "MON_P6"
+  },
+  {
+    "slotId": "MON_P6",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P6",
+    "periodIndex": 6,
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "nextSlotId": "MON_P7"
+  },
+  {
+    "slotId": "MON_P7",
+    "dayCode": "MON",
+    "dayName": "Monday",
+    "periodId": "P7",
+    "periodIndex": 7,
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "TUE_P1",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P1",
+    "periodIndex": 1,
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "nextSlotId": "TUE_P2"
+  },
+  {
+    "slotId": "TUE_P2",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P2",
+    "periodIndex": 2,
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "nextSlotId": "TUE_P3"
+  },
+  {
+    "slotId": "TUE_P3",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P3",
+    "periodIndex": 3,
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "nextSlotId": "TUE_P4"
+  },
+  {
+    "slotId": "TUE_P4",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P4",
+    "periodIndex": 4,
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "TUE_P5",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P5",
+    "periodIndex": 5,
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "nextSlotId": "TUE_P6"
+  },
+  {
+    "slotId": "TUE_P6",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P6",
+    "periodIndex": 6,
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "nextSlotId": "TUE_P7"
+  },
+  {
+    "slotId": "TUE_P7",
+    "dayCode": "TUE",
+    "dayName": "Tuesday",
+    "periodId": "P7",
+    "periodIndex": 7,
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "WED_P1",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P1",
+    "periodIndex": 1,
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "nextSlotId": "WED_P2"
+  },
+  {
+    "slotId": "WED_P2",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P2",
+    "periodIndex": 2,
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "nextSlotId": "WED_P3"
+  },
+  {
+    "slotId": "WED_P3",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P3",
+    "periodIndex": 3,
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "nextSlotId": "WED_P4"
+  },
+  {
+    "slotId": "WED_P4",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P4",
+    "periodIndex": 4,
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "WED_P5",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P5",
+    "periodIndex": 5,
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "nextSlotId": "WED_P6"
+  },
+  {
+    "slotId": "WED_P6",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P6",
+    "periodIndex": 6,
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "nextSlotId": "WED_P7"
+  },
+  {
+    "slotId": "WED_P7",
+    "dayCode": "WED",
+    "dayName": "Wednesday",
+    "periodId": "P7",
+    "periodIndex": 7,
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "THU_P1",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P1",
+    "periodIndex": 1,
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "nextSlotId": "THU_P2"
+  },
+  {
+    "slotId": "THU_P2",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P2",
+    "periodIndex": 2,
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "nextSlotId": "THU_P3"
+  },
+  {
+    "slotId": "THU_P3",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P3",
+    "periodIndex": 3,
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "nextSlotId": "THU_P4"
+  },
+  {
+    "slotId": "THU_P4",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P4",
+    "periodIndex": 4,
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "THU_P5",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P5",
+    "periodIndex": 5,
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "nextSlotId": "THU_P6"
+  },
+  {
+    "slotId": "THU_P6",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P6",
+    "periodIndex": 6,
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "nextSlotId": "THU_P7"
+  },
+  {
+    "slotId": "THU_P7",
+    "dayCode": "THU",
+    "dayName": "Thursday",
+    "periodId": "P7",
+    "periodIndex": 7,
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "FRI_P1",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P1",
+    "periodIndex": 1,
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "nextSlotId": "FRI_P2"
+  },
+  {
+    "slotId": "FRI_P2",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P2",
+    "periodIndex": 2,
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "nextSlotId": "FRI_P3"
+  },
+  {
+    "slotId": "FRI_P3",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P3",
+    "periodIndex": 3,
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "nextSlotId": "FRI_P4"
+  },
+  {
+    "slotId": "FRI_P4",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P4",
+    "periodIndex": 4,
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "FRI_P5",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P5",
+    "periodIndex": 5,
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "nextSlotId": "FRI_P6"
+  },
+  {
+    "slotId": "FRI_P6",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P6",
+    "periodIndex": 6,
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "nextSlotId": "FRI_P7"
+  },
+  {
+    "slotId": "FRI_P7",
+    "dayCode": "FRI",
+    "dayName": "Friday",
+    "periodId": "P7",
+    "periodIndex": 7,
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "SAT_P1",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P1",
+    "periodIndex": 1,
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "nextSlotId": "SAT_P2"
+  },
+  {
+    "slotId": "SAT_P2",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P2",
+    "periodIndex": 2,
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "nextSlotId": "SAT_P3"
+  },
+  {
+    "slotId": "SAT_P3",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P3",
+    "periodIndex": 3,
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "nextSlotId": "SAT_P4"
+  },
+  {
+    "slotId": "SAT_P4",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P4",
+    "periodIndex": 4,
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "nextSlotId": null
+  },
+  {
+    "slotId": "SAT_P5",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P5",
+    "periodIndex": 5,
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "nextSlotId": "SAT_P6"
+  },
+  {
+    "slotId": "SAT_P6",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P6",
+    "periodIndex": 6,
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "nextSlotId": "SAT_P7"
+  },
+  {
+    "slotId": "SAT_P7",
+    "dayCode": "SAT",
+    "dayName": "Saturday",
+    "periodId": "P7",
+    "periodIndex": 7,
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "nextSlotId": null
+  }
+]

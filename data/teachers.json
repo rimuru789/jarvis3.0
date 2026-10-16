@@ -1,0 +1,122 @@
+[
+  {
+    "teacherId": "T01",
+    "displayName": "Demo Faculty 01 — Mathematics",
+    "specialty": "Mathematics and statistics",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T02",
+    "displayName": "Demo Faculty 02 — Mechanics",
+    "specialty": "Engineering mechanics",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T03",
+    "displayName": "Demo Faculty 03 — Digital systems",
+    "specialty": "Digital logic and computer organization",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T04",
+    "displayName": "Demo Faculty 04 — IT and programming labs",
+    "specialty": "Internet technology and programming labs",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T05",
+    "displayName": "Demo Faculty 05 — Programming",
+    "specialty": "C/C++ programming",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T06",
+    "displayName": "Demo Faculty 06 — IDEA Lab",
+    "specialty": "IDEA Lab mentoring",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T07",
+    "displayName": "Demo Faculty 07 — Communication and entrepreneurship",
+    "specialty": "Communication and entrepreneurship",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T08",
+    "displayName": "Demo Faculty 08 — Humanities",
+    "specialty": "Human values, Indian knowledge system and audit course",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T09",
+    "displayName": "Demo Faculty 09 — Physics",
+    "specialty": "Physics",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T10",
+    "displayName": "Demo Faculty 10 — Data structures and algorithms",
+    "specialty": "Data structures and algorithms",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T11",
+    "displayName": "Demo Faculty 11 — Databases and integrated labs",
+    "specialty": "Database management and integrated labs",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T12",
+    "displayName": "Demo Faculty 12 — Object-oriented programming",
+    "specialty": "Object-oriented programming",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T13",
+    "displayName": "Demo Faculty 13 — Workshop and common activities",
+    "specialty": "Workshop and NSS/Civil Defense",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T14",
+    "displayName": "Demo Faculty 14 — Environment and electives",
+    "specialty": "Environmental science and open electives",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  },
+  {
+    "teacherId": "T15",
+    "displayName": "Demo Faculty 15 — Engineering graphics",
+    "specialty": "Engineering graphics",
+    "maxCourseAssignments": 3,
+    "availability": "ALL_SLOTS_FOR_DEMO",
+    "isSyntheticDemoData": true
+  }
+]

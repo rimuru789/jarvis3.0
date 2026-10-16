@@ -1,0 +1,3768 @@
+{
+  "projectName": "SlotShield",
+  "dataStatus": "SYNTHETIC_DEMO_TEACHER_ASSIGNMENTS_AND_ROOMS",
+  "curriculumSource": "SLRTCE Computer Engineering Curriculum R-2025, uploaded PDF, curriculum tables for FE Sem I, FE Sem II and SE Sem III",
+  "scheduleSettings": {
+    "days": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI",
+      "SAT"
+    ],
+    "periodsPerDay": 7,
+    "periods": [
+      {
+        "periodId": "P1",
+        "startTime": "09:00",
+        "endTime": "10:00"
+      },
+      {
+        "periodId": "P2",
+        "startTime": "10:00",
+        "endTime": "11:00"
+      },
+      {
+        "periodId": "P3",
+        "startTime": "11:00",
+        "endTime": "12:00"
+      },
+      {
+        "periodId": "P4",
+        "startTime": "12:00",
+        "endTime": "13:00"
+      },
+      {
+        "periodId": "P5",
+        "startTime": "14:00",
+        "endTime": "15:00"
+      },
+      {
+        "periodId": "P6",
+        "startTime": "15:00",
+        "endTime": "16:00"
+      },
+      {
+        "periodId": "P7",
+        "startTime": "16:00",
+        "endTime": "17:00"
+      }
+    ],
+    "lunchBreak": "13:00-14:00",
+    "cohortSize": 30,
+    "cohorts": [
+      "CE-S1-A",
+      "CE-S2-A",
+      "CE-S3-A"
+    ],
+    "teacherMaxCourseAssignments": 3,
+    "generationMode": "HEURISTIC_WITH_HARD_CONSTRAINT_VALIDATION"
+  },
+  "summary": {
+    "1": {
+      "courseCount": 14,
+      "weeklyHours": {
+        "lecture": 16,
+        "tutorial": 1,
+        "practical": 13,
+        "total": 30
+      }
+    },
+    "2": {
+      "courseCount": 13,
+      "weeklyHours": {
+        "lecture": 17,
+        "tutorial": 1,
+        "practical": 15,
+        "total": 33
+      }
+    },
+    "3": {
+      "courseCount": 10,
+      "weeklyHours": {
+        "lecture": 18,
+        "tutorial": 1,
+        "practical": 6,
+        "total": 25
+      }
+    }
+  },
+  "teachers": [
+    {
+      "teacherId": "T01",
+      "displayName": "Demo Faculty 01 — Mathematics",
+      "specialty": "Mathematics and statistics",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T02",
+      "displayName": "Demo Faculty 02 — Mechanics",
+      "specialty": "Engineering mechanics",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T03",
+      "displayName": "Demo Faculty 03 — Digital systems",
+      "specialty": "Digital logic and computer organization",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T04",
+      "displayName": "Demo Faculty 04 — IT and programming labs",
+      "specialty": "Internet technology and programming labs",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T05",
+      "displayName": "Demo Faculty 05 — Programming",
+      "specialty": "C/C++ programming",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T06",
+      "displayName": "Demo Faculty 06 — IDEA Lab",
+      "specialty": "IDEA Lab mentoring",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T07",
+      "displayName": "Demo Faculty 07 — Communication and entrepreneurship",
+      "specialty": "Communication and entrepreneurship",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T08",
+      "displayName": "Demo Faculty 08 — Humanities",
+      "specialty": "Human values, Indian knowledge system and audit course",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T09",
+      "displayName": "Demo Faculty 09 — Physics",
+      "specialty": "Physics",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T10",
+      "displayName": "Demo Faculty 10 — Data structures and algorithms",
+      "specialty": "Data structures and algorithms",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T11",
+      "displayName": "Demo Faculty 11 — Databases and integrated labs",
+      "specialty": "Database management and integrated labs",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T12",
+      "displayName": "Demo Faculty 12 — Object-oriented programming",
+      "specialty": "Object-oriented programming",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T13",
+      "displayName": "Demo Faculty 13 — Workshop and common activities",
+      "specialty": "Workshop and NSS/Civil Defense",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T14",
+      "displayName": "Demo Faculty 14 — Environment and electives",
+      "specialty": "Environmental science and open electives",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    },
+    {
+      "teacherId": "T15",
+      "displayName": "Demo Faculty 15 — Engineering graphics",
+      "specialty": "Engineering graphics",
+      "maxCourseAssignments": 3,
+      "availability": "ALL_SLOTS_FOR_DEMO",
+      "isSyntheticDemoData": true
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "12111101",
+      "courseCode": "12111101",
+      "courseType": "BSC",
+      "courseName": "Linear Algebra and Calculus",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T01",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 1,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12121102",
+      "courseCode": "12121102",
+      "courseType": "ESC",
+      "courseName": "Engineering Mechanics",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T02",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "MECHANICS_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12121103",
+      "courseCode": "12121103",
+      "courseType": "ESC",
+      "courseName": "Digital Logic and Computer Organization Architecture",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T03",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12121104",
+      "courseCode": "12121104",
+      "courseType": "ESC",
+      "courseName": "Internet Technology",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T04",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12121105",
+      "courseCode": "12121105",
+      "courseType": "ESC",
+      "courseName": "C and C++ Programming",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T05",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122106",
+      "courseCode": "12122106",
+      "courseType": "ESCL",
+      "courseName": "Engineering Mechanics Lab",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T02",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 1
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "MECHANICS_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122107",
+      "courseCode": "12122107",
+      "courseType": "ESCL",
+      "courseName": "Digital Logic and Computer Organization Architecture Lab",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T03",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122108",
+      "courseCode": "12122108",
+      "courseType": "ESCL",
+      "courseName": "Internet Technology Lab",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T04",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122109",
+      "courseCode": "12122109",
+      "courseType": "ESCL",
+      "courseName": "C and C++ Programming Lab",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T05",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122110",
+      "courseCode": "12122110",
+      "courseType": "ESCL",
+      "courseName": "IDEA LAB -1 (Innovation Design Engineering and Apply)",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T06",
+      "weeklyHours": {
+        "lecture": 1,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "IDEA_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12412111",
+      "courseCode": "12412111",
+      "courseType": "VSEC",
+      "courseName": "Workshop-I",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T13",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "WORKSHOP"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98461112",
+      "courseCode": "98461112",
+      "courseType": "CC",
+      "courseName": "Universal Human Values",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T08",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98421113",
+      "courseCode": "98421113",
+      "courseType": "AEC",
+      "courseName": "Corporate Communication",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T07",
+      "weeklyHours": {
+        "lecture": 1,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98422114",
+      "courseCode": "98422114",
+      "courseType": "AECL",
+      "courseName": "Corporate Communication Lab",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "assignedTeacherId": "T07",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12111201",
+      "courseCode": "12111201",
+      "courseType": "BSC",
+      "courseName": "Probability, Statistics, and Differential Equations",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T01",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 1,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12111202",
+      "courseCode": "12111202",
+      "courseType": "BSC",
+      "courseName": "Modern Physics",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T09",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "PHYSICS_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12121203",
+      "courseCode": "12121203",
+      "courseType": "ESC",
+      "courseName": "Engineering Graphics",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T15",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "GRAPHICS_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12211204",
+      "courseCode": "12211204",
+      "courseType": "PCC",
+      "courseName": "Data Structure",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T10",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12112205",
+      "courseCode": "12112205",
+      "courseType": "BSCL",
+      "courseName": "Modern Physics Lab",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T09",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 1
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "PHYSICS_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122206",
+      "courseCode": "12122206",
+      "courseType": "ESCL",
+      "courseName": "Engineering Graphics Lab",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T15",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "GRAPHICS_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122207",
+      "courseCode": "12122207",
+      "courseType": "ESCL",
+      "courseName": "Modern Programming Paradigms Lab",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T04",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12122208",
+      "courseCode": "12122208",
+      "courseType": "ESCL",
+      "courseName": "IDEA LAB -2 (Innovation Design Engineering and Apply)",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T06",
+      "weeklyHours": {
+        "lecture": 1,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "IDEA_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12212209",
+      "courseCode": "12212209",
+      "courseType": "PCCL",
+      "courseName": "Data Structure Lab",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T10",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12412210",
+      "courseCode": "12412210",
+      "courseType": "VSEC",
+      "courseName": "Workshop-II",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T13",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "WORKSHOP"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98441211",
+      "courseCode": "98441211",
+      "courseType": "IKS",
+      "courseName": "Indian Knowledge System",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T08",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98462212",
+      "courseCode": "98462212",
+      "courseType": "CC",
+      "courseName": "NSS & Civil Defense",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T13",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 4
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "MULTIPURPOSE"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98471213",
+      "courseCode": "98471213",
+      "courseType": "AUDIT",
+      "courseName": "Audit Course",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "assignedTeacherId": "T08",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12211301",
+      "courseCode": "12211301",
+      "courseType": "PCC",
+      "courseName": "Discrete Mathematics and Graph Theory",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T01",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 1,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12211302",
+      "courseCode": "12211302",
+      "courseType": "PCC",
+      "courseName": "Analysis of Algorithm",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T10",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12211303",
+      "courseCode": "12211303",
+      "courseType": "PCC",
+      "courseName": "Database Management System",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T11",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12211304",
+      "courseCode": "12211304",
+      "courseType": "PCC",
+      "courseName": "Object Oriented Programming",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T12",
+      "weeklyHours": {
+        "lecture": 3,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12212305",
+      "courseCode": "12212305",
+      "courseType": "PCCL",
+      "courseName": "Integrated Lab - 1",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T11",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12212306",
+      "courseCode": "12212306",
+      "courseType": "PCCL",
+      "courseName": "Object Oriented Programming Lab",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T12",
+      "weeklyHours": {
+        "lecture": 0,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "COMPUTER_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "9951137WW",
+      "courseCode": "9951137WW",
+      "courseType": "OE",
+      "courseName": "Open Elective",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T14",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98431308",
+      "courseCode": "98431308",
+      "courseType": "ENTREPRENEURSHIP",
+      "courseName": "Entrepreneurship Development",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T07",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "98451309",
+      "courseCode": "98451309",
+      "courseType": "VEC",
+      "courseName": "Environmental Science",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T14",
+      "weeklyHours": {
+        "lecture": 2,
+        "tutorial": 0,
+        "practical": 0
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "CLASSROOM"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    },
+    {
+      "courseId": "12812310",
+      "courseCode": "12812310",
+      "courseType": "CEP",
+      "courseName": "IDEA LAB -3 (Innovation Design Engineering and Apply)",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "assignedTeacherId": "T06",
+      "weeklyHours": {
+        "lecture": 1,
+        "tutorial": 0,
+        "practical": 2
+      },
+      "roomRequirements": {
+        "LECTURE": [
+          "CLASSROOM"
+        ],
+        "TUTORIAL": [
+          "CLASSROOM"
+        ],
+        "PRACTICAL": [
+          "IDEA_LAB"
+        ]
+      },
+      "source": "SLRTCE Computer Engineering Curriculum R-2025, curriculum structure table",
+      "teacherAssignmentStatus": "SYNTHETIC_DEMO_ASSIGNMENT"
+    }
+  ],
+  "rooms": [
+    {
+      "roomId": "C101",
+      "displayName": "Classroom 101",
+      "roomType": "CLASSROOM",
+      "capacity": 60
+    },
+    {
+      "roomId": "C102",
+      "displayName": "Classroom 102",
+      "roomType": "CLASSROOM",
+      "capacity": 60
+    },
+    {
+      "roomId": "C103",
+      "displayName": "Classroom 103",
+      "roomType": "CLASSROOM",
+      "capacity": 60
+    },
+    {
+      "roomId": "C201",
+      "displayName": "Classroom 201",
+      "roomType": "CLASSROOM",
+      "capacity": 60
+    },
+    {
+      "roomId": "C202",
+      "displayName": "Classroom 202",
+      "roomType": "CLASSROOM",
+      "capacity": 60
+    },
+    {
+      "roomId": "C203",
+      "displayName": "Classroom 203",
+      "roomType": "CLASSROOM",
+      "capacity": 60
+    },
+    {
+      "roomId": "LAB-CSE-1",
+      "displayName": "Computer Lab 1",
+      "roomType": "COMPUTER_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "LAB-CSE-2",
+      "displayName": "Computer Lab 2",
+      "roomType": "COMPUTER_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "LAB-IT-1",
+      "displayName": "IT Lab",
+      "roomType": "COMPUTER_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "LAB-MECH-1",
+      "displayName": "Mechanics Lab",
+      "roomType": "MECHANICS_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "LAB-PHYS-1",
+      "displayName": "Physics Lab",
+      "roomType": "PHYSICS_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "LAB-GRAPHICS-1",
+      "displayName": "Graphics Lab",
+      "roomType": "GRAPHICS_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "LAB-IDEA-1",
+      "displayName": "IDEA Lab",
+      "roomType": "IDEA_LAB",
+      "capacity": 35
+    },
+    {
+      "roomId": "WORKSHOP-1",
+      "displayName": "Workshop",
+      "roomType": "WORKSHOP",
+      "capacity": 35
+    },
+    {
+      "roomId": "MP-1",
+      "displayName": "Multipurpose Room",
+      "roomType": "MULTIPURPOSE",
+      "capacity": 80
+    }
+  ],
+  "timeSlots": [
+    {
+      "slotId": "MON_P1",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P1",
+      "periodIndex": 1,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "nextSlotId": "MON_P2"
+    },
+    {
+      "slotId": "MON_P2",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P2",
+      "periodIndex": 2,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "nextSlotId": "MON_P3"
+    },
+    {
+      "slotId": "MON_P3",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P3",
+      "periodIndex": 3,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "nextSlotId": "MON_P4"
+    },
+    {
+      "slotId": "MON_P4",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P4",
+      "periodIndex": 4,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "MON_P5",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P5",
+      "periodIndex": 5,
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "nextSlotId": "MON_P6"
+    },
+    {
+      "slotId": "MON_P6",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P6",
+      "periodIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "nextSlotId": "MON_P7"
+    },
+    {
+      "slotId": "MON_P7",
+      "dayCode": "MON",
+      "dayName": "Monday",
+      "periodId": "P7",
+      "periodIndex": 7,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "TUE_P1",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P1",
+      "periodIndex": 1,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "nextSlotId": "TUE_P2"
+    },
+    {
+      "slotId": "TUE_P2",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P2",
+      "periodIndex": 2,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "nextSlotId": "TUE_P3"
+    },
+    {
+      "slotId": "TUE_P3",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P3",
+      "periodIndex": 3,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "nextSlotId": "TUE_P4"
+    },
+    {
+      "slotId": "TUE_P4",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P4",
+      "periodIndex": 4,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "TUE_P5",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P5",
+      "periodIndex": 5,
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "nextSlotId": "TUE_P6"
+    },
+    {
+      "slotId": "TUE_P6",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P6",
+      "periodIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "nextSlotId": "TUE_P7"
+    },
+    {
+      "slotId": "TUE_P7",
+      "dayCode": "TUE",
+      "dayName": "Tuesday",
+      "periodId": "P7",
+      "periodIndex": 7,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "WED_P1",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P1",
+      "periodIndex": 1,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "nextSlotId": "WED_P2"
+    },
+    {
+      "slotId": "WED_P2",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P2",
+      "periodIndex": 2,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "nextSlotId": "WED_P3"
+    },
+    {
+      "slotId": "WED_P3",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P3",
+      "periodIndex": 3,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "nextSlotId": "WED_P4"
+    },
+    {
+      "slotId": "WED_P4",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P4",
+      "periodIndex": 4,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "WED_P5",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P5",
+      "periodIndex": 5,
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "nextSlotId": "WED_P6"
+    },
+    {
+      "slotId": "WED_P6",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P6",
+      "periodIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "nextSlotId": "WED_P7"
+    },
+    {
+      "slotId": "WED_P7",
+      "dayCode": "WED",
+      "dayName": "Wednesday",
+      "periodId": "P7",
+      "periodIndex": 7,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "THU_P1",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P1",
+      "periodIndex": 1,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "nextSlotId": "THU_P2"
+    },
+    {
+      "slotId": "THU_P2",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P2",
+      "periodIndex": 2,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "nextSlotId": "THU_P3"
+    },
+    {
+      "slotId": "THU_P3",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P3",
+      "periodIndex": 3,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "nextSlotId": "THU_P4"
+    },
+    {
+      "slotId": "THU_P4",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P4",
+      "periodIndex": 4,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "THU_P5",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P5",
+      "periodIndex": 5,
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "nextSlotId": "THU_P6"
+    },
+    {
+      "slotId": "THU_P6",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P6",
+      "periodIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "nextSlotId": "THU_P7"
+    },
+    {
+      "slotId": "THU_P7",
+      "dayCode": "THU",
+      "dayName": "Thursday",
+      "periodId": "P7",
+      "periodIndex": 7,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "FRI_P1",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P1",
+      "periodIndex": 1,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "nextSlotId": "FRI_P2"
+    },
+    {
+      "slotId": "FRI_P2",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P2",
+      "periodIndex": 2,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "nextSlotId": "FRI_P3"
+    },
+    {
+      "slotId": "FRI_P3",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P3",
+      "periodIndex": 3,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "nextSlotId": "FRI_P4"
+    },
+    {
+      "slotId": "FRI_P4",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P4",
+      "periodIndex": 4,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "FRI_P5",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P5",
+      "periodIndex": 5,
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "nextSlotId": "FRI_P6"
+    },
+    {
+      "slotId": "FRI_P6",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P6",
+      "periodIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "nextSlotId": "FRI_P7"
+    },
+    {
+      "slotId": "FRI_P7",
+      "dayCode": "FRI",
+      "dayName": "Friday",
+      "periodId": "P7",
+      "periodIndex": 7,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "SAT_P1",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P1",
+      "periodIndex": 1,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "nextSlotId": "SAT_P2"
+    },
+    {
+      "slotId": "SAT_P2",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P2",
+      "periodIndex": 2,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "nextSlotId": "SAT_P3"
+    },
+    {
+      "slotId": "SAT_P3",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P3",
+      "periodIndex": 3,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "nextSlotId": "SAT_P4"
+    },
+    {
+      "slotId": "SAT_P4",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P4",
+      "periodIndex": 4,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "nextSlotId": null
+    },
+    {
+      "slotId": "SAT_P5",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P5",
+      "periodIndex": 5,
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "nextSlotId": "SAT_P6"
+    },
+    {
+      "slotId": "SAT_P6",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P6",
+      "periodIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "nextSlotId": "SAT_P7"
+    },
+    {
+      "slotId": "SAT_P7",
+      "dayCode": "SAT",
+      "dayName": "Saturday",
+      "periodId": "P7",
+      "periodIndex": 7,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "nextSlotId": null
+    }
+  ],
+  "sessions": [
+    {
+      "sessionId": "S1-12111101-LEC-01",
+      "courseId": "12111101",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T01",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12111101-LEC-02",
+      "courseId": "12111101",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T01",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12111101-TUT-01",
+      "courseId": "12111101",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T01",
+      "sessionType": "TUTORIAL",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121102-LEC-01",
+      "courseId": "12121102",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T02",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121102-LEC-02",
+      "courseId": "12121102",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T02",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121103-LEC-01",
+      "courseId": "12121103",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T03",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121103-LEC-02",
+      "courseId": "12121103",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T03",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121103-LEC-03",
+      "courseId": "12121103",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T03",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121104-LEC-01",
+      "courseId": "12121104",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T04",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121104-LEC-02",
+      "courseId": "12121104",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T04",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121105-LEC-01",
+      "courseId": "12121105",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T05",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121105-LEC-02",
+      "courseId": "12121105",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T05",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12121105-LEC-03",
+      "courseId": "12121105",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T05",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12122106-PRA-01",
+      "courseId": "12122106",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T02",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "MECHANICS_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12122107-PRA-01",
+      "courseId": "12122107",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T03",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12122108-PRA-01",
+      "courseId": "12122108",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T04",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12122109-PRA-01",
+      "courseId": "12122109",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T05",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12122110-LEC-01",
+      "courseId": "12122110",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T06",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12122110-PRA-01",
+      "courseId": "12122110",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T06",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "IDEA_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-12412111-PRA-01",
+      "courseId": "12412111",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T13",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "WORKSHOP"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-98461112-LEC-01",
+      "courseId": "98461112",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-98461112-LEC-02",
+      "courseId": "98461112",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-98421113-LEC-01",
+      "courseId": "98421113",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T07",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S1-98422114-PRA-01",
+      "courseId": "98422114",
+      "semester": 1,
+      "cohortId": "CE-S1-A",
+      "teacherId": "T07",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12111201-LEC-01",
+      "courseId": "12111201",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T01",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12111201-LEC-02",
+      "courseId": "12111201",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T01",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12111201-TUT-01",
+      "courseId": "12111201",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T01",
+      "sessionType": "TUTORIAL",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12111202-LEC-01",
+      "courseId": "12111202",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T09",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12111202-LEC-02",
+      "courseId": "12111202",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T09",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12121203-LEC-01",
+      "courseId": "12121203",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T15",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12121203-LEC-02",
+      "courseId": "12121203",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T15",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12211204-LEC-01",
+      "courseId": "12211204",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T10",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12211204-LEC-02",
+      "courseId": "12211204",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T10",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12211204-LEC-03",
+      "courseId": "12211204",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T10",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12112205-PRA-01",
+      "courseId": "12112205",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T09",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "PHYSICS_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12122206-PRA-01",
+      "courseId": "12122206",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T15",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "GRAPHICS_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12122207-LEC-01",
+      "courseId": "12122207",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T04",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12122207-LEC-02",
+      "courseId": "12122207",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T04",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12122207-PRA-01",
+      "courseId": "12122207",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T04",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12122208-LEC-01",
+      "courseId": "12122208",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T06",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12122208-PRA-01",
+      "courseId": "12122208",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T06",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "IDEA_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12212209-PRA-01",
+      "courseId": "12212209",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T10",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-12412210-PRA-01",
+      "courseId": "12412210",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T13",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "WORKSHOP"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98441211-LEC-01",
+      "courseId": "98441211",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98441211-LEC-02",
+      "courseId": "98441211",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98462212-PRA-01",
+      "courseId": "98462212",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T13",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "MULTIPURPOSE"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98462212-PRA-02",
+      "courseId": "98462212",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T13",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "MULTIPURPOSE"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98471213-LEC-01",
+      "courseId": "98471213",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98471213-LEC-02",
+      "courseId": "98471213",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S2-98471213-LEC-03",
+      "courseId": "98471213",
+      "semester": 2,
+      "cohortId": "CE-S2-A",
+      "teacherId": "T08",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211301-LEC-01",
+      "courseId": "12211301",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T01",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211301-LEC-02",
+      "courseId": "12211301",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T01",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211301-TUT-01",
+      "courseId": "12211301",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T01",
+      "sessionType": "TUTORIAL",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211302-LEC-01",
+      "courseId": "12211302",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T10",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211302-LEC-02",
+      "courseId": "12211302",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T10",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211302-LEC-03",
+      "courseId": "12211302",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T10",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211303-LEC-01",
+      "courseId": "12211303",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T11",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211303-LEC-02",
+      "courseId": "12211303",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T11",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211303-LEC-03",
+      "courseId": "12211303",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T11",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211304-LEC-01",
+      "courseId": "12211304",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T12",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211304-LEC-02",
+      "courseId": "12211304",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T12",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12211304-LEC-03",
+      "courseId": "12211304",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T12",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 3,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12212305-PRA-01",
+      "courseId": "12212305",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T11",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12212306-PRA-01",
+      "courseId": "12212306",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T12",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "COMPUTER_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-9951137WW-LEC-01",
+      "courseId": "9951137WW",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T14",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-9951137WW-LEC-02",
+      "courseId": "9951137WW",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T14",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-98431308-LEC-01",
+      "courseId": "98431308",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T07",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-98431308-LEC-02",
+      "courseId": "98431308",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T07",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-98451309-LEC-01",
+      "courseId": "98451309",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T14",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-98451309-LEC-02",
+      "courseId": "98451309",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T14",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 2,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12812310-LEC-01",
+      "courseId": "12812310",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T06",
+      "sessionType": "LECTURE",
+      "durationSlots": 1,
+      "requiredRoomTypes": [
+        "CLASSROOM"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    },
+    {
+      "sessionId": "S3-12812310-PRA-01",
+      "courseId": "12812310",
+      "semester": 3,
+      "cohortId": "CE-S3-A",
+      "teacherId": "T06",
+      "sessionType": "PRACTICAL",
+      "durationSlots": 2,
+      "requiredRoomTypes": [
+        "IDEA_LAB"
+      ],
+      "weeklyOccurrence": 1,
+      "status": "UNSCHEDULED"
+    }
+  ],
+  "sampleTimetable": {
+    "timetableId": "DEMO-TIMETABLE-001",
+    "status": "VALID_DEMO_SCHEDULE",
+    "generatedAt": "DEMO_STATIC_FIXTURE",
+    "entries": [
+      {
+        "entryId": "E-0001",
+        "sessionId": "S1-12122110-PRA-01",
+        "courseId": "12122110",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T06",
+        "roomId": "LAB-IDEA-1",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P2",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0002",
+        "sessionId": "S1-12412111-PRA-01",
+        "courseId": "12412111",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T13",
+        "roomId": "WORKSHOP-1",
+        "dayCode": "WED",
+        "startSlotId": "WED_P3",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0003",
+        "sessionId": "S2-12122208-PRA-01",
+        "courseId": "12122208",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T06",
+        "roomId": "LAB-IDEA-1",
+        "dayCode": "MON",
+        "startSlotId": "MON_P6",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0004",
+        "sessionId": "S3-12812310-PRA-01",
+        "courseId": "12812310",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T06",
+        "roomId": "LAB-IDEA-1",
+        "dayCode": "WED",
+        "startSlotId": "WED_P3",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0005",
+        "sessionId": "S2-12412210-PRA-01",
+        "courseId": "12412210",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T13",
+        "roomId": "WORKSHOP-1",
+        "dayCode": "THU",
+        "startSlotId": "THU_P5",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0006",
+        "sessionId": "S2-98462212-PRA-01",
+        "courseId": "98462212",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T13",
+        "roomId": "MP-1",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P5",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0007",
+        "sessionId": "S2-98462212-PRA-02",
+        "courseId": "98462212",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T13",
+        "roomId": "MP-1",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P6",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0008",
+        "sessionId": "S2-12122206-PRA-01",
+        "courseId": "12122206",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T15",
+        "roomId": "LAB-GRAPHICS-1",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P6",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0009",
+        "sessionId": "S2-12112205-PRA-01",
+        "courseId": "12112205",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T09",
+        "roomId": "LAB-PHYS-1",
+        "dayCode": "THU",
+        "startSlotId": "THU_P7",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0010",
+        "sessionId": "S1-12122106-PRA-01",
+        "courseId": "12122106",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T02",
+        "roomId": "LAB-MECH-1",
+        "dayCode": "THU",
+        "startSlotId": "THU_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0011",
+        "sessionId": "S2-12122207-PRA-01",
+        "courseId": "12122207",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T04",
+        "roomId": "LAB-CSE-2",
+        "dayCode": "WED",
+        "startSlotId": "WED_P5",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0012",
+        "sessionId": "S2-12212209-PRA-01",
+        "courseId": "12212209",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T10",
+        "roomId": "LAB-IT-1",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P3",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0013",
+        "sessionId": "S1-12122108-PRA-01",
+        "courseId": "12122108",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T04",
+        "roomId": "LAB-CSE-1",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P2",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0014",
+        "sessionId": "S1-12122107-PRA-01",
+        "courseId": "12122107",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T03",
+        "roomId": "LAB-CSE-2",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P6",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0015",
+        "sessionId": "S1-12122109-PRA-01",
+        "courseId": "12122109",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T05",
+        "roomId": "LAB-CSE-1",
+        "dayCode": "MON",
+        "startSlotId": "MON_P3",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0016",
+        "sessionId": "S3-12212305-PRA-01",
+        "courseId": "12212305",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T11",
+        "roomId": "LAB-CSE-2",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P2",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0017",
+        "sessionId": "S3-12212306-PRA-01",
+        "courseId": "12212306",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T12",
+        "roomId": "LAB-IT-1",
+        "dayCode": "MON",
+        "startSlotId": "MON_P5",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0018",
+        "sessionId": "S1-98422114-PRA-01",
+        "courseId": "98422114",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T07",
+        "roomId": "C203",
+        "dayCode": "THU",
+        "startSlotId": "THU_P6",
+        "durationSlots": 2,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0019",
+        "sessionId": "S2-12122208-LEC-01",
+        "courseId": "12122208",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T06",
+        "roomId": "C102",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0020",
+        "sessionId": "S2-12122207-LEC-01",
+        "courseId": "12122207",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T04",
+        "roomId": "C103",
+        "dayCode": "MON",
+        "startSlotId": "MON_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0021",
+        "sessionId": "S2-12122207-LEC-02",
+        "courseId": "12122207",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T04",
+        "roomId": "C201",
+        "dayCode": "THU",
+        "startSlotId": "THU_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0022",
+        "sessionId": "S2-12111201-LEC-01",
+        "courseId": "12111201",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T01",
+        "roomId": "C201",
+        "dayCode": "WED",
+        "startSlotId": "WED_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0023",
+        "sessionId": "S2-12111201-LEC-02",
+        "courseId": "12111201",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T01",
+        "roomId": "C203",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0024",
+        "sessionId": "S2-12111201-TUT-01",
+        "courseId": "12111201",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T01",
+        "roomId": "C203",
+        "dayCode": "MON",
+        "startSlotId": "MON_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0025",
+        "sessionId": "S2-12111202-LEC-01",
+        "courseId": "12111202",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T09",
+        "roomId": "C102",
+        "dayCode": "WED",
+        "startSlotId": "WED_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0026",
+        "sessionId": "S2-12111202-LEC-02",
+        "courseId": "12111202",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T09",
+        "roomId": "C203",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0027",
+        "sessionId": "S2-12121203-LEC-01",
+        "courseId": "12121203",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T15",
+        "roomId": "C201",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0028",
+        "sessionId": "S2-12121203-LEC-02",
+        "courseId": "12121203",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T15",
+        "roomId": "C203",
+        "dayCode": "WED",
+        "startSlotId": "WED_P7",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0029",
+        "sessionId": "S2-12211204-LEC-01",
+        "courseId": "12211204",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T10",
+        "roomId": "C102",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0030",
+        "sessionId": "S2-12211204-LEC-02",
+        "courseId": "12211204",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T10",
+        "roomId": "C203",
+        "dayCode": "MON",
+        "startSlotId": "MON_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0031",
+        "sessionId": "S2-12211204-LEC-03",
+        "courseId": "12211204",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T10",
+        "roomId": "C203",
+        "dayCode": "THU",
+        "startSlotId": "THU_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0032",
+        "sessionId": "S2-98441211-LEC-01",
+        "courseId": "98441211",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T08",
+        "roomId": "C202",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0033",
+        "sessionId": "S2-98441211-LEC-02",
+        "courseId": "98441211",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T08",
+        "roomId": "C202",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0034",
+        "sessionId": "S2-98471213-LEC-01",
+        "courseId": "98471213",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T08",
+        "roomId": "C102",
+        "dayCode": "WED",
+        "startSlotId": "WED_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0035",
+        "sessionId": "S2-98471213-LEC-02",
+        "courseId": "98471213",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T08",
+        "roomId": "C102",
+        "dayCode": "MON",
+        "startSlotId": "MON_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0036",
+        "sessionId": "S2-98471213-LEC-03",
+        "courseId": "98471213",
+        "semester": 2,
+        "cohortId": "CE-S2-A",
+        "teacherId": "T08",
+        "roomId": "C103",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0037",
+        "sessionId": "S1-98461112-LEC-01",
+        "courseId": "98461112",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T08",
+        "roomId": "C101",
+        "dayCode": "MON",
+        "startSlotId": "MON_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0038",
+        "sessionId": "S1-98461112-LEC-02",
+        "courseId": "98461112",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T08",
+        "roomId": "C202",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0039",
+        "sessionId": "S1-12121104-LEC-01",
+        "courseId": "12121104",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T04",
+        "roomId": "C202",
+        "dayCode": "WED",
+        "startSlotId": "WED_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0040",
+        "sessionId": "S1-12121104-LEC-02",
+        "courseId": "12121104",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T04",
+        "roomId": "C102",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0041",
+        "sessionId": "S1-12122110-LEC-01",
+        "courseId": "12122110",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T06",
+        "roomId": "C101",
+        "dayCode": "THU",
+        "startSlotId": "THU_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0042",
+        "sessionId": "S1-12111101-LEC-01",
+        "courseId": "12111101",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T01",
+        "roomId": "C101",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0043",
+        "sessionId": "S1-12111101-LEC-02",
+        "courseId": "12111101",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T01",
+        "roomId": "C203",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0044",
+        "sessionId": "S1-12111101-TUT-01",
+        "courseId": "12111101",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T01",
+        "roomId": "C202",
+        "dayCode": "WED",
+        "startSlotId": "WED_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0045",
+        "sessionId": "S1-12121102-LEC-01",
+        "courseId": "12121102",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T02",
+        "roomId": "C203",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0046",
+        "sessionId": "S1-12121102-LEC-02",
+        "courseId": "12121102",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T02",
+        "roomId": "C202",
+        "dayCode": "MON",
+        "startSlotId": "MON_P6",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0047",
+        "sessionId": "S1-12121103-LEC-01",
+        "courseId": "12121103",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T03",
+        "roomId": "C203",
+        "dayCode": "MON",
+        "startSlotId": "MON_P7",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0048",
+        "sessionId": "S1-12121103-LEC-02",
+        "courseId": "12121103",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T03",
+        "roomId": "C202",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0049",
+        "sessionId": "S1-12121103-LEC-03",
+        "courseId": "12121103",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T03",
+        "roomId": "C201",
+        "dayCode": "WED",
+        "startSlotId": "WED_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0050",
+        "sessionId": "S1-12121105-LEC-01",
+        "courseId": "12121105",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T05",
+        "roomId": "C201",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0051",
+        "sessionId": "S1-12121105-LEC-02",
+        "courseId": "12121105",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T05",
+        "roomId": "C202",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0052",
+        "sessionId": "S1-12121105-LEC-03",
+        "courseId": "12121105",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T05",
+        "roomId": "C201",
+        "dayCode": "THU",
+        "startSlotId": "THU_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0053",
+        "sessionId": "S1-98421113-LEC-01",
+        "courseId": "98421113",
+        "semester": 1,
+        "cohortId": "CE-S1-A",
+        "teacherId": "T07",
+        "roomId": "C101",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0054",
+        "sessionId": "S3-12812310-LEC-01",
+        "courseId": "12812310",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T06",
+        "roomId": "C102",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0055",
+        "sessionId": "S3-12211302-LEC-01",
+        "courseId": "12211302",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T10",
+        "roomId": "C201",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0056",
+        "sessionId": "S3-12211302-LEC-02",
+        "courseId": "12211302",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T10",
+        "roomId": "C103",
+        "dayCode": "WED",
+        "startSlotId": "WED_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0057",
+        "sessionId": "S3-12211302-LEC-03",
+        "courseId": "12211302",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T10",
+        "roomId": "C102",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0058",
+        "sessionId": "S3-12211301-LEC-01",
+        "courseId": "12211301",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T01",
+        "roomId": "C201",
+        "dayCode": "THU",
+        "startSlotId": "THU_P6",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0059",
+        "sessionId": "S3-12211301-LEC-02",
+        "courseId": "12211301",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T01",
+        "roomId": "C103",
+        "dayCode": "MON",
+        "startSlotId": "MON_P7",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0060",
+        "sessionId": "S3-12211301-TUT-01",
+        "courseId": "12211301",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T01",
+        "roomId": "C201",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0061",
+        "sessionId": "S3-98431308-LEC-01",
+        "courseId": "98431308",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T07",
+        "roomId": "C103",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0062",
+        "sessionId": "S3-98431308-LEC-02",
+        "courseId": "98431308",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T07",
+        "roomId": "C103",
+        "dayCode": "THU",
+        "startSlotId": "THU_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0063",
+        "sessionId": "S3-12211303-LEC-01",
+        "courseId": "12211303",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T11",
+        "roomId": "C203",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0064",
+        "sessionId": "S3-12211303-LEC-02",
+        "courseId": "12211303",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T11",
+        "roomId": "C101",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0065",
+        "sessionId": "S3-12211303-LEC-03",
+        "courseId": "12211303",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T11",
+        "roomId": "C201",
+        "dayCode": "WED",
+        "startSlotId": "WED_P6",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0066",
+        "sessionId": "S3-12211304-LEC-01",
+        "courseId": "12211304",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T12",
+        "roomId": "C203",
+        "dayCode": "SAT",
+        "startSlotId": "SAT_P1",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0067",
+        "sessionId": "S3-12211304-LEC-02",
+        "courseId": "12211304",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T12",
+        "roomId": "C102",
+        "dayCode": "THU",
+        "startSlotId": "THU_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0068",
+        "sessionId": "S3-12211304-LEC-03",
+        "courseId": "12211304",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T12",
+        "roomId": "C102",
+        "dayCode": "MON",
+        "startSlotId": "MON_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0069",
+        "sessionId": "S3-9951137WW-LEC-01",
+        "courseId": "9951137WW",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T14",
+        "roomId": "C101",
+        "dayCode": "WED",
+        "startSlotId": "WED_P2",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0070",
+        "sessionId": "S3-9951137WW-LEC-02",
+        "courseId": "9951137WW",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T14",
+        "roomId": "C101",
+        "dayCode": "TUE",
+        "startSlotId": "TUE_P4",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0071",
+        "sessionId": "S3-98451309-LEC-01",
+        "courseId": "98451309",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T14",
+        "roomId": "C101",
+        "dayCode": "FRI",
+        "startSlotId": "FRI_P5",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      },
+      {
+        "entryId": "E-0072",
+        "sessionId": "S3-98451309-LEC-02",
+        "courseId": "98451309",
+        "semester": 3,
+        "cohortId": "CE-S3-A",
+        "teacherId": "T14",
+        "roomId": "C102",
+        "dayCode": "THU",
+        "startSlotId": "THU_P3",
+        "durationSlots": 1,
+        "status": "SCHEDULED",
+        "changeReason": null
+      }
+    ],
+    "metrics": {
+      "scheduledSessionCount": 72,
+      "unscheduledSessionCount": 0,
+      "movedEntryCount": 0,
+      "hardConflictCount": 0,
+      "preservedEntryPercent": null
+    },
+    "validation": {
+      "valid": true,
+      "hardConflictCount": 0,
+      "conflicts": []
+    },
+    "warnings": [
+      "This is a generated demo fixture based on synthetic faculty assignments and room inventory, not an official college timetable."
+    ]
+  }
+}

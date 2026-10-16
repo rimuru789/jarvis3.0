@@ -1,0 +1,1010 @@
+[
+  {
+    "sessionId": "S1-12111101-LEC-01",
+    "courseId": "12111101",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T01",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12111101-LEC-02",
+    "courseId": "12111101",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T01",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12111101-TUT-01",
+    "courseId": "12111101",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T01",
+    "sessionType": "TUTORIAL",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121102-LEC-01",
+    "courseId": "12121102",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T02",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121102-LEC-02",
+    "courseId": "12121102",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T02",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121103-LEC-01",
+    "courseId": "12121103",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T03",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121103-LEC-02",
+    "courseId": "12121103",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T03",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121103-LEC-03",
+    "courseId": "12121103",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T03",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121104-LEC-01",
+    "courseId": "12121104",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T04",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121104-LEC-02",
+    "courseId": "12121104",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T04",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121105-LEC-01",
+    "courseId": "12121105",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T05",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121105-LEC-02",
+    "courseId": "12121105",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T05",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12121105-LEC-03",
+    "courseId": "12121105",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T05",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12122106-PRA-01",
+    "courseId": "12122106",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T02",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "MECHANICS_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12122107-PRA-01",
+    "courseId": "12122107",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T03",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12122108-PRA-01",
+    "courseId": "12122108",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T04",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12122109-PRA-01",
+    "courseId": "12122109",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T05",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12122110-LEC-01",
+    "courseId": "12122110",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T06",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12122110-PRA-01",
+    "courseId": "12122110",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T06",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "IDEA_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-12412111-PRA-01",
+    "courseId": "12412111",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T13",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "WORKSHOP"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-98461112-LEC-01",
+    "courseId": "98461112",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-98461112-LEC-02",
+    "courseId": "98461112",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-98421113-LEC-01",
+    "courseId": "98421113",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T07",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S1-98422114-PRA-01",
+    "courseId": "98422114",
+    "semester": 1,
+    "cohortId": "CE-S1-A",
+    "teacherId": "T07",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12111201-LEC-01",
+    "courseId": "12111201",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T01",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12111201-LEC-02",
+    "courseId": "12111201",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T01",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12111201-TUT-01",
+    "courseId": "12111201",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T01",
+    "sessionType": "TUTORIAL",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12111202-LEC-01",
+    "courseId": "12111202",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T09",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12111202-LEC-02",
+    "courseId": "12111202",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T09",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12121203-LEC-01",
+    "courseId": "12121203",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T15",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12121203-LEC-02",
+    "courseId": "12121203",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T15",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12211204-LEC-01",
+    "courseId": "12211204",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T10",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12211204-LEC-02",
+    "courseId": "12211204",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T10",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12211204-LEC-03",
+    "courseId": "12211204",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T10",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12112205-PRA-01",
+    "courseId": "12112205",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T09",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "PHYSICS_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12122206-PRA-01",
+    "courseId": "12122206",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T15",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "GRAPHICS_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12122207-LEC-01",
+    "courseId": "12122207",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T04",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12122207-LEC-02",
+    "courseId": "12122207",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T04",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12122207-PRA-01",
+    "courseId": "12122207",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T04",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12122208-LEC-01",
+    "courseId": "12122208",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T06",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12122208-PRA-01",
+    "courseId": "12122208",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T06",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "IDEA_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12212209-PRA-01",
+    "courseId": "12212209",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T10",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-12412210-PRA-01",
+    "courseId": "12412210",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T13",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "WORKSHOP"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98441211-LEC-01",
+    "courseId": "98441211",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98441211-LEC-02",
+    "courseId": "98441211",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98462212-PRA-01",
+    "courseId": "98462212",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T13",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "MULTIPURPOSE"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98462212-PRA-02",
+    "courseId": "98462212",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T13",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "MULTIPURPOSE"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98471213-LEC-01",
+    "courseId": "98471213",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98471213-LEC-02",
+    "courseId": "98471213",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S2-98471213-LEC-03",
+    "courseId": "98471213",
+    "semester": 2,
+    "cohortId": "CE-S2-A",
+    "teacherId": "T08",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211301-LEC-01",
+    "courseId": "12211301",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T01",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211301-LEC-02",
+    "courseId": "12211301",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T01",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211301-TUT-01",
+    "courseId": "12211301",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T01",
+    "sessionType": "TUTORIAL",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211302-LEC-01",
+    "courseId": "12211302",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T10",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211302-LEC-02",
+    "courseId": "12211302",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T10",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211302-LEC-03",
+    "courseId": "12211302",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T10",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211303-LEC-01",
+    "courseId": "12211303",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T11",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211303-LEC-02",
+    "courseId": "12211303",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T11",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211303-LEC-03",
+    "courseId": "12211303",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T11",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211304-LEC-01",
+    "courseId": "12211304",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T12",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211304-LEC-02",
+    "courseId": "12211304",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T12",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12211304-LEC-03",
+    "courseId": "12211304",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T12",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 3,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12212305-PRA-01",
+    "courseId": "12212305",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T11",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12212306-PRA-01",
+    "courseId": "12212306",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T12",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "COMPUTER_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-9951137WW-LEC-01",
+    "courseId": "9951137WW",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T14",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-9951137WW-LEC-02",
+    "courseId": "9951137WW",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T14",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-98431308-LEC-01",
+    "courseId": "98431308",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T07",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-98431308-LEC-02",
+    "courseId": "98431308",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T07",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-98451309-LEC-01",
+    "courseId": "98451309",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T14",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-98451309-LEC-02",
+    "courseId": "98451309",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T14",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 2,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12812310-LEC-01",
+    "courseId": "12812310",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T06",
+    "sessionType": "LECTURE",
+    "durationSlots": 1,
+    "requiredRoomTypes": [
+      "CLASSROOM"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  },
+  {
+    "sessionId": "S3-12812310-PRA-01",
+    "courseId": "12812310",
+    "semester": 3,
+    "cohortId": "CE-S3-A",
+    "teacherId": "T06",
+    "sessionType": "PRACTICAL",
+    "durationSlots": 2,
+    "requiredRoomTypes": [
+      "IDEA_LAB"
+    ],
+    "weeklyOccurrence": 1,
+    "status": "UNSCHEDULED"
+  }
+]

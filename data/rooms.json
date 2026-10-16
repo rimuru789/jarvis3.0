@@ -1,0 +1,92 @@
+[
+  {
+    "roomId": "C101",
+    "displayName": "Classroom 101",
+    "roomType": "CLASSROOM",
+    "capacity": 60
+  },
+  {
+    "roomId": "C102",
+    "displayName": "Classroom 102",
+    "roomType": "CLASSROOM",
+    "capacity": 60
+  },
+  {
+    "roomId": "C103",
+    "displayName": "Classroom 103",
+    "roomType": "CLASSROOM",
+    "capacity": 60
+  },
+  {
+    "roomId": "C201",
+    "displayName": "Classroom 201",
+    "roomType": "CLASSROOM",
+    "capacity": 60
+  },
+  {
+    "roomId": "C202",
+    "displayName": "Classroom 202",
+    "roomType": "CLASSROOM",
+    "capacity": 60
+  },
+  {
+    "roomId": "C203",
+    "displayName": "Classroom 203",
+    "roomType": "CLASSROOM",
+    "capacity": 60
+  },
+  {
+    "roomId": "LAB-CSE-1",
+    "displayName": "Computer Lab 1",
+    "roomType": "COMPUTER_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "LAB-CSE-2",
+    "displayName": "Computer Lab 2",
+    "roomType": "COMPUTER_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "LAB-IT-1",
+    "displayName": "IT Lab",
+    "roomType": "COMPUTER_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "LAB-MECH-1",
+    "displayName": "Mechanics Lab",
+    "roomType": "MECHANICS_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "LAB-PHYS-1",
+    "displayName": "Physics Lab",
+    "roomType": "PHYSICS_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "LAB-GRAPHICS-1",
+    "displayName": "Graphics Lab",
+    "roomType": "GRAPHICS_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "LAB-IDEA-1",
+    "displayName": "IDEA Lab",
+    "roomType": "IDEA_LAB",
+    "capacity": 35
+  },
+  {
+    "roomId": "WORKSHOP-1",
+    "displayName": "Workshop",
+    "roomType": "WORKSHOP",
+    "capacity": 35
+  },
+  {
+    "roomId": "MP-1",
+    "displayName": "Multipurpose Room",
+    "roomType": "MULTIPURPOSE",
+    "capacity": 80
+  }
+]
