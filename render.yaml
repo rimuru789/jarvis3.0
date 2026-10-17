@@ -1,0 +1,28 @@
+services:
+  # ─── SlotShield Backend API (Node + Express) ──────────────────────────
+  - type: web
+    name: slotshield-server
+    runtime: node
+    plan: free
+    buildCommand: cd server && npm install && npm run build
+    startCommand: cd server && node dist/server/src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: https://slotshield-client.onrender.com
+
+  # ─── SlotShield Frontend (Vite + React Static Site) ───────────────────
+  - type: web
+    name: slotshield-client
+    runtime: static
+    plan: free
+    buildCommand: cd client && npm install && npm run build
+    publishDir: client/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://slotshield-server.onrender.com

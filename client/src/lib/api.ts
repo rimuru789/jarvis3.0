@@ -57,7 +57,27 @@ export type {
   SessionRequirement,
 };
 
-const API_BASE = '/api/v1';
+function getApiBaseUrl(): string {
+  const envUrl = (
+    (import.meta as any).env?.VITE_API_BASE_URL ||
+    (import.meta as any).env?.VITE_API_URL ||
+    ''
+  ).trim();
+
+  if (!envUrl) {
+    return '/api/v1';
+  }
+
+  // Strip trailing slashes
+  const cleanUrl = envUrl.replace(/\/+$/, '');
+  // If already ends with /api/v1, use as-is; otherwise append /api/v1
+  if (cleanUrl.endsWith('/api/v1')) {
+    return cleanUrl;
+  }
+  return `${cleanUrl}/api/v1`;
+}
+
+const API_BASE = getApiBaseUrl();
 
 export interface TimetableListItem {
   timetableId: string;
