@@ -3,7 +3,6 @@ services:
   - type: web
     name: slotshield-server
     runtime: node
-    plan: free
     buildCommand: cd server && npm install && npm run build
     startCommand: cd server && node dist/server/src/index.js
     envVars:
