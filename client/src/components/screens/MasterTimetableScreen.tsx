@@ -123,17 +123,17 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
   return (
     <div className="flex flex-col w-full pb-12">
       {/* Utility Control Ribbon */}
-      <div className="w-full bg-[#141b2b] px-4 md:px-6 py-2.5 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 border-b border-[#232a3a]">
+      <div className="w-full bg-[#FFFFFF] px-4 md:px-6 py-2.5 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 border-b border-[#DCE5D5]">
         <div className="flex items-center gap-3 flex-wrap">
           {/* Semester Selector Tabs */}
-          <div className="flex items-center gap-1 bg-[#070e1d] p-1 rounded border border-[#232a3a]">
+          <div className="flex items-center gap-1 bg-[#F7F4E8] p-1 rounded border border-[#DCE5D5]">
             <button
               type="button"
               onClick={() => setSelectedSemester('ALL')}
               className={`font-mono text-[10px] px-3 py-1 rounded transition-colors cursor-pointer ${
                 selectedSemester === 'ALL'
-                  ? 'bg-[#232a3a] text-[#4edea3] font-semibold'
-                  : 'text-[#bbcabf] hover:text-[#dce2f7]'
+                  ? 'bg-[#5B8C51] text-[#FFFFFF] font-semibold shadow-xs'
+                  : 'text-[#526B57] hover:text-[#294635]'
               }`}
             >
               ALL SEMESTERS
@@ -143,8 +143,8 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
               onClick={() => setSelectedSemester(1)}
               className={`font-mono text-[10px] px-3 py-1 rounded transition-colors cursor-pointer ${
                 selectedSemester === 1
-                  ? 'bg-[#232a3a] text-[#4edea3] font-semibold'
-                  : 'text-[#bbcabf] hover:text-[#dce2f7]'
+                  ? 'bg-[#5B8C51] text-[#FFFFFF] font-semibold shadow-xs'
+                  : 'text-[#526B57] hover:text-[#294635]'
               }`}
             >
               SEM I
@@ -154,8 +154,8 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
               onClick={() => setSelectedSemester(2)}
               className={`font-mono text-[10px] px-3 py-1 rounded transition-colors cursor-pointer ${
                 selectedSemester === 2
-                  ? 'bg-[#232a3a] text-[#4edea3] font-semibold'
-                  : 'text-[#bbcabf] hover:text-[#dce2f7]'
+                  ? 'bg-[#5B8C51] text-[#FFFFFF] font-semibold shadow-xs'
+                  : 'text-[#526B57] hover:text-[#294635]'
               }`}
             >
               SEM II
@@ -165,18 +165,18 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
               onClick={() => setSelectedSemester(3)}
               className={`font-mono text-[10px] px-3 py-1 rounded transition-colors cursor-pointer ${
                 selectedSemester === 3
-                  ? 'bg-[#232a3a] text-[#4edea3] font-semibold'
-                  : 'text-[#bbcabf] hover:text-[#dce2f7]'
+                  ? 'bg-[#5B8C51] text-[#FFFFFF] font-semibold shadow-xs'
+                  : 'text-[#526B57] hover:text-[#294635]'
               }`}
             >
               SEM III
             </button>
           </div>
 
-          <div className="hidden sm:block h-4 w-px bg-[#2e3545]" />
+          <div className="hidden sm:block h-4 w-px bg-[#DCE5D5]" />
 
-          <div className="flex items-center gap-1.5 font-mono text-[11px] text-[#bbcabf]">
-            <Icon name="domain" className="text-[#86948a] text-[16px]" />
+          <div className="flex items-center gap-1.5 font-mono text-[11px] text-[#526B57]">
+            <Icon name="domain" className="text-[#718B68] text-[16px]" />
             <span>COMP-ENG WING A / BLDG-4</span>
           </div>
         </div>
@@ -184,18 +184,18 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
         {/* Right Status & Actions */}
         <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end flex-wrap">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[11px] text-[#bbcabf]">
+            <span className="font-mono text-[11px] text-[#526B57]">
               Active Term: 2026–2027 ODD
             </span>
-            <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-[#10b981]/15 text-[#4edea3] border border-[#10b981]/30 font-semibold">
+            <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-[#EDF5E8] text-[#294635] border border-[#DCE5D5] font-semibold">
               {timetable.status || 'COMMITTED'}
             </span>
             {timetable.validation && (
               <span
                 className={`font-mono text-[10px] px-2 py-0.5 rounded font-semibold border ${
                   timetable.validation.valid
-                    ? 'bg-[#10b981]/15 text-[#4edea3] border-[#10b981]/30'
-                    : 'bg-[#93000a]/30 text-[#ffb4ab] border-[#ffb4ab]/30'
+                    ? 'bg-[#EDF5E8] text-[#294635] border-[#DCE5D5]'
+                    : 'bg-[#F8DFDA] text-[#762D27] border-[#E8A29A]'
                 }`}
               >
                 {timetable.validation.valid
@@ -212,7 +212,7 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
                 onClick={onValidate}
                 disabled={isValidating}
                 title="Re-run hard constraint verification against the active schedule"
-                className="px-2.5 py-1 rounded bg-[#191f2f] hover:bg-[#232a3a] text-[#adc6ff] font-mono text-[11px] flex items-center gap-1 border border-[#3c4a42] transition-colors cursor-pointer disabled:opacity-50"
+                className="px-2.5 py-1 rounded bg-[#F7F4E8] hover:bg-[#EDF5E8] text-[#294635] font-mono text-[11px] flex items-center gap-1 border border-[#DCE5D5] transition-colors cursor-pointer disabled:opacity-50"
               >
                 <Icon
                   name={isValidating ? 'sync' : 'fact_check'}
@@ -225,7 +225,7 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
             <button
               type="button"
               onClick={onOpenGenerate}
-              className="px-2.5 py-1 rounded bg-[#232a3a] hover:bg-[#2e3545] text-[#4edea3] font-mono text-[11px] flex items-center gap-1 border border-[#3c4a42] transition-colors cursor-pointer"
+              className="px-2.5 py-1 rounded bg-[#EDF5E8] hover:bg-[#DDE8D2] text-[#294635] font-mono text-[11px] flex items-center gap-1 border border-[#DCE5D5] transition-colors cursor-pointer"
             >
               <Icon name="tune" className="text-[14px]" />
               <span>Generate</span>
@@ -234,7 +234,7 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
             <button
               type="button"
               onClick={onOpenDisruption}
-              className="px-2.5 py-1 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-mono text-[11px] font-semibold flex items-center gap-1 transition-colors cursor-pointer"
+              className="px-2.5 py-1 rounded bg-[#5B8C51] hover:bg-[#4B7443] text-[#FFFFFF] font-mono text-[11px] font-semibold flex items-center gap-1 transition-colors cursor-pointer"
             >
               <Icon name="terminal" className="text-[14px]" />
               <span>Simulate Disruption</span>
@@ -249,11 +249,11 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
           {/* Grid Layout: Time column + 6 day columns */}
           <div className="grid grid-cols-7 gap-2">
             {/* Time labels column header */}
-            <div className="col-span-1 bg-[#141b2b] p-2.5 rounded border border-[#232a3a] flex flex-col justify-center text-center">
-              <span className="font-mono text-[10px] text-[#bbcabf] font-semibold uppercase">
+            <div className="col-span-1 bg-[#FFFFFF] p-2.5 rounded border border-[#DCE5D5] flex flex-col justify-center text-center shadow-xs">
+              <span className="font-mono text-[10px] text-[#526B57] font-semibold uppercase">
                 TIMETABLE GRID
               </span>
-              <span className="text-[9px] text-[#86948a] font-mono">
+              <span className="text-[9px] text-[#718B68] font-mono">
                 {filteredEntries.length} Sessions Visible
               </span>
             </div>
@@ -262,12 +262,12 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
             {days.map((day) => (
               <div
                 key={day.code}
-                className="col-span-1 bg-[#141b2b] p-2.5 rounded border border-[#232a3a] flex flex-col items-center justify-center text-center"
+                className="col-span-1 bg-[#FFFFFF] p-2.5 rounded border border-[#DCE5D5] flex flex-col items-center justify-center text-center shadow-xs"
               >
-                <span className="font-mono text-[12px] font-bold text-[#dce2f7]">
+                <span className="font-mono text-[12px] font-bold text-[#294635]">
                   {day.name.toUpperCase()}
                 </span>
-                <span className="text-[10px] font-mono text-[#bbcabf]">
+                <span className="text-[10px] font-mono text-[#526B57]">
                   {day.code}
                 </span>
               </div>
@@ -283,14 +283,14 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
             return (
               <div key={period.periodId} className="grid grid-cols-7 gap-2">
                 {/* Period Time Column */}
-                <div className="col-span-1 bg-[#141b2b] p-2 rounded border border-[#232a3a] flex flex-col items-center justify-center text-center">
-                  <span className="font-mono text-[11px] font-bold text-[#dce2f7]">
+                <div className="col-span-1 bg-[#FFFFFF] p-2 rounded border border-[#DCE5D5] flex flex-col items-center justify-center text-center shadow-xs">
+                  <span className="font-mono text-[11px] font-bold text-[#294635]">
                     {period.startTime}
                   </span>
-                  <span className="font-mono text-[9px] text-[#86948a]">
+                  <span className="font-mono text-[9px] text-[#526B57]">
                     to {period.endTime}
                   </span>
-                  <span className="text-[9px] font-mono text-[#4edea3] mt-0.5">
+                  <span className="text-[9px] font-mono text-[#5B8C51] font-semibold mt-0.5">
                     {period.periodId}
                   </span>
                 </div>
@@ -304,10 +304,10 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
                     return (
                       <div
                         key={day.code}
-                        className="col-span-1 min-h-[76px] rounded bg-[#191f2f]/60 border border-dashed border-[#3c4a42] p-1 flex items-center justify-center text-center text-[#86948a] font-mono text-[10px]"
+                        className="col-span-1 min-h-[76px] rounded bg-[#F7F4E8] border border-dashed border-[#DCE5D5] p-1 flex items-center justify-center text-center text-[#526B57] font-mono text-[10px]"
                         title="Mandatory hard constraint: no academic session may overlap"
                       >
-                        <div className="flex items-center gap-1 text-[#86948a]">
+                        <div className="flex items-center gap-1 text-[#526B57]">
                           <Icon name="restaurant" className="text-[14px]" />
                           <span>LUNCH RECESS</span>
                         </div>
@@ -319,7 +319,7 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
                     return (
                       <div
                         key={day.code}
-                        className="col-span-1 min-h-[76px] rounded bg-[#141b2b]/40 border border-[#232a3a]/60 p-2 flex items-center justify-center text-center text-[#3c4a42] font-mono text-[10px]"
+                        className="col-span-1 min-h-[76px] rounded bg-[#F7F4E8]/40 border border-[#DCE5D5]/60 p-2 flex items-center justify-center text-center text-[#8FA58A] font-mono text-[10px]"
                       >
                         <span>Open</span>
                       </div>
@@ -346,38 +346,38 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
                             onClick={() => setSelectedEntry(entry)}
                             className={`min-h-[76px] rounded p-2 flex flex-col justify-between cursor-pointer transition-all hover:scale-[1.02] border ${
                               isChanged
-                                ? 'bg-[#0566d9]/20 border-[#adc6ff] shadow-md ring-1 ring-[#adc6ff]/50'
+                                ? 'bg-[#F3D98B]/30 border-[#B58B48] shadow-xs ring-1 ring-[#B58B48]/50'
                                 : isLecture
-                                ? 'bg-[#191f2f] border-[#0566d9]/40 hover:border-[#adc6ff]'
+                                ? 'bg-[#FFFFFF] border-[#DCE5D5] hover:border-[#5B8C51] shadow-2xs'
                                 : isLab
-                                ? 'bg-[#191f2f] border-[#b090ff]/40 hover:border-[#d0bcff]'
-                                : 'bg-[#191f2f] border-[#10b981]/40 hover:border-[#4edea3]'
+                                ? 'bg-[#F4D6BD]/20 border-[#F4D6BD] hover:border-[#B58B48] shadow-2xs'
+                                : 'bg-[#EDF5E8] border-[#DCE5D5] hover:border-[#5B8C51] shadow-2xs'
                             }`}
                           >
                             <div className="flex items-center justify-between gap-1">
                               <span
                                 className={`font-mono text-[11px] font-bold truncate ${
                                   isLecture
-                                    ? 'text-[#adc6ff]'
+                                    ? 'text-[#294635]'
                                     : isLab
-                                    ? 'text-[#d0bcff]'
-                                    : 'text-[#4edea3]'
+                                    ? 'text-[#762D27]'
+                                    : 'text-[#5B8C51]'
                                 }`}
                               >
                                 {course?.courseCode || entry.courseId} [{room?.displayName || entry.roomId}]
                               </span>
-                              <span className="text-[9px] font-mono text-[#bbcabf] uppercase shrink-0">
+                              <span className="text-[9px] font-mono text-[#526B57] uppercase shrink-0">
                                 {sessionType.substring(0, 3)}
                               </span>
                             </div>
 
                             <div className="flex flex-col mt-1">
-                              <span className="text-[11px] text-[#dce2f7] truncate">
+                              <span className="text-[11px] text-[#294635] font-medium truncate">
                                 {course?.courseName || entry.courseId}
                               </span>
-                              <div className="flex items-center justify-between text-[10px] text-[#bbcabf] mt-0.5">
+                              <div className="flex items-center justify-between text-[10px] text-[#526B57] mt-0.5">
                                 <span className="truncate">{teacherName}</span>
-                                <span className="font-mono text-[9px] px-1 rounded bg-[#070e1d] text-[#4edea3]">
+                                <span className="font-mono text-[9px] px-1 rounded bg-[#EDF5E8] text-[#5B8C51] font-semibold border border-[#DCE5D5]">
                                   S{entry.semester}
                                 </span>
                               </div>
@@ -396,66 +396,66 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
 
       {/* Slot Inspection Drawer / Modal */}
       {selectedEntry && (
-        <div className="fixed inset-0 z-50 bg-[#070e1d]/75 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="w-full max-w-lg bg-[#141b2b] border border-[#232a3a] rounded-lg shadow-2xl p-5 flex flex-col gap-4">
-            <div className="flex items-center justify-between pb-3 border-b border-[#232a3a]">
+        <div className="fixed inset-0 z-50 bg-[#294635]/40 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="w-full max-w-lg bg-[#FFFFFF] border border-[#DCE5D5] rounded-lg shadow-xl p-5 flex flex-col gap-4">
+            <div className="flex items-center justify-between pb-3 border-b border-[#DCE5D5]">
               <div className="flex items-center gap-2">
-                <span className="font-mono text-[14px] font-bold text-[#4edea3]">
+                <span className="font-mono text-[14px] font-bold text-[#5B8C51]">
                   {courseMap.get(selectedEntry.courseId)?.courseCode || selectedEntry.courseId}
                 </span>
-                <span className="text-[14px] font-semibold text-[#dce2f7]">
+                <span className="text-[14px] font-semibold text-[#294635]">
                   {courseMap.get(selectedEntry.courseId)?.courseName || 'Curricular Session'}
                 </span>
               </div>
               <button
                 type="button"
                 onClick={() => setSelectedEntry(null)}
-                className="w-7 h-7 rounded bg-[#232a3a] text-[#bbcabf] hover:text-[#dce2f7] flex items-center justify-center cursor-pointer"
+                className="w-7 h-7 rounded bg-[#EDF5E8] text-[#526B57] hover:text-[#294635] flex items-center justify-center cursor-pointer"
               >
                 <Icon name="close" className="text-[16px]" />
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-3 text-[12px] font-mono">
-              <div className="bg-[#191f2f] p-2.5 rounded border border-[#232a3a]">
-                <span className="text-[10px] text-[#bbcabf] uppercase block">Scheduled Window</span>
-                <span className="text-[#dce2f7] font-semibold">
+              <div className="bg-[#F7F4E8] p-2.5 rounded border border-[#DCE5D5]">
+                <span className="text-[10px] text-[#526B57] uppercase block">Scheduled Window</span>
+                <span className="text-[#294635] font-semibold">
                   {selectedEntry.dayCode} • Slot {selectedEntry.startSlotId}
                 </span>
               </div>
-              <div className="bg-[#191f2f] p-2.5 rounded border border-[#232a3a]">
-                <span className="text-[10px] text-[#bbcabf] uppercase block">Room Allocation</span>
-                <span className="text-[#adc6ff] font-semibold">
+              <div className="bg-[#F7F4E8] p-2.5 rounded border border-[#DCE5D5]">
+                <span className="text-[10px] text-[#526B57] uppercase block">Room Allocation</span>
+                <span className="text-[#294635] font-semibold">
                   {roomMap.get(selectedEntry.roomId)?.displayName || selectedEntry.roomId}{' '}
                   (Cap {roomMap.get(selectedEntry.roomId)?.capacity || 60})
                 </span>
               </div>
-              <div className="bg-[#191f2f] p-2.5 rounded border border-[#232a3a]">
-                <span className="text-[10px] text-[#bbcabf] uppercase block">Faculty Lead</span>
-                <span className="text-[#dce2f7] font-semibold">
+              <div className="bg-[#F7F4E8] p-2.5 rounded border border-[#DCE5D5]">
+                <span className="text-[10px] text-[#526B57] uppercase block">Faculty Lead</span>
+                <span className="text-[#294635] font-semibold">
                   {teacherMap.get(selectedEntry.teacherId)?.displayName || selectedEntry.teacherId}
                 </span>
               </div>
-              <div className="bg-[#191f2f] p-2.5 rounded border border-[#232a3a]">
-                <span className="text-[10px] text-[#bbcabf] uppercase block">Target Cohort</span>
-                <span className="text-[#d0bcff] font-semibold">
+              <div className="bg-[#F7F4E8] p-2.5 rounded border border-[#DCE5D5]">
+                <span className="text-[10px] text-[#526B57] uppercase block">Target Cohort</span>
+                <span className="text-[#294635] font-semibold">
                   {selectedEntry.cohortId} (Semester {selectedEntry.semester})
                 </span>
               </div>
             </div>
 
             {selectedEntry.changeReason && (
-              <div className="p-3 rounded bg-[#0566d9]/15 border border-[#0566d9]/40 flex items-start gap-2 text-[11px] text-[#dce2f7]">
-                <Icon name="difference" className="text-[#adc6ff] text-[16px] shrink-0 mt-0.5" />
+              <div className="p-3 rounded bg-[#F3D98B]/30 border border-[#F3D98B] flex items-start gap-2 text-[11px] text-[#294635]">
+                <Icon name="difference" className="text-[#B58B48] text-[16px] shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-[#adc6ff] block">Relocation Reason:</span>
+                  <span className="font-semibold text-[#B58B48] block">Relocation Reason:</span>
                   <span>{selectedEntry.changeReason}</span>
                 </div>
               </div>
             )}
 
-            <div className="p-3 rounded bg-[#070e1d] border border-[#232a3a] flex items-center gap-2 text-[11px] text-[#bbcabf]">
-              <Icon name="verified" className="text-[#4edea3] text-[16px]" />
+            <div className="p-3 rounded bg-[#EDF5E8] border border-[#DCE5D5] flex items-center gap-2 text-[11px] text-[#526B57]">
+              <Icon name="verified" className="text-[#5B8C51] text-[16px]" />
               <span>Lunch non-overlap constraint verified: Interval {lunchInterval.start} - {lunchInterval.end} clear.</span>
             </div>
 
@@ -463,7 +463,7 @@ export const MasterTimetableScreen: React.FC<MasterTimetableScreenProps> = ({
               <button
                 type="button"
                 onClick={() => setSelectedEntry(null)}
-                className="px-4 py-1.5 rounded bg-[#232a3a] hover:bg-[#2e3545] text-[#dce2f7] text-[12px] cursor-pointer"
+                className="px-4 py-1.5 rounded bg-[#EDF5E8] hover:bg-[#DDE8D2] text-[#294635] border border-[#DCE5D5] text-[12px] cursor-pointer"
               >
                 Close
               </button>

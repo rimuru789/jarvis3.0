@@ -119,13 +119,13 @@ export function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#0c1322] text-[#dce2f7] flex flex-col items-center justify-center p-4">
+      <div className="min-h-screen bg-[#FFFDF5] text-[#294635] flex flex-col items-center justify-center p-4">
         <div className="flex flex-col items-center gap-3">
-          <Icon name="sync" className="text-[32px] text-[#4edea3] animate-spin" />
-          <h2 className="text-[16px] font-mono font-semibold text-[#dce2f7]">
+          <Icon name="sync" className="text-[32px] text-[#5B8C51] animate-spin" />
+          <h2 className="text-[16px] font-mono font-semibold text-[#294635]">
             Initializing SlotShield Academic Engine...
           </h2>
-          <p className="text-[12px] text-[#bbcabf] font-mono">
+          <p className="text-[12px] text-[#526B57] font-mono">
             Loading curriculum, faculty directory, and room constraints
           </p>
         </div>
@@ -135,23 +135,23 @@ export function App() {
 
   if (loadError || !bootstrapData || !currentTimetable) {
     return (
-      <div className="min-h-screen bg-[#0c1322] text-[#dce2f7] flex flex-col items-center justify-center p-4">
-        <div className="w-full max-w-md bg-[#141b2b] border border-[#232a3a] p-6 rounded-xl flex flex-col items-center text-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-[#93000a]/30 border border-[#ffb4ab]/30 flex items-center justify-center text-[#ffb4ab]">
+      <div className="min-h-screen bg-[#FFFDF5] text-[#294635] flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-md bg-[#FFFFFF] border border-[#DCE5D5] p-6 rounded-xl shadow-md flex flex-col items-center text-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-[#F8DFDA] border border-[#B94D43]/30 flex items-center justify-center text-[#B94D43]">
             <Icon name="error" className="text-[24px]" />
           </div>
           <div>
-            <h2 className="text-[16px] font-semibold text-[#dce2f7]">
+            <h2 className="text-[16px] font-semibold text-[#294635]">
               Unable to Load Backend Context
             </h2>
-            <p className="text-[12px] text-[#bbcabf] mt-1 font-mono">
+            <p className="text-[12px] text-[#526B57] mt-1 font-mono">
               {loadError || 'Server returned empty payload.'}
             </p>
           </div>
           <button
             type="button"
             onClick={loadData}
-            className="px-4 py-2 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-semibold text-[13px] font-mono transition-colors cursor-pointer"
+            className="px-4 py-2 rounded bg-[#5B8C51] hover:bg-[#4B7443] text-[#FFFFFF] font-semibold text-[13px] font-mono transition-colors cursor-pointer"
           >
             Retry Connection
           </button>
@@ -161,7 +161,7 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0c1322] text-[#dce2f7] flex flex-col selection:bg-[#10b981] selection:text-[#00422b]">
+    <div className="min-h-screen bg-[#FFFDF5] text-[#294635] flex flex-col selection:bg-[#DDE8D2] selection:text-[#294635]">
       {/* Top Header */}
       <Header
         activeScreen={activeScreen}
@@ -223,20 +223,20 @@ export function App() {
               onApplyRepairSuccess={handleApplyRepairSuccess}
             />
           ) : (
-            <div className="w-full max-w-2xl mx-auto my-12 p-8 bg-[#141b2b] border border-[#232a3a] rounded-xl flex flex-col items-center text-center gap-4">
-              <Icon name="info" className="text-[32px] text-[#adc6ff]" />
+            <div className="w-full max-w-2xl mx-auto my-12 p-8 bg-[#FFFFFF] border border-[#DCE5D5] rounded-xl shadow-sm flex flex-col items-center text-center gap-4">
+              <Icon name="info" className="text-[32px] text-[#5B8C51]" />
               <div>
-                <h3 className="text-[16px] font-semibold text-[#dce2f7]">
+                <h3 className="text-[16px] font-semibold text-[#294635]">
                   No Active Repair Proposal Staged
                 </h3>
-                <p className="text-[12px] text-[#bbcabf] mt-1 font-mono">
+                <p className="text-[12px] text-[#526B57] mt-1 font-mono">
                   Configure a faculty outage or room closure in the Disruption Simulator to evaluate impact and generate a self-healing repair proposal.
                 </p>
               </div>
               <button
                 type="button"
                 onClick={() => setActiveScreen('disruption-simulator')}
-                className="px-4 py-2 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-mono text-[12px] font-semibold transition-colors cursor-pointer"
+                className="px-4 py-2 rounded bg-[#5B8C51] hover:bg-[#4B7443] text-[#FFFFFF] font-mono text-[12px] font-semibold transition-colors cursor-pointer"
               >
                 Go to Disruption Simulator
               </button>

@@ -170,23 +170,23 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
   return (
     <div className="w-full flex justify-center py-6 px-4 md:px-6">
       {/* Modal / Generation Container */}
-      <div className="w-full max-w-5xl bg-[#141b2b] border border-[#232a3a] rounded-xl shadow-2xl flex flex-col overflow-hidden">
+      <div className="w-full max-w-5xl bg-[#FFFFFF] border border-[#DCE5D5] rounded-xl shadow-xl flex flex-col overflow-hidden">
         {/* Modal Header */}
-        <div className="px-6 py-4 bg-[#191f2f] border-b border-[#232a3a] flex items-start justify-between">
+        <div className="px-6 py-4 bg-[#F7F4E8] border-b border-[#DCE5D5] flex items-start justify-between">
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded bg-[#10b981]/15 border border-[#10b981]/30 flex items-center justify-center shrink-0 mt-0.5 text-[#4edea3]">
+            <div className="w-10 h-10 rounded bg-[#EDF5E8] border border-[#B7D8A9] flex items-center justify-center shrink-0 mt-0.5 text-[#5B8C51]">
               <Icon name="terminal" className="text-[24px]" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <h2 className="text-[20px] font-semibold text-[#dce2f7] tracking-tight">
+                <h2 className="text-[20px] font-semibold text-[#294635] tracking-tight">
                   Generate Academic Timetable
                 </h2>
-                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#2e3545] text-[#6ffbbe] font-semibold tracking-wider">
+                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#DDE8D2] text-[#294635] font-semibold tracking-wider border border-[#DCE5D5]">
                   Deterministic Heuristic Solver
                 </span>
               </div>
-              <p className="text-[13px] text-[#bbcabf] mt-0.5">
+              <p className="text-[13px] text-[#526B57] mt-0.5">
                 Constraint satisfaction scheduler enforcing curriculum demand, teacher availability, room capacity, and hard lunch intervals.
               </p>
             </div>
@@ -195,7 +195,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
             <button
               type="button"
               onClick={onClose}
-              className="w-8 h-8 rounded bg-[#2e3545] hover:bg-[#323949] text-[#bbcabf] hover:text-[#dce2f7] flex items-center justify-center transition-colors cursor-pointer"
+              className="w-8 h-8 rounded bg-[#EDF5E8] hover:bg-[#DDE8D2] text-[#526B57] hover:text-[#294635] flex items-center justify-center transition-colors cursor-pointer"
             >
               <Icon name="close" className="text-[18px]" />
             </button>
@@ -205,8 +205,8 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
         {/* Modal Body */}
         <div className="p-6 flex flex-col gap-6 max-h-[calc(90vh-140px)] overflow-y-auto">
           {errorMessage && (
-            <div className="p-3.5 rounded bg-[#93000a]/20 border border-[#ffb4ab]/40 text-[#ffdad6] text-[12px] flex items-center gap-2 font-mono">
-              <Icon name="error" className="text-[#ffb4ab] text-[18px] shrink-0" />
+            <div className="p-3.5 rounded bg-[#F8DFDA] border border-[#E8A29A] text-[#762D27] text-[12px] flex items-center gap-2 font-mono">
+              <Icon name="error" className="text-[#B94D43] text-[18px] shrink-0" />
               <span>{errorMessage}</span>
             </div>
           )}
@@ -215,11 +215,11 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
           <section className="flex flex-col gap-3">
             <div className="flex items-center justify-between pb-1">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-3.5 bg-[#4edea3] rounded-full" />
-                <h3 className="font-mono text-[13px] text-[#dce2f7] font-semibold uppercase tracking-wider">
+                <span className="w-1.5 h-3.5 bg-[#5B8C51] rounded-full" />
+                <h3 className="font-mono text-[13px] text-[#294635] font-semibold uppercase tracking-wider">
                   1. Target Cohorts &amp; Semesters
                 </h3>
-                <span className="hidden sm:inline text-[11px] text-[#bbcabf]">
+                <span className="hidden sm:inline text-[11px] text-[#526B57]">
                   Select cohorts for parallel scheduling
                 </span>
               </div>
@@ -227,14 +227,14 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                 <button
                   type="button"
                   onClick={() => toggleAll(true)}
-                  className="px-2.5 py-1 rounded bg-[#191f2f] hover:bg-[#232a3a] text-[#4edea3] border border-[#232a3a] cursor-pointer"
+                  className="px-2.5 py-1 rounded bg-[#EDF5E8] hover:bg-[#DDE8D2] text-[#5B8C51] border border-[#DCE5D5] cursor-pointer"
                 >
                   Select All
                 </button>
                 <button
                   type="button"
                   onClick={() => toggleAll(false)}
-                  className="px-2.5 py-1 rounded bg-[#191f2f] hover:bg-[#232a3a] text-[#bbcabf] border border-[#232a3a] cursor-pointer"
+                  className="px-2.5 py-1 rounded bg-[#F7F4E8] hover:bg-[#EDF5E8] text-[#526B57] border border-[#DCE5D5] cursor-pointer"
                 >
                   Deselect All
                 </button>
@@ -243,9 +243,9 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {/* Semester I Card */}
-              <label className="group relative flex flex-col p-3.5 rounded bg-[#191f2f] border border-[#232a3a] hover:border-[#3c4a42] cursor-pointer transition-all">
+              <label className="group relative flex flex-col p-3.5 rounded bg-[#F7F4E8] border border-[#DCE5D5] hover:border-[#8FA58A] cursor-pointer transition-all">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[12px] font-semibold text-[#4edea3]">
+                  <span className="font-mono text-[12px] font-semibold text-[#294635]">
                     SEMESTER I (CE-S1-A)
                   </span>
                   <input
@@ -254,35 +254,35 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                     onChange={(e) =>
                       setSelectedSemesters({ ...selectedSemesters, 1: e.target.checked })
                     }
-                    className="w-4 h-4 rounded bg-[#070e1d] text-[#10b981] accent-[#10b981] cursor-pointer"
+                    className="w-4 h-4 rounded text-[#5B8C51] accent-[#5B8C51] cursor-pointer"
                   />
                 </div>
                 <div className="mt-2.5 flex flex-col gap-1 text-[11px] font-mono">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#bbcabf]">Curriculum Courses</span>
-                    <span className="text-[#dce2f7] font-semibold">
+                    <span className="text-[#526B57]">Curriculum Courses</span>
+                    <span className="text-[#294635] font-semibold">
                       {summary['1']?.courseCount || 7} subjects
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#bbcabf]">Weekly Demand</span>
-                    <span className="text-[#dce2f7]">
+                    <span className="text-[#526B57]">Weekly Demand</span>
+                    <span className="text-[#294635]">
                       {summary['1']?.weeklyHours?.total || 24} hours
                     </span>
                   </div>
                 </div>
-                <div className="mt-3 pt-2 border-t border-[#232a3a] flex items-center justify-between text-[11px] font-mono">
-                  <span className="text-[#86948a]">Dept Core</span>
-                  <span className="px-1.5 py-0.5 rounded bg-[#10b981]/15 text-[#4edea3] font-medium border border-[#10b981]/30">
+                <div className="mt-3 pt-2 border-t border-[#DCE5D5] flex items-center justify-between text-[11px] font-mono">
+                  <span className="text-[#718B68]">Dept Core</span>
+                  <span className="px-1.5 py-0.5 rounded bg-[#EDF5E8] text-[#5B8C51] font-medium border border-[#B7D8A9]">
                     Ready
                   </span>
                 </div>
               </label>
 
               {/* Semester II Card */}
-              <label className="group relative flex flex-col p-3.5 rounded bg-[#191f2f] border border-[#232a3a] hover:border-[#3c4a42] cursor-pointer transition-all">
+              <label className="group relative flex flex-col p-3.5 rounded bg-[#F7F4E8] border border-[#DCE5D5] hover:border-[#8FA58A] cursor-pointer transition-all">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[12px] font-semibold text-[#adc6ff]">
+                  <span className="font-mono text-[12px] font-semibold text-[#294635]">
                     SEMESTER II (CE-S2-A)
                   </span>
                   <input
@@ -291,35 +291,35 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                     onChange={(e) =>
                       setSelectedSemesters({ ...selectedSemesters, 2: e.target.checked })
                     }
-                    className="w-4 h-4 rounded bg-[#070e1d] text-[#10b981] accent-[#10b981] cursor-pointer"
+                    className="w-4 h-4 rounded text-[#5B8C51] accent-[#5B8C51] cursor-pointer"
                   />
                 </div>
                 <div className="mt-2.5 flex flex-col gap-1 text-[11px] font-mono">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#bbcabf]">Curriculum Courses</span>
-                    <span className="text-[#dce2f7] font-semibold">
+                    <span className="text-[#526B57]">Curriculum Courses</span>
+                    <span className="text-[#294635] font-semibold">
                       {summary['2']?.courseCount || 7} subjects
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#bbcabf]">Weekly Demand</span>
-                    <span className="text-[#dce2f7]">
+                    <span className="text-[#526B57]">Weekly Demand</span>
+                    <span className="text-[#294635]">
                       {summary['2']?.weeklyHours?.total || 24} hours
                     </span>
                   </div>
                 </div>
-                <div className="mt-3 pt-2 border-t border-[#232a3a] flex items-center justify-between text-[11px] font-mono">
-                  <span className="text-[#86948a]">Integrated Lab</span>
-                  <span className="px-1.5 py-0.5 rounded bg-[#10b981]/15 text-[#4edea3] font-medium border border-[#10b981]/30">
+                <div className="mt-3 pt-2 border-t border-[#DCE5D5] flex items-center justify-between text-[11px] font-mono">
+                  <span className="text-[#718B68]">Integrated Lab</span>
+                  <span className="px-1.5 py-0.5 rounded bg-[#EDF5E8] text-[#5B8C51] font-medium border border-[#B7D8A9]">
                     Ready
                   </span>
                 </div>
               </label>
 
               {/* Semester III Card */}
-              <label className="group relative flex flex-col p-3.5 rounded bg-[#191f2f] border border-[#232a3a] hover:border-[#3c4a42] cursor-pointer transition-all">
+              <label className="group relative flex flex-col p-3.5 rounded bg-[#F7F4E8] border border-[#DCE5D5] hover:border-[#8FA58A] cursor-pointer transition-all">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[12px] font-semibold text-[#d0bcff]">
+                  <span className="font-mono text-[12px] font-semibold text-[#294635]">
                     SEMESTER III (CE-S3-A)
                   </span>
                   <input
@@ -328,26 +328,26 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                     onChange={(e) =>
                       setSelectedSemesters({ ...selectedSemesters, 3: e.target.checked })
                     }
-                    className="w-4 h-4 rounded bg-[#070e1d] text-[#10b981] accent-[#10b981] cursor-pointer"
+                    className="w-4 h-4 rounded text-[#5B8C51] accent-[#5B8C51] cursor-pointer"
                   />
                 </div>
                 <div className="mt-2.5 flex flex-col gap-1 text-[11px] font-mono">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#bbcabf]">Curriculum Courses</span>
-                    <span className="text-[#dce2f7] font-semibold">
+                    <span className="text-[#526B57]">Curriculum Courses</span>
+                    <span className="text-[#294635] font-semibold">
                       {summary['3']?.courseCount || 7} subjects
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#bbcabf]">Weekly Demand</span>
-                    <span className="text-[#dce2f7]">
+                    <span className="text-[#526B57]">Weekly Demand</span>
+                    <span className="text-[#294635]">
                       {summary['3']?.weeklyHours?.total || 24} hours
                     </span>
                   </div>
                 </div>
-                <div className="mt-3 pt-2 border-t border-[#232a3a] flex items-center justify-between text-[11px] font-mono">
-                  <span className="text-[#86948a]">Elective Pools</span>
-                  <span className="px-1.5 py-0.5 rounded bg-[#10b981]/15 text-[#4edea3] font-medium border border-[#10b981]/30">
+                <div className="mt-3 pt-2 border-t border-[#DCE5D5] flex items-center justify-between text-[11px] font-mono">
+                  <span className="text-[#718B68]">Elective Pools</span>
+                  <span className="px-1.5 py-0.5 rounded bg-[#EDF5E8] text-[#5B8C51] font-medium border border-[#B7D8A9]">
                     Ready
                   </span>
                 </div>
@@ -358,43 +358,43 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
           {/* SECTION 2: Scheduling Parameters */}
           <section className="flex flex-col gap-3">
             <div className="flex items-center gap-2 pb-1">
-              <span className="w-1.5 h-3.5 bg-[#0566d9] rounded-full" />
-              <h3 className="font-mono text-[13px] text-[#dce2f7] font-semibold uppercase tracking-wider">
+              <span className="w-1.5 h-3.5 bg-[#5B8C51] rounded-full" />
+              <h3 className="font-mono text-[13px] text-[#294635] font-semibold uppercase tracking-wider">
                 2. Scheduling Parameters &amp; Structural Constraints
               </h3>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px]">
-              <div className="bg-[#191f2f] p-3.5 rounded border border-[#232a3a] flex items-center justify-between">
+              <div className="bg-[#F7F4E8] p-3.5 rounded border border-[#DCE5D5] flex items-center justify-between">
                 <div className="flex flex-col">
-                  <span className="text-[#dce2f7] font-medium">Working Days Cycle</span>
-                  <span className="text-[11px] text-[#bbcabf]">
+                  <span className="text-[#294635] font-medium">Working Days Cycle</span>
+                  <span className="text-[11px] text-[#526B57]">
                     Configured in institutional timetable settings
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1 bg-[#070e1d] rounded border border-[#232a3a] text-[#4edea3] font-mono text-[11px]">
+                <div className="flex items-center gap-1.5 px-3 py-1 bg-[#EDF5E8] rounded border border-[#DCE5D5] text-[#5B8C51] font-mono text-[11px]">
                   <Icon name="calendar_month" className="text-[14px]" />
                   <span>Mon – Sat (6 Days)</span>
                 </div>
               </div>
 
-              <div className="bg-[#191f2f] p-3.5 rounded border border-[#232a3a] flex items-center justify-between">
+              <div className="bg-[#F7F4E8] p-3.5 rounded border border-[#DCE5D5] flex items-center justify-between">
                 <div className="flex flex-col">
-                  <span className="text-[#dce2f7] font-medium">Daily Periods</span>
-                  <span className="text-[11px] text-[#bbcabf]">
+                  <span className="text-[#294635] font-medium">Daily Periods</span>
+                  <span className="text-[11px] text-[#526B57]">
                     7 periods per day (09:00 – 16:00)
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1 bg-[#070e1d] rounded border border-[#232a3a] text-[#dce2f7] font-mono text-[11px]">
-                  <Icon name="schedule" className="text-[#86948a] text-[14px]" />
+                <div className="flex items-center gap-1.5 px-3 py-1 bg-[#EDF5E8] rounded border border-[#DCE5D5] text-[#294635] font-mono text-[11px]">
+                  <Icon name="schedule" className="text-[#718B68] text-[14px]" />
                   <span>P1 – P7</span>
                 </div>
               </div>
 
-              <div className="bg-[#191f2f] p-3.5 rounded border border-[#232a3a] flex items-center justify-between md:col-span-2">
+              <div className="bg-[#F7F4E8] p-3.5 rounded border border-[#DCE5D5] flex items-center justify-between md:col-span-2">
                 <div className="flex flex-col pr-4">
-                  <span className="text-[#dce2f7] font-medium">Teacher Assignment Limit</span>
-                  <span className="text-[11px] text-[#bbcabf]">
+                  <span className="text-[#294635] font-medium">Teacher Assignment Limit</span>
+                  <span className="text-[11px] text-[#526B57]">
                     Hard ceiling: Max courses assigned per teacher across all semesters
                   </span>
                 </div>
@@ -402,7 +402,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                   <select
                     value={maxHours}
                     onChange={(e) => setMaxHours(Number(e.target.value))}
-                    className="h-8 bg-[#070e1d] text-[#dce2f7] font-mono text-[12px] rounded px-3 border border-[#232a3a] focus:outline-none cursor-pointer"
+                    className="h-8 bg-[#FFFFFF] text-[#294635] font-mono text-[12px] rounded px-3 border border-[#DCE5D5] focus:outline-none cursor-pointer"
                   >
                     <option value={2}>2 Courses Max</option>
                     <option value={3}>3 Courses Max (Standard)</option>
@@ -414,20 +414,20 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
           </section>
 
           {/* SECTION 3: Mandatory Hard Constraint: Semester Lunch Timings & Cohort Overrides */}
-          <section className="flex flex-col gap-3 bg-[#070e1d] p-4 rounded-lg border border-[#3c4a42]">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1 border-b border-[#232a3a]">
+          <section className="flex flex-col gap-3 bg-[#F7F4E8] p-4 rounded-lg border border-[#DCE5D5]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1 border-b border-[#DCE5D5]">
               <div className="flex items-center gap-2">
-                <Icon name="restaurant" className="text-[#4edea3] text-[20px]" />
+                <Icon name="restaurant" className="text-[#5B8C51] text-[20px]" />
                 <div>
-                  <h3 className="font-mono text-[13px] text-[#dce2f7] font-semibold uppercase tracking-wider">
+                  <h3 className="font-mono text-[13px] text-[#294635] font-semibold uppercase tracking-wider">
                     3. Mandatory Hard Constraint: Semester Lunch Timings &amp; Cohort Overrides
                   </h3>
-                  <p className="text-[11px] text-[#bbcabf]">
+                  <p className="text-[11px] text-[#526B57]">
                     No lecture, tutorial, or practical may overlap an effective lunch interval. A cohort inherits its semester default unless an override is configured.
                   </p>
                 </div>
               </div>
-              <span className="font-mono text-[10px] uppercase px-2 py-0.5 rounded bg-[#93000a]/30 text-[#ffb4ab] border border-[#ffb4ab]/30 self-start sm:self-center font-bold">
+              <span className="font-mono text-[10px] uppercase px-2 py-0.5 rounded bg-[#F8DFDA] text-[#762D27] border border-[#E8A29A] self-start sm:self-center font-bold">
                 Hard Boundary (0 Overlaps)
               </span>
             </div>
@@ -448,19 +448,19 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                 return (
                   <div
                     key={sem}
-                    className="bg-[#141b2b] p-3 rounded border border-[#232a3a] flex flex-col gap-2.5"
+                    className="bg-[#FFFFFF] p-3 rounded border border-[#DCE5D5] flex flex-col gap-2.5"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[12px] font-bold text-[#4edea3]">
+                      <span className="font-mono text-[12px] font-bold text-[#5B8C51]">
                         {title}
                       </span>
-                      <span className="text-[10px] font-mono text-[#bbcabf]">
+                      <span className="text-[10px] font-mono text-[#526B57]">
                         {cohort}
                       </span>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <span className="text-[11px] font-mono text-[#bbcabf]">Default:</span>
+                      <span className="text-[11px] font-mono text-[#526B57]">Default:</span>
                       <select
                         value={`${def.startTime}-${def.endTime}`}
                         onChange={(e) => {
@@ -470,7 +470,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                             [sem]: { startTime, endTime },
                           });
                         }}
-                        className="h-7 bg-[#070e1d] text-[#dce2f7] font-mono text-[11px] rounded px-2 border border-[#232a3a] focus:outline-none cursor-pointer"
+                        className="h-7 bg-[#F7F4E8] text-[#294635] font-mono text-[11px] rounded px-2 border border-[#DCE5D5] focus:outline-none cursor-pointer"
                       >
                         <option value="12:00-13:00">12:00 – 13:00 (Standard)</option>
                         <option value="13:00-14:00">13:00 – 14:00 (Staggered)</option>
@@ -479,9 +479,9 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                     </div>
 
                     {/* Cohort Override Toggle */}
-                    <div className="mt-1 pt-2 border-t border-[#232a3a] flex flex-col gap-1.5">
+                    <div className="mt-1 pt-2 border-t border-[#DCE5D5] flex flex-col gap-1.5">
                       <div className="flex items-center justify-between text-[11px]">
-                        <span className="font-mono text-[#dce2f7]">{cohort} Override</span>
+                        <span className="font-mono text-[#294635]">{cohort} Override</span>
                         <label className="flex items-center gap-1.5 cursor-pointer">
                           <input
                             type="checkbox"
@@ -495,15 +495,15 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                                 },
                               })
                             }
-                            className="accent-[#10b981] cursor-pointer"
+                            className="accent-[#5B8C51] cursor-pointer"
                           />
-                          <span className="text-[10px] font-mono text-[#bbcabf]">Enable</span>
+                          <span className="text-[10px] font-mono text-[#526B57]">Enable</span>
                         </label>
                       </div>
 
                       {override.enabled ? (
-                        <div className="flex items-center gap-2 bg-[#070e1d] p-1.5 rounded border border-[#232a3a]">
-                          <span className="text-[10px] font-mono text-[#adc6ff]">Override:</span>
+                        <div className="flex items-center gap-2 bg-[#EDF5E8] p-1.5 rounded border border-[#DCE5D5]">
+                          <span className="text-[10px] font-mono text-[#5B8C51]">Override:</span>
                           <select
                             value={`${override.interval.startTime}-${override.interval.endTime}`}
                             onChange={(e) => {
@@ -516,7 +516,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                                 },
                               });
                             }}
-                            className="h-6 bg-[#141b2b] text-[#dce2f7] font-mono text-[10px] rounded px-1.5 border border-[#232a3a] cursor-pointer"
+                            className="h-6 bg-[#FFFFFF] text-[#294635] font-mono text-[10px] rounded px-1.5 border border-[#DCE5D5] cursor-pointer"
                           >
                             <option value="13:00-14:00">13:00 – 14:00</option>
                             <option value="12:00-13:00">12:00 – 13:00</option>
@@ -524,7 +524,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
                           </select>
                         </div>
                       ) : (
-                        <span className="text-[10px] font-mono text-[#86948a] italic">
+                        <span className="text-[10px] font-mono text-[#718B68] italic">
                           Inheriting Sem {sem} default ({def.startTime} – {def.endTime})
                         </span>
                       )}
@@ -537,22 +537,22 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
 
           {/* SECTION 4: Live Generation Status */}
           {generatedResult && (
-            <section className="flex flex-col gap-2 bg-[#070e1d] p-4 rounded border border-[#232a3a]">
+            <section className="flex flex-col gap-2 bg-[#EDF5E8] p-4 rounded border border-[#DCE5D5]">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Icon name="check_circle" className="text-[#4edea3] text-[18px]" />
-                  <span className="font-mono text-[12px] text-[#dce2f7] font-semibold tracking-wide">
+                  <Icon name="check_circle" className="text-[#5B8C51] text-[18px]" />
+                  <span className="font-mono text-[12px] text-[#294635] font-semibold tracking-wide">
                     HEURISTIC SOLVER CONVERGED: {generatedResult.timetableId}
                   </span>
                 </div>
                 <div className="flex items-center gap-2 font-mono text-[11px]">
-                  <span className="text-[#4edea3] font-bold">
+                  <span className="text-[#5B8C51] font-bold">
                     {generatedResult.metrics.scheduledSessionCount} Sessions Scheduled
                   </span>
-                  <span className="text-[#3c4a42]">|</span>
+                  <span className="text-[#DCE5D5]">|</span>
                   <span
                     className={
-                      generatedResult.validation.valid ? 'text-[#4edea3]' : 'text-[#ffb4ab]'
+                      generatedResult.validation.valid ? 'text-[#5B8C51]' : 'text-[#762D27]'
                     }
                   >
                     {generatedResult.validation.hardConflictCount} Hard Conflicts
@@ -561,7 +561,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
               </div>
 
               {generatedResult.validation.conflicts.length > 0 && (
-                <div className="mt-2 flex flex-col gap-1 p-2 rounded bg-[#93000a]/20 border border-[#ffb4ab]/30 text-[11px] font-mono text-[#ffdad6]">
+                <div className="mt-2 flex flex-col gap-1 p-2 rounded bg-[#F8DFDA] border border-[#E8A29A] text-[11px] font-mono text-[#762D27]">
                   <span className="font-bold">Detected Constraint Conflicts:</span>
                   {generatedResult.validation.conflicts.map((c, i) => (
                     <div key={i}>• {c.message}</div>
@@ -573,9 +573,9 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
         </div>
 
         {/* Modal Footer */}
-        <div className="px-6 py-3.5 bg-[#191f2f] border-t border-[#232a3a] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-1.5 font-mono text-[10px] text-[#bbcabf]">
-            <Icon name="verified_user" className="text-[#86948a] text-[16px]" />
+        <div className="px-6 py-3.5 bg-[#F7F4E8] border-t border-[#DCE5D5] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-1.5 font-mono text-[10px] text-[#526B57]">
+            <Icon name="verified_user" className="text-[#718B68] text-[16px]" />
             <span>Zero faculty clash &amp; lunch breach guarantee under departmental ruleset</span>
           </div>
 
@@ -584,7 +584,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded bg-[#232a3a] hover:bg-[#2e3545] text-[#dce2f7] font-mono text-[11px] transition-colors cursor-pointer"
+                className="px-4 py-2 rounded bg-[#EDF5E8] hover:bg-[#DDE8D2] text-[#294635] font-mono text-[11px] border border-[#DCE5D5] transition-colors cursor-pointer"
               >
                 Close
               </button>
@@ -593,7 +593,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
               <button
                 type="button"
                 onClick={onNavigateToMaster}
-                className="px-4 py-2 rounded bg-[#232a3a] hover:bg-[#2e3545] text-[#4edea3] font-mono text-[11px] font-semibold border border-[#3c4a42] transition-colors cursor-pointer"
+                className="px-4 py-2 rounded bg-[#EDF5E8] hover:bg-[#DDE8D2] text-[#5B8C51] font-mono text-[11px] font-semibold border border-[#DCE5D5] transition-colors cursor-pointer"
               >
                 View in Master Timetable
               </button>
@@ -602,7 +602,7 @@ export const GenerateTimetableScreen: React.FC<GenerateTimetableScreenProps> = (
               type="button"
               disabled={isGenerating}
               onClick={handleStartGeneration}
-              className="px-5 py-2 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-semibold text-[13px] flex items-center gap-2 transition-all shadow-md active:scale-[0.98] disabled:opacity-75 cursor-pointer"
+              className="px-5 py-2 rounded bg-[#5B8C51] hover:bg-[#4B7443] text-[#FFFFFF] font-semibold text-[13px] flex items-center gap-2 transition-all shadow-md active:scale-[0.98] disabled:opacity-75 cursor-pointer"
             >
               <Icon
                 name={isGenerating ? 'sync' : 'tune'}

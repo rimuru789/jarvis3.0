@@ -103,7 +103,7 @@ export function GenerateTimetableModal({
       style={{
         position: 'fixed',
         inset: 0,
-        backgroundColor: 'rgba(5, 11, 20, 0.82)',
+        backgroundColor: 'rgba(41, 70, 53, 0.45)',
         backdropFilter: 'blur(4px)',
         display: 'flex',
         alignItems: 'center',
@@ -115,26 +115,26 @@ export function GenerateTimetableModal({
     >
       <div
         style={{
-          background: 'var(--navy-900, #0f1e36)',
-          border: '1px solid rgba(148, 163, 184, 0.2)',
+          background: '#FFFFFF',
+          border: '1px solid #DCE5D5',
           borderRadius: 'var(--radius-lg, 12px)',
           width: '100%',
           maxWidth: '680px',
           maxHeight: '90vh',
           overflowY: 'auto',
-          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5)',
-          color: 'var(--text-primary, #f1f5f9)',
+          boxShadow: '0 20px 25px -5px rgba(41, 70, 53, 0.1), 0 8px 10px -6px rgba(41, 70, 53, 0.05)',
+          color: '#294635',
           padding: '1.75rem',
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', borderBottom: '1px solid rgba(148, 163, 184, 0.15)', paddingBottom: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', borderBottom: '1px solid #DCE5D5', paddingBottom: '1rem' }}>
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#294635' }}>
               <span>⚡</span> Generate Timetable
             </h2>
-            <p style={{ margin: '0.25rem 0 0', fontSize: '0.8rem', color: 'var(--text-secondary, #94a3b8)' }}>
+            <p style={{ margin: '0.25rem 0 0', fontSize: '0.8rem', color: '#526B57' }}>
               Deterministic heuristic solver with hard constraint validation across all selected semesters.
             </p>
           </div>
@@ -143,7 +143,7 @@ export function GenerateTimetableModal({
             style={{
               background: 'transparent',
               border: 'none',
-              color: 'var(--text-secondary, #94a3b8)',
+              color: '#526B57',
               fontSize: '1.25rem',
               cursor: 'pointer',
               padding: '0.25rem 0.5rem',
@@ -157,9 +157,9 @@ export function GenerateTimetableModal({
         {error && (
           <div
             style={{
-              background: 'rgba(239, 68, 68, 0.15)',
-              border: '1px solid rgba(239, 68, 68, 0.3)',
-              color: '#fca5a5',
+              background: '#F8DFDA',
+              border: '1px solid #E8A29A',
+              color: '#762D27',
               padding: '0.75rem 1rem',
               borderRadius: 'var(--radius-md, 8px)',
               fontSize: '0.85rem',
@@ -172,7 +172,7 @@ export function GenerateTimetableModal({
 
         {/* Semester Selection */}
         <div style={{ marginBottom: '1.25rem' }}>
-          <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary, #94a3b8)', display: 'block', marginBottom: '0.5rem' }}>
+          <label style={{ fontSize: '0.85rem', fontWeight: 600, color: '#526B57', display: 'block', marginBottom: '0.5rem' }}>
             Target Semesters
           </label>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
@@ -189,9 +189,9 @@ export function GenerateTimetableModal({
                     fontWeight: 600,
                     fontSize: '0.85rem',
                     cursor: 'pointer',
-                    background: active ? 'var(--emerald-500, #10b981)' : 'var(--navy-950, #0a1322)',
-                    color: active ? 'var(--navy-950, #050b14)' : 'var(--text-secondary, #94a3b8)',
-                    border: `1px solid ${active ? 'var(--emerald-500, #10b981)' : 'rgba(148, 163, 184, 0.2)'}`,
+                    background: active ? '#5B8C51' : '#F7F4E8',
+                    color: active ? '#FFFFFF' : '#526B57',
+                    border: `1px solid ${active ? '#5B8C51' : '#DCE5D5'}`,
                   }}
                 >
                   Semester {sem === 1 ? 'I' : sem === 2 ? 'II' : 'III'}
@@ -202,12 +202,12 @@ export function GenerateTimetableModal({
         </div>
 
         {/* Effective Lunch Intervals Section */}
-        <div style={{ marginBottom: '1.5rem', background: 'var(--navy-950, #0a1322)', border: '1px solid rgba(148, 163, 184, 0.12)', borderRadius: 'var(--radius-md, 8px)', padding: '1rem' }}>
+        <div style={{ marginBottom: '1.5rem', background: '#F7F4E8', border: '1px solid #DCE5D5', borderRadius: 'var(--radius-md, 8px)', padding: '1rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--emerald-400, #34d399)' }}>
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#5B8C51' }}>
               🍱 Effective Protected Lunch Intervals
             </span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary, #94a3b8)' }}>
+            <span style={{ fontSize: '0.75rem', color: '#526B57' }}>
               Mandatory Hard Constraint
             </span>
           </div>
@@ -223,22 +223,22 @@ export function GenerateTimetableModal({
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     padding: '0.5rem 0.75rem',
-                    background: 'var(--navy-900, #0f1e36)',
+                    background: '#FFFFFF',
                     borderRadius: 'var(--radius-sm, 4px)',
-                    border: '1px solid rgba(148, 163, 184, 0.1)',
+                    border: '1px solid #DCE5D5',
                   }}
                 >
                   <div>
-                    <span style={{ fontWeight: 600, fontSize: '0.85rem', marginRight: '0.5rem' }}>
+                    <span style={{ fontWeight: 600, fontSize: '0.85rem', marginRight: '0.5rem', color: '#294635' }}>
                       {c.cohortId}
                     </span>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary, #94a3b8)' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#526B57' }}>
                       (Semester {c.semester})
                     </span>
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#294635' }}>
                       {c.startTime} – {c.endTime}
                     </span>
                     <span
@@ -247,9 +247,9 @@ export function GenerateTimetableModal({
                         fontWeight: 600,
                         padding: '0.15rem 0.45rem',
                         borderRadius: 'var(--radius-sm, 4px)',
-                        background: c.isOverride ? 'rgba(16, 185, 129, 0.15)' : 'rgba(59, 130, 246, 0.15)',
-                        color: c.isOverride ? 'var(--emerald-400, #34d399)' : '#93c5fd',
-                        border: `1px solid ${c.isOverride ? 'rgba(16, 185, 129, 0.3)' : 'rgba(59, 130, 246, 0.3)'}`,
+                        background: '#EDF5E8',
+                        color: c.isOverride ? '#5B8C51' : '#526B57',
+                        border: `1px solid ${c.isOverride ? '#B7D8A9' : '#DCE5D5'}`,
                       }}
                     >
                       {c.isOverride ? 'Cohort Override' : 'Semester Default'}
@@ -258,7 +258,7 @@ export function GenerateTimetableModal({
                 </div>
               ))}
           </div>
-          <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary, #94a3b8)', marginTop: '0.5rem' }}>
+          <div style={{ fontSize: '0.7rem', color: '#526B57', marginTop: '0.5rem' }}>
             ℹ️ No lecture, tutorial, practical, or multi-slot session may overlap or cross these protected intervals.
           </div>
         </div>
@@ -270,26 +270,26 @@ export function GenerateTimetableModal({
               marginBottom: '1.25rem',
               padding: '1rem',
               borderRadius: 'var(--radius-md, 8px)',
-              background: result.validation.valid ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)',
-              border: `1px solid ${result.validation.valid ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`,
+              background: result.validation.valid ? '#EDF5E8' : '#F8DFDA',
+              border: `1px solid ${result.validation.valid ? '#B7D8A9' : '#E8A29A'}`,
             }}
           >
-            <div style={{ fontWeight: 700, fontSize: '0.95rem', color: result.validation.valid ? 'var(--emerald-400)' : '#fca5a5', marginBottom: '0.35rem' }}>
+            <div style={{ fontWeight: 700, fontSize: '0.95rem', color: result.validation.valid ? '#294635' : '#762D27', marginBottom: '0.35rem' }}>
               {result.validation.valid ? '✓ Schedule Generated & Validated' : '⚠️ Generation Produced Conflicts'}
             </div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--text-primary)' }}>
+            <div style={{ fontSize: '0.85rem', color: '#294635' }}>
               Scheduled: <strong>{result.metrics.scheduledSessionCount}</strong> sessions | Unscheduled: <strong>{result.metrics.unscheduledSessionCount}</strong> | Hard Conflicts: <strong>{result.metrics.hardConflictCount}</strong>
             </div>
 
             {result.validation.conflicts.length > 0 && (
               <div style={{ marginTop: '0.75rem' }}>
-                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#fca5a5', marginBottom: '0.25rem' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#762D27', marginBottom: '0.25rem' }}>
                   Constraint Violations:
                 </div>
                 <div style={{ maxHeight: '120px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
                   {result.validation.conflicts.map((c, i) => (
-                    <div key={`conf-${i}`} style={{ fontSize: '0.75rem', background: 'rgba(0,0,0,0.2)', padding: '0.35rem 0.5rem', borderRadius: '4px' }}>
-                      <strong style={{ color: '#fca5a5' }}>[{c.code}]</strong> {c.message}
+                    <div key={`conf-${i}`} style={{ fontSize: '0.75rem', background: '#F8DFDA', border: '1px solid #E8A29A', padding: '0.35rem 0.5rem', borderRadius: '4px', color: '#762D27' }}>
+                      <strong style={{ color: '#B94D43' }}>[{c.code}]</strong> {c.message}
                     </div>
                   ))}
                 </div>
@@ -299,15 +299,15 @@ export function GenerateTimetableModal({
         )}
 
         {/* Actions */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.75rem', borderTop: '1px solid rgba(148, 163, 184, 0.15)', paddingTop: '1.25rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.75rem', borderTop: '1px solid #DCE5D5', paddingTop: '1.25rem' }}>
           <button
             type="button"
             onClick={onClose}
             style={{
               padding: '0.5rem 1.25rem',
               background: 'transparent',
-              border: '1px solid rgba(148, 163, 184, 0.3)',
-              color: 'var(--text-secondary, #94a3b8)',
+              border: '1px solid #DCE5D5',
+              color: '#526B57',
               borderRadius: 'var(--radius-md, 8px)',
               fontWeight: 500,
               fontSize: '0.85rem',
@@ -322,9 +322,9 @@ export function GenerateTimetableModal({
             disabled={generating}
             style={{
               padding: '0.5rem 1.5rem',
-              background: 'var(--emerald-500, #10b981)',
+              background: '#5B8C51',
               border: 'none',
-              color: 'var(--navy-950, #050b14)',
+              color: '#FFFFFF',
               borderRadius: 'var(--radius-md, 8px)',
               fontWeight: 600,
               fontSize: '0.85rem',

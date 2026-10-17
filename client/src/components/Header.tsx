@@ -27,40 +27,40 @@ export const Header: React.FC<HeaderProps> = ({
   totalSessionsCount = 72,
 }) => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#141b2b]/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.35)] border-b border-[#232a3a]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-md shadow-xs border-b border-[#DCE5D5]">
       <div className="h-16 w-full px-4 md:px-6 flex items-center justify-between gap-4">
         {/* Left: Brand Identity */}
         <div
           className="flex items-center gap-3 shrink-0 cursor-pointer"
           onClick={() => onNavigate('master-timetable')}
         >
-          <div className="h-9 w-9 rounded-md bg-[#191f2f] border border-[#3c4a42] flex items-center justify-center text-[#4edea3] shadow-inner">
+          <div className="h-9 w-9 rounded-md bg-[#EDF5E8] border border-[#DCE5D5] flex items-center justify-center text-[#5B8C51] shadow-xs">
             <Icon name="calendar_month" className="text-[20px]" />
           </div>
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="text-[16px] font-semibold tracking-tight text-[#dce2f7]">
+              <span className="text-[16px] font-semibold tracking-tight text-[#294635]">
                 SlotShield
               </span>
-              <span className="text-[10px] uppercase px-1.5 py-0.5 rounded bg-[#2e3545] text-[#4edea3] font-mono font-medium tracking-wider">
+              <span className="text-[10px] uppercase px-1.5 py-0.5 rounded bg-[#EDF5E8] text-[#5B8C51] font-mono font-medium tracking-wider border border-[#DCE5D5]">
                 Dept of Computer Engineering
               </span>
             </div>
-            <span className="text-[12px] text-[#bbcabf]/80">
+            <span className="text-[12px] text-[#526B57]">
               Academic Timetable System
             </span>
           </div>
         </div>
 
         {/* Center: Primary Navigation */}
-        <nav className="hidden xl:flex items-center gap-1 bg-[#070e1d] p-1 rounded-md border border-[#232a3a]">
+        <nav className="hidden xl:flex items-center gap-1 bg-[#F7F4E8] p-1 rounded-md border border-[#DCE5D5]">
           <button
             type="button"
             onClick={() => onNavigate('master-timetable')}
             className={`font-mono text-[11px] px-3.5 py-1.5 rounded transition-all cursor-pointer ${
               activeScreen === 'master-timetable'
-                ? 'bg-[#232a3a] text-[#4edea3] font-semibold shadow-inner'
-                : 'text-[#bbcabf] hover:text-[#dce2f7] hover:bg-[#191f2f]'
+                ? 'bg-[#FFFFFF] text-[#294635] font-semibold shadow-xs border border-[#DCE5D5]'
+                : 'text-[#526B57] hover:text-[#294635] hover:bg-[#EDF5E8]'
             }`}
           >
             Master Timetable
@@ -70,8 +70,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('generate-timetable')}
             className={`font-mono text-[11px] px-3.5 py-1.5 rounded transition-all cursor-pointer ${
               activeScreen === 'generate-timetable'
-                ? 'bg-[#232a3a] text-[#4edea3] font-semibold shadow-inner'
-                : 'text-[#bbcabf] hover:text-[#dce2f7] hover:bg-[#191f2f]'
+                ? 'bg-[#FFFFFF] text-[#294635] font-semibold shadow-xs border border-[#DCE5D5]'
+                : 'text-[#526B57] hover:text-[#294635] hover:bg-[#EDF5E8]'
             }`}
           >
             Generate Timetable
@@ -81,8 +81,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('disruption-simulator')}
             className={`font-mono text-[11px] px-3.5 py-1.5 rounded transition-all cursor-pointer ${
               activeScreen === 'disruption-simulator'
-                ? 'bg-[#232a3a] text-[#4edea3] font-semibold shadow-inner'
-                : 'text-[#bbcabf] hover:text-[#dce2f7] hover:bg-[#191f2f]'
+                ? 'bg-[#FFFFFF] text-[#294635] font-semibold shadow-xs border border-[#DCE5D5]'
+                : 'text-[#526B57] hover:text-[#294635] hover:bg-[#EDF5E8]'
             }`}
           >
             Disruption Simulator
@@ -92,8 +92,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('repair-proposal')}
             className={`font-mono text-[11px] px-3.5 py-1.5 rounded transition-all cursor-pointer ${
               activeScreen === 'repair-proposal'
-                ? 'bg-[#232a3a] text-[#4edea3] font-semibold shadow-inner'
-                : 'text-[#bbcabf] hover:text-[#dce2f7] hover:bg-[#191f2f]'
+                ? 'bg-[#FFFFFF] text-[#294635] font-semibold shadow-xs border border-[#DCE5D5]'
+                : 'text-[#526B57] hover:text-[#294635] hover:bg-[#EDF5E8]'
             }`}
           >
             Repair Proposal
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({
           <select
             value={activeScreen}
             onChange={(e) => onNavigate(e.target.value as ScreenId)}
-            className="bg-[#070e1d] text-[#4edea3] text-xs font-mono border border-[#232a3a] rounded px-2.5 py-1.5 focus:outline-none cursor-pointer"
+            className="bg-[#FFFFFF] text-[#294635] text-xs font-mono border border-[#DCE5D5] rounded px-2.5 py-1.5 focus:outline-none cursor-pointer"
           >
             <option value="master-timetable">Master Timetable</option>
             <option value="generate-timetable">Generate Timetable</option>
@@ -116,11 +116,11 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right: Operational Telemetry & Connection Status */}
         <div className="flex items-center gap-3 shrink-0">
-          <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded bg-[#070e1d] border border-[#232a3a] text-[#bbcabf] text-[10px] font-mono uppercase tracking-wide">
+          <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded bg-[#F7F4E8] border border-[#DCE5D5] text-[#526B57] text-[10px] font-mono uppercase tracking-wide">
             <span>{activeSemestersText}</span>
-            <span className="text-[#3c4a42]">|</span>
+            <span className="text-[#DCE5D5]">|</span>
             <span>{facultyCount} Faculty</span>
-            <span className="text-[#3c4a42]">|</span>
+            <span className="text-[#DCE5D5]">|</span>
             <span>{totalSessionsCount} Scheduled Sessions</span>
           </div>
 
@@ -131,13 +131,13 @@ export const Header: React.FC<HeaderProps> = ({
             title="Click to view Backend & Solver Integration status"
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded border transition-colors cursor-pointer ${
               backendConnected
-                ? 'bg-[#232a3a] border-[#10b981]/40 text-[#4edea3] hover:bg-[#2e3545]'
-                : 'bg-[#191f2f] border-[#3c4a42] text-[#bbcabf] hover:bg-[#232a3a]'
+                ? 'bg-[#EDF5E8] border-[#5B8C51]/40 text-[#294635] hover:bg-[#DDE8D2]'
+                : 'bg-[#F7F4E8] border-[#DCE5D5] text-[#526B57] hover:bg-[#EDF5E8]'
             }`}
           >
             <span
               className={`h-2 w-2 rounded-full ${
-                backendConnected ? 'bg-[#4edea3] animate-pulse' : 'bg-[#adc6ff]'
+                backendConnected ? 'bg-[#5B8C51] animate-pulse' : 'bg-[#F3D98B]'
               }`}
             />
             <span className="text-[10px] font-mono font-medium uppercase tracking-wider">
@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
 
           {/* User Profile Avatar */}
-          <div className="w-8 h-8 rounded-full bg-[#10b981] flex items-center justify-center text-[#003824] shadow-sm">
+          <div className="w-8 h-8 rounded-full bg-[#5B8C51] flex items-center justify-center text-[#FFFFFF] shadow-sm">
             <Icon name="person" className="text-[16px]" />
           </div>
         </div>

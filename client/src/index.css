@@ -1,53 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #0c1322;
-  --color-surface-dim: #0c1322;
-  --color-surface-bright: #323949;
-  --color-surface-container-lowest: #070e1d;
-  --color-surface-container-low: #141b2b;
-  --color-surface-container: #191f2f;
-  --color-surface-container-high: #232a3a;
-  --color-surface-container-highest: #2e3545;
-  --color-on-surface: #dce2f7;
-  --color-on-surface-variant: #bbcabf;
-  --color-inverse-surface: #dce2f7;
-  --color-inverse-on-surface: #293040;
-  --color-outline: #86948a;
-  --color-outline-variant: #3c4a42;
-  --color-surface-tint: #4edea3;
-  --color-primary: #4edea3;
-  --color-on-primary: #003824;
-  --color-primary-container: #10b981;
-  --color-on-primary-container: #00422b;
-  --color-inverse-primary: #006c49;
-  --color-secondary: #adc6ff;
-  --color-on-secondary: #002e6a;
-  --color-secondary-container: #0566d9;
-  --color-on-secondary-container: #e6ecff;
-  --color-tertiary: #d0bcff;
-  --color-on-tertiary: #3c0091;
-  --color-tertiary-container: #b090ff;
-  --color-on-tertiary-container: #4600a7;
-  --color-error: #ffb4ab;
-  --color-on-error: #690005;
-  --color-error-container: #93000a;
-  --color-on-error-container: #ffdad6;
-  --color-primary-fixed: #6ffbbe;
-  --color-primary-fixed-dim: #4edea3;
-  --color-on-primary-fixed: #002113;
-  --color-on-primary-fixed-variant: #005236;
-  --color-secondary-fixed: #d8e2ff;
-  --color-secondary-fixed-dim: #adc6ff;
-  --color-on-secondary-fixed: #001a42;
-  --color-on-secondary-fixed-variant: #004395;
-  --color-tertiary-fixed: #e9ddff;
-  --color-tertiary-fixed-dim: #d0bcff;
-  --color-on-tertiary-fixed: #23005c;
-  --color-on-tertiary-fixed-variant: #5516be;
-  --color-background: #0c1322;
-  --color-on-background: #dce2f7;
-  --color-surface-variant: #2e3545;
+  --color-surface: #FFFDF5;
+  --color-surface-dim: #F7F4E8;
+  --color-surface-bright: #FFFFFF;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #FFFDF5;
+  --color-surface-container: #F7F4E8;
+  --color-surface-container-high: #EDF5E8;
+  --color-surface-container-highest: #DDE8D2;
+
+  --color-on-surface: #294635;
+  --color-on-surface-variant: #526B57;
+  --color-inverse-surface: #294635;
+  --color-inverse-on-surface: #FFFDF5;
+
+  --color-outline: #8FA58A;
+  --color-outline-variant: #DCE5D5;
+  --color-surface-tint: #5B8C51;
+
+  --color-primary: #5B8C51;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #DDE8D2;
+  --color-on-primary-container: #294635;
+  --color-inverse-primary: #B7D8A9;
+
+  --color-secondary: #718B68;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #EDF5E8;
+  --color-on-secondary-container: #294635;
+
+  --color-tertiary: #B58B48;
+  --color-on-tertiary: #FFFFFF;
+  --color-tertiary-container: #F3D98B;
+  --color-on-tertiary-container: #55421D;
+
+  --color-error: #B94D43;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #F8DFDA;
+  --color-on-error-container: #762D27;
+
+  --color-primary-fixed: #DDE8D2;
+  --color-primary-fixed-dim: #B7D8A9;
+  --color-on-primary-fixed: #294635;
+  --color-on-primary-fixed-variant: #426B3C;
+
+  --color-secondary-fixed: #EDF5E8;
+  --color-secondary-fixed-dim: #DDE8D2;
+  --color-on-secondary-fixed: #294635;
+  --color-on-secondary-fixed-variant: #526B57;
+
+  --color-tertiary-fixed: #FBEBC3;
+  --color-tertiary-fixed-dim: #F3D98B;
+  --color-on-tertiary-fixed: #55421D;
+  --color-on-tertiary-fixed-variant: #765B2D;
+
+  --color-background: #FFFDF5;
+  --color-on-background: #294635;
+  --color-surface-variant: #EDF5E8;
 
   --font-headline-lg: "Inter", system-ui, -apple-system, sans-serif;
   --font-headline-md: "Inter", system-ui, -apple-system, sans-serif;
@@ -61,11 +71,38 @@
 }
 
 @layer base {
-  html, body {
+
+  :root {
+    --bg-main: #FFFDF5;
+    --bg-secondary: #F7F4E8;
+    --bg-card: #FFFFFF;
+    --primary-green: #5B8C51;
+    --text-primary: #294635;
+    --text-secondary: #526B57;
+    --light-sage: #DDE8D2;
+    --pale-mint: #EDF5E8;
+    --muted-border: #DCE5D5;
+    --warm-yellow: #F3D98B;
+    --soft-peach: #F4D6BD;
+
+    /* Legacy CSS variables used in existing modals & grid */
+    --navy-900: #FFFFFF;
+    --navy-950: #F7F4E8;
+    --emerald-500: #5B8C51;
+    --emerald-400: #5B8C51;
+    --color-warning: #B58B48;
+    --color-error: #B94D43;
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --radius-sm: 4px;
+  }
+
+  html,
+  body {
     margin: 0;
     padding: 0;
-    background-color: #0c1322;
-    color: #dce2f7;
+    background-color: #FFFDF5;
+    color: #294635;
     font-family: "Inter", system-ui, -apple-system, sans-serif;
   }
 }
@@ -83,13 +120,106 @@
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #070e1d;
+  background: #F7F4E8;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #232a3a;
+  background: #B7CBAE;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #2e3545;
+  background: #8FA58A;
+}
+
+/* Legacy Starter Component Styles (Bulbasaur Botanical Theme) */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE5D5;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #294635;
+}
+
+.metric-card__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #294635;
+}
+
+.metric-card__label {
+  font-size: 0.75rem;
+  color: #526B57;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #F7F4E8;
+  border: 1px solid #DCE5D5;
+  border-radius: 8px;
+}
+
+.filter-bar__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #526B57;
+  text-transform: uppercase;
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  background-color: #FFFFFF;
+  border: 1px solid #DCE5D5;
+  color: #526B57;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  background-color: #EDF5E8;
+  color: #294635;
+}
+
+.filter-btn--active {
+  background-color: #5B8C51;
+  border-color: #5B8C51;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.grid-header {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE5D5;
+  color: #294635;
+  padding: 0.5rem;
+}
+
+.grid-cell {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE5D5;
+  min-height: 72px;
+}
+
+.grid-cell--lunch {
+  background-color: #F7F4E8;
+  border-style: dashed;
 }

@@ -138,29 +138,29 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
   return (
     <div className="flex flex-col w-full pb-12">
       {/* Control Sub-Bar / Tactical Ribbon */}
-      <section className="w-full bg-[#141b2b] px-4 md:px-6 py-2.5 border-b border-[#232a3a] shadow-sm">
+      <section className="w-full bg-[#FFFFFF] px-4 md:px-6 py-2.5 border-b border-[#DCE5D5] shadow-xs">
         <div className="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-2.5">
           <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="inline-flex items-center gap-1 font-mono text-[11px] text-[#4edea3] font-semibold uppercase tracking-wider bg-[#191f2f] px-2.5 py-1 rounded border border-[#232a3a]">
-              <Icon name="tune" className="text-[#4edea3] text-[15px]" />
+            <span className="inline-flex items-center gap-1 font-mono text-[11px] text-[#294635] font-semibold uppercase tracking-wider bg-[#EDF5E8] px-2.5 py-1 rounded border border-[#DCE5D5]">
+              <Icon name="tune" className="text-[#5B8C51] text-[15px]" />
               Disruption Simulator TESTBED
             </span>
-            <span className="hidden md:inline text-[#3c4a42] font-mono text-[11px]">•</span>
-            <p className="text-[12px] text-[#bbcabf]">
+            <span className="hidden md:inline text-[#DCE5D5] font-mono text-[11px]">•</span>
+            <p className="text-[12px] text-[#526B57]">
               Inject real-world operational disruptions to evaluate schedule resiliency and prepare automated repairs.
             </p>
           </div>
 
           <div className="flex items-center gap-2 shrink-0 flex-wrap font-mono text-[10px]">
-            <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#070e1d] border border-[#232a3a] text-[#dce2f7]">
-              <Icon name="lock" className="text-[#4edea3] text-[14px]" />
-              <span className="text-[#bbcabf] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F7F4E8] border border-[#DCE5D5] text-[#294635]">
+              <Icon name="lock" className="text-[#5B8C51] text-[14px]" />
+              <span className="text-[#526B57] uppercase tracking-wider">
                 SOLVER BASELINE:{' '}
-                <strong className="text-[#4edea3] font-semibold">{timetable.timetableId}</strong>
+                <strong className="text-[#5B8C51] font-semibold">{timetable.timetableId}</strong>
               </span>
             </div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#2e3545] text-[#dce2f7]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#4edea3] animate-ping" />
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#EDF5E8] text-[#294635] border border-[#DCE5D5]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#5B8C51] animate-ping" />
               <span className="font-semibold uppercase tracking-wider text-[10px]">
                 HEURISTIC EVALUATOR READY
               </span>
@@ -173,22 +173,22 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
       <div className="w-full px-4 md:px-6 py-6">
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
           {/* LEFT COLUMN: Disruption Parameters Configuration (5 cols) */}
-          <section className="xl:col-span-5 flex flex-col gap-4 bg-[#141b2b] p-5 rounded-lg border border-[#232a3a] shadow-sm">
+          <section className="xl:col-span-5 flex flex-col gap-4 bg-[#FFFFFF] p-5 rounded-lg border border-[#DCE5D5] shadow-xs">
             <div className="flex items-center justify-between pb-1">
               <div className="flex items-center gap-2">
-                <Icon name="tune" className="text-[#4edea3] text-[20px]" />
-                <h2 className="text-[16px] font-semibold text-[#dce2f7] tracking-tight">
+                <Icon name="tune" className="text-[#5B8C51] text-[20px]" />
+                <h2 className="text-[16px] font-semibold text-[#294635] tracking-tight">
                   Disruption Parameters Configuration
                 </h2>
               </div>
-              <span className="font-mono text-[10px] text-[#4edea3] uppercase font-medium bg-[#191f2f] px-2 py-0.5 rounded border border-[#232a3a]">
+              <span className="font-mono text-[10px] text-[#5B8C51] uppercase font-medium bg-[#EDF5E8] px-2 py-0.5 rounded border border-[#DCE5D5]">
                 Setup Mode
               </span>
             </div>
 
             {/* Step 1: Disruption Archetype */}
             <div className="flex flex-col gap-1.5 pt-1">
-              <label className="font-mono text-[10px] uppercase tracking-wider text-[#bbcabf]">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-[#526B57]">
                 Step 1: Disruption Archetype
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -197,8 +197,8 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                   onClick={() => handleArchetypeChange('FACULTY_UNAVAILABLE')}
                   className={`flex items-center justify-center gap-2 p-2 rounded transition-all font-mono text-[11px] cursor-pointer ${
                     archetype === 'FACULTY_UNAVAILABLE'
-                      ? 'bg-[#10b981] text-[#003824] font-semibold shadow-inner'
-                      : 'bg-[#191f2f] text-[#bbcabf] hover:text-[#dce2f7] hover:bg-[#232a3a] border border-[#232a3a]'
+                      ? 'bg-[#5B8C51] text-[#FFFFFF] font-semibold shadow-inner'
+                      : 'bg-[#F7F4E8] text-[#526B57] hover:text-[#294635] hover:bg-[#EDF5E8] border border-[#DCE5D5]'
                   }`}
                 >
                   <Icon name="person_off" className="text-[18px]" />
@@ -209,8 +209,8 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                   onClick={() => handleArchetypeChange('ROOM_UNAVAILABLE')}
                   className={`flex items-center justify-center gap-2 p-2 rounded transition-all font-mono text-[11px] cursor-pointer ${
                     archetype === 'ROOM_UNAVAILABLE'
-                      ? 'bg-[#10b981] text-[#003824] font-semibold shadow-inner'
-                      : 'bg-[#191f2f] text-[#bbcabf] hover:text-[#dce2f7] hover:bg-[#232a3a] border border-[#232a3a]'
+                      ? 'bg-[#5B8C51] text-[#FFFFFF] font-semibold shadow-inner'
+                      : 'bg-[#F7F4E8] text-[#526B57] hover:text-[#294635] hover:bg-[#EDF5E8] border border-[#DCE5D5]'
                   }`}
                 >
                   <Icon name="domain_disabled" className="text-[18px]" />
@@ -222,10 +222,10 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
             {/* Step 2: Affected Entity Selection */}
             <div className="flex flex-col gap-1.5 pt-1">
               <div className="flex items-center justify-between">
-                <label className="font-mono text-[10px] uppercase tracking-wider text-[#bbcabf]">
+                <label className="font-mono text-[10px] uppercase tracking-wider text-[#526B57]">
                   Step 2: Affected Entity Selection
                 </label>
-                <span className="font-mono text-[10px] text-[#adc6ff] uppercase">
+                <span className="font-mono text-[10px] text-[#5B8C51] uppercase font-medium">
                   {archetype === 'FACULTY_UNAVAILABLE'
                     ? `${teachers.length} Registered Faculty`
                     : `${rooms.length} Active Rooms`}
@@ -235,7 +235,7 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                 <select
                   value={selectedEntityId}
                   onChange={(e) => setSelectedEntityId(e.target.value)}
-                  className="w-full h-8 px-2.5 bg-[#070e1d] text-[#dce2f7] text-[13px] rounded border border-[#232a3a] focus:outline-none focus:border-[#4edea3] transition-colors cursor-pointer"
+                  className="w-full h-8 px-2.5 bg-[#FFFFFF] text-[#294635] text-[13px] rounded border border-[#DCE5D5] focus:outline-none focus:border-[#5B8C51] transition-colors cursor-pointer"
                 >
                   {archetype === 'FACULTY_UNAVAILABLE'
                     ? teachers.map((t) => (
@@ -252,11 +252,11 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
               </div>
 
               {/* Entity Detail Pill */}
-              <div className="flex items-center gap-2 p-2 rounded bg-[#191f2f] border border-[#232a3a] text-[#bbcabf] font-mono text-[10px]">
-                <Icon name="info" className="text-[#4edea3] text-[14px]" />
+              <div className="flex items-center gap-2 p-2 rounded bg-[#F7F4E8] border border-[#DCE5D5] text-[#526B57] font-mono text-[10px]">
+                <Icon name="info" className="text-[#5B8C51] text-[14px]" />
                 <span>
                   Directly Affected on {selectedDay}:{' '}
-                  <strong className="text-[#ffb4ab] font-semibold">
+                  <strong className="text-[#B94D43] font-semibold">
                     {directlyAffectedEntries.length} sessions
                   </strong>
                 </span>
@@ -265,16 +265,16 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
 
             {/* Step 3: Disruption Window */}
             <div className="flex flex-col gap-1.5 pt-1">
-              <label className="font-mono text-[10px] uppercase tracking-wider text-[#bbcabf]">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-[#526B57]">
                 Step 3: Disruption Window &amp; Period
               </label>
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <span className="text-[10px] font-mono text-[#bbcabf] block mb-1">Day:</span>
+                  <span className="text-[10px] font-mono text-[#526B57] block mb-1">Day:</span>
                   <select
                     value={selectedDay}
                     onChange={(e) => setSelectedDay(e.target.value as DayCode)}
-                    className="w-full h-8 px-2 bg-[#070e1d] text-[#dce2f7] text-[12px] font-mono rounded border border-[#232a3a] focus:outline-none cursor-pointer"
+                    className="w-full h-8 px-2 bg-[#FFFFFF] text-[#294635] text-[12px] font-mono rounded border border-[#DCE5D5] focus:outline-none focus:border-[#5B8C51] cursor-pointer"
                   >
                     {days.map((d) => (
                       <option key={d.code} value={d.code}>
@@ -285,12 +285,12 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-mono text-[#bbcabf] block mb-1">Period:</span>
+                  <span className="text-[10px] font-mono text-[#526B57] block mb-1">Period:</span>
                   <select
                     disabled={isFullDay}
                     value={selectedSlotPeriod}
                     onChange={(e) => setSelectedSlotPeriod(e.target.value)}
-                    className="w-full h-8 px-2 bg-[#070e1d] text-[#dce2f7] text-[12px] font-mono rounded border border-[#232a3a] focus:outline-none cursor-pointer disabled:opacity-50"
+                    className="w-full h-8 px-2 bg-[#FFFFFF] text-[#294635] text-[12px] font-mono rounded border border-[#DCE5D5] focus:outline-none focus:border-[#5B8C51] cursor-pointer disabled:opacity-50"
                   >
                     <option value="P1">P1 (09:00 - 10:00)</option>
                     <option value="P2">P2 (10:00 - 11:00)</option>
@@ -304,12 +304,12 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
               </div>
 
               <div className="flex items-center justify-between pt-1">
-                <label className="flex items-center gap-2 cursor-pointer font-mono text-[11px] text-[#dce2f7]">
+                <label className="flex items-center gap-2 cursor-pointer font-mono text-[11px] text-[#294635]">
                   <input
                     type="checkbox"
                     checked={isFullDay}
                     onChange={(e) => setIsFullDay(e.target.checked)}
-                    className="accent-[#10b981] cursor-pointer"
+                    className="accent-[#5B8C51] cursor-pointer"
                   />
                   <span>Full-Day Outage (All slots on {selectedDay})</span>
                 </label>
@@ -318,14 +318,14 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
 
             {/* Step 4: Reason Code */}
             <div className="flex flex-col gap-1.5 pt-1">
-              <label className="font-mono text-[10px] uppercase tracking-wider text-[#bbcabf]">
+              <label className="font-mono text-[10px] uppercase tracking-wider text-[#526B57]">
                 Step 4: Operational Justification
               </label>
               <div className="grid grid-cols-2 gap-2">
                 <select
                   value={reasonCode}
                   onChange={(e) => setReasonCode(e.target.value)}
-                  className="h-8 px-2 bg-[#070e1d] text-[#dce2f7] text-[12px] font-mono rounded border border-[#232a3a] cursor-pointer"
+                  className="h-8 px-2 bg-[#FFFFFF] text-[#294635] text-[12px] font-mono rounded border border-[#DCE5D5] focus:outline-none focus:border-[#5B8C51] cursor-pointer"
                 >
                   <option value="L-MED-04">L-MED-04 (Medical Leave)</option>
                   <option value="D-CONF-01">D-CONF-01 (Academic Conference)</option>
@@ -337,7 +337,7 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                   value={reasonText}
                   onChange={(e) => setReasonText(e.target.value)}
                   placeholder="Notes..."
-                  className="h-8 px-2.5 bg-[#070e1d] text-[#dce2f7] text-[12px] rounded border border-[#232a3a] focus:outline-none"
+                  className="h-8 px-2.5 bg-[#FFFFFF] text-[#294635] text-[12px] rounded border border-[#DCE5D5] focus:outline-none focus:border-[#5B8C51]"
                 />
               </div>
             </div>
@@ -347,7 +347,7 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
               type="button"
               disabled={isSimulating}
               onClick={handleSimulate}
-              className="mt-2 w-full py-2.5 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-semibold text-[13px] flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98] cursor-pointer disabled:opacity-75"
+              className="mt-2 w-full py-2.5 rounded bg-[#5B8C51] hover:bg-[#4B7443] text-[#FFFFFF] font-semibold text-[13px] flex items-center justify-center gap-2 transition-all shadow-xs active:scale-[0.98] cursor-pointer disabled:opacity-75"
             >
               <Icon
                 name={isSimulating ? 'sync' : 'tune'}
@@ -360,61 +360,61 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
           {/* RIGHT COLUMN: Operational Impact Analysis (7 cols) */}
           <section className="xl:col-span-7 flex flex-col gap-4">
             {simulationError && (
-              <div className="p-3.5 rounded bg-[#93000a]/20 border border-[#ffb4ab]/40 text-[#ffdad6] text-[12px] flex items-center gap-2 font-mono">
-                <Icon name="error" className="text-[#ffb4ab] text-[18px] shrink-0" />
+              <div className="p-3.5 rounded bg-[#F8DFDA] border border-[#E8A29A] text-[#762D27] text-[12px] flex items-center gap-2 font-mono">
+                <Icon name="error" className="text-[#B94D43] text-[18px] shrink-0" />
                 <span>{simulationError}</span>
               </div>
             )}
 
             {/* Impact Metric Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="bg-[#191f2f] p-3.5 rounded border border-[#232a3a]">
-                <span className="font-mono text-[10px] text-[#bbcabf] uppercase block">
+              <div className="bg-[#FFFFFF] p-3.5 rounded border border-[#DCE5D5]">
+                <span className="font-mono text-[10px] text-[#526B57] uppercase block">
                   Affected Sessions
                 </span>
-                <span className="text-[20px] font-bold font-mono text-[#ffb4ab]">
+                <span className="text-[20px] font-bold font-mono text-[#B94D43]">
                   {directlyAffectedEntries.length}
                 </span>
-                <span className="text-[10px] text-[#bbcabf] block">Sessions voided by outage</span>
+                <span className="text-[10px] text-[#526B57] block">Sessions voided by outage</span>
               </div>
 
-              <div className="bg-[#191f2f] p-3.5 rounded border border-[#232a3a]">
-                <span className="font-mono text-[10px] text-[#bbcabf] uppercase block">
+              <div className="bg-[#FFFFFF] p-3.5 rounded border border-[#DCE5D5]">
+                <span className="font-mono text-[10px] text-[#526B57] uppercase block">
                   Hard Collisions
                 </span>
-                <span className="text-[20px] font-bold font-mono text-[#4edea3]">
+                <span className="text-[20px] font-bold font-mono text-[#5B8C51]">
                   {proposal ? proposal.validation.hardConflictCount : directlyAffectedEntries.length > 0 ? directlyAffectedEntries.length : 0}
                 </span>
-                <span className="text-[10px] text-[#bbcabf] block">Direct conflicts triggered</span>
+                <span className="text-[10px] text-[#526B57] block">Direct conflicts triggered</span>
               </div>
 
-              <div className="bg-[#191f2f] p-3.5 rounded border border-[#232a3a]">
-                <span className="font-mono text-[10px] text-[#bbcabf] uppercase block">
+              <div className="bg-[#FFFFFF] p-3.5 rounded border border-[#DCE5D5]">
+                <span className="font-mono text-[10px] text-[#526B57] uppercase block">
                   Relocations Proposed
                 </span>
-                <span className="text-[20px] font-bold font-mono text-[#adc6ff]">
+                <span className="text-[20px] font-bold font-mono text-[#5B8C51]">
                   {proposal ? proposal.changes.length : 0}
                 </span>
-                <span className="text-[10px] text-[#bbcabf] block">Deltas ready for preview</span>
+                <span className="text-[10px] text-[#526B57] block">Deltas ready for preview</span>
               </div>
             </div>
 
             {/* Directly Affected Sessions Breakdown */}
-            <div className="bg-[#141b2b] p-4 rounded-lg border border-[#232a3a] flex flex-col gap-3">
-              <div className="flex items-center justify-between pb-1 border-b border-[#232a3a]">
+            <div className="bg-[#FFFFFF] p-4 rounded-lg border border-[#DCE5D5] flex flex-col gap-3">
+              <div className="flex items-center justify-between pb-1 border-b border-[#DCE5D5]">
                 <div className="flex items-center gap-2">
-                  <Icon name="cancel" className="text-[#ffb4ab] text-[18px]" />
-                  <span className="font-semibold text-[14px] text-[#dce2f7]">
+                  <Icon name="cancel" className="text-[#B94D43] text-[18px]" />
+                  <span className="font-semibold text-[14px] text-[#294635]">
                     Directly Disrupted Sessions ({directlyAffectedEntries.length})
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-[#bbcabf]">
+                <span className="text-[10px] font-mono text-[#526B57]">
                   {selectedDay} • {isFullDay ? 'All Slots' : selectedSlotPeriod}
                 </span>
               </div>
 
               {directlyAffectedEntries.length === 0 ? (
-                <div className="py-6 text-center text-[12px] font-mono text-[#86948a]">
+                <div className="py-6 text-center text-[12px] font-mono text-[#526B57]">
                   No sessions match the selected entity and time slot on {selectedDay}.
                 </div>
               ) : (
@@ -427,18 +427,18 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                     return (
                       <div
                         key={e.entryId}
-                        className="bg-[#191f2f] p-3 rounded border border-[#93000a]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+                        className="bg-[#F8DFDA]/40 p-3 rounded border border-[#E8A29A] flex flex-col sm:flex-row sm:items-center justify-between gap-2"
                       >
                         <div className="flex flex-col">
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-[12px] font-bold text-[#ffb4ab]">
+                            <span className="font-mono text-[12px] font-bold text-[#B94D43]">
                               {course?.courseCode || e.courseId}
                             </span>
-                            <span className="text-[12px] text-[#dce2f7] font-medium">
+                            <span className="text-[12px] text-[#294635] font-medium">
                               {course?.courseName || 'Curricular Session'}
                             </span>
                           </div>
-                          <div className="flex items-center gap-3 text-[11px] font-mono text-[#bbcabf] mt-1">
+                          <div className="flex items-center gap-3 text-[11px] font-mono text-[#526B57] mt-1">
                             <span>Slot: {e.startSlotId}</span>
                             <span>•</span>
                             <span>Room: {room?.displayName || e.roomId}</span>
@@ -448,7 +448,7 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                         </div>
 
                         <div className="shrink-0 flex items-center">
-                          <span className="px-2 py-0.5 rounded bg-[#93000a]/30 text-[#ffb4ab] font-mono text-[10px] font-semibold border border-[#ffb4ab]/30">
+                          <span className="px-2 py-0.5 rounded bg-[#F8DFDA] text-[#B94D43] font-mono text-[10px] font-semibold border border-[#E8A29A]">
                             Disrupted
                           </span>
                         </div>
@@ -461,14 +461,14 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
 
             {/* Repair Proposal Ready Banner */}
             {proposal && (
-              <div className="bg-[#10b981]/10 border border-[#10b981]/40 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="bg-[#EDF5E8] border border-[#B7D8A9] rounded-lg p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <Icon name="verified" className="text-[#4edea3] text-[24px] shrink-0" />
+                  <Icon name="verified" className="text-[#5B8C51] text-[24px] shrink-0" />
                   <div className="flex flex-col">
-                    <span className="font-semibold text-[14px] text-[#dce2f7]">
+                    <span className="font-semibold text-[14px] text-[#294635]">
                       Automated Repair Proposal Ready ({proposal.changeSetId})
                     </span>
-                    <span className="text-[12px] text-[#bbcabf]">
+                    <span className="text-[12px] text-[#526B57]">
                       {proposal.changes.length} relocations computed with zero hard conflicts and 100% lunch compliance.
                     </span>
                   </div>
@@ -477,7 +477,7 @@ export const DisruptionSimulatorScreen: React.FC<DisruptionSimulatorScreenProps>
                 <button
                   type="button"
                   onClick={() => onProceedToRepair(proposal)}
-                  className="px-4 py-2 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-semibold text-[12px] font-mono flex items-center justify-center gap-1.5 transition-all cursor-pointer shrink-0"
+                  className="px-4 py-2 rounded bg-[#5B8C51] hover:bg-[#4B7443] text-[#FFFFFF] font-semibold text-[12px] font-mono flex items-center justify-center gap-1.5 transition-all cursor-pointer shrink-0"
                 >
                   <span>Inspect Repair Proposal</span>
                   <Icon name="arrow_forward" className="text-[14px]" />

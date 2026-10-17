@@ -152,7 +152,7 @@ export function ScheduleSettingsModal({
       style={{
         position: 'fixed',
         inset: 0,
-        backgroundColor: 'rgba(5, 11, 20, 0.82)',
+        backgroundColor: 'rgba(41, 70, 53, 0.45)',
         backdropFilter: 'blur(4px)',
         display: 'flex',
         alignItems: 'center',
@@ -164,26 +164,26 @@ export function ScheduleSettingsModal({
     >
       <div
         style={{
-          background: 'var(--navy-900, #0f1e36)',
-          border: '1px solid rgba(148, 163, 184, 0.2)',
+          background: '#FFFFFF',
+          border: '1px solid #DCE5D5',
           borderRadius: 'var(--radius-lg, 12px)',
           width: '100%',
           maxWidth: '680px',
           maxHeight: '90vh',
           overflowY: 'auto',
-          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5)',
-          color: 'var(--text-primary, #f1f5f9)',
+          boxShadow: '0 20px 25px -5px rgba(41, 70, 53, 0.1), 0 8px 10px -6px rgba(41, 70, 53, 0.05)',
+          color: '#294635',
           padding: '1.75rem',
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', borderBottom: '1px solid rgba(148, 163, 184, 0.15)', paddingBottom: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', borderBottom: '1px solid #DCE5D5', paddingBottom: '1rem' }}>
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#294635' }}>
               <span>🍱</span> Lunch Break Constraints
             </h2>
-            <p style={{ margin: '0.25rem 0 0', fontSize: '0.8rem', color: 'var(--text-secondary, #94a3b8)' }}>
+            <p style={{ margin: '0.25rem 0 0', fontSize: '0.8rem', color: '#526B57' }}>
               Configure semester-level defaults and optional cohort-specific overrides.
             </p>
           </div>
@@ -192,7 +192,7 @@ export function ScheduleSettingsModal({
             style={{
               background: 'transparent',
               border: 'none',
-              color: 'var(--text-secondary, #94a3b8)',
+              color: '#526B57',
               fontSize: '1.25rem',
               cursor: 'pointer',
               padding: '0.25rem 0.5rem',
@@ -206,9 +206,9 @@ export function ScheduleSettingsModal({
         {error && (
           <div
             style={{
-              background: 'rgba(239, 68, 68, 0.15)',
-              border: '1px solid rgba(239, 68, 68, 0.3)',
-              color: '#fca5a5',
+              background: '#F8DFDA',
+              border: '1px solid #E8A29A',
+              color: '#762D27',
               padding: '0.75rem 1rem',
               borderRadius: 'var(--radius-md, 8px)',
               fontSize: '0.85rem',
@@ -225,7 +225,7 @@ export function ScheduleSettingsModal({
 
         {/* Section 1: Semester Defaults */}
         <div style={{ marginBottom: '1.75rem' }}>
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--emerald-400, #34d399)', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: '#5B8C51', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             1. Semester-Level Defaults
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
@@ -235,13 +235,13 @@ export function ScheduleSettingsModal({
                 <div
                   key={`sem-def-${sem}`}
                   style={{
-                    background: 'var(--navy-950, #0a1322)',
-                    border: '1px solid rgba(148, 163, 184, 0.12)',
+                    background: '#F7F4E8',
+                    border: '1px solid #DCE5D5',
                     borderRadius: 'var(--radius-md, 8px)',
                     padding: '0.85rem',
                   }}
                 >
-                  <div style={{ fontWeight: 600, fontSize: '0.85rem', marginBottom: '0.5rem' }}>
+                  <div style={{ fontWeight: 600, fontSize: '0.85rem', marginBottom: '0.5rem', color: '#294635' }}>
                     Semester {sem === '1' ? 'I' : sem === '2' ? 'II' : 'III'} Default
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -250,24 +250,24 @@ export function ScheduleSettingsModal({
                       value={def.startTime}
                       onChange={(e) => handleSemesterTimeChange(sem, 'startTime', e.target.value)}
                       style={{
-                        background: 'var(--navy-900, #0f1e36)',
-                        border: '1px solid rgba(148, 163, 184, 0.25)',
-                        color: 'inherit',
+                        background: '#FFFFFF',
+                        border: '1px solid #DCE5D5',
+                        color: '#294635',
                         padding: '0.35rem 0.5rem',
                         borderRadius: 'var(--radius-sm, 4px)',
                         fontSize: '0.8rem',
                         width: '100%',
                       }}
                     />
-                    <span style={{ color: 'var(--text-secondary, #94a3b8)', fontSize: '0.75rem' }}>to</span>
+                    <span style={{ color: '#526B57', fontSize: '0.75rem' }}>to</span>
                     <input
                       type="time"
                       value={def.endTime}
                       onChange={(e) => handleSemesterTimeChange(sem, 'endTime', e.target.value)}
                       style={{
-                        background: 'var(--navy-900, #0f1e36)',
-                        border: '1px solid rgba(148, 163, 184, 0.25)',
-                        color: 'inherit',
+                        background: '#FFFFFF',
+                        border: '1px solid #DCE5D5',
+                        color: '#294635',
                         padding: '0.35rem 0.5rem',
                         borderRadius: 'var(--radius-sm, 4px)',
                         fontSize: '0.8rem',
@@ -283,7 +283,7 @@ export function ScheduleSettingsModal({
 
         {/* Section 2: Cohort Overrides */}
         <div style={{ marginBottom: '1.75rem' }}>
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--emerald-400, #34d399)', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: '#5B8C51', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             2. Cohort-Level Overrides (Optional)
           </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -297,8 +297,8 @@ export function ScheduleSettingsModal({
                 <div
                   key={`cohort-${cid}`}
                   style={{
-                    background: 'var(--navy-950, #0a1322)',
-                    border: `1px solid ${cfg.enabled ? 'rgba(16, 185, 129, 0.35)' : 'rgba(148, 163, 184, 0.12)'}`,
+                    background: '#F7F4E8',
+                    border: `1px solid ${cfg.enabled ? '#B7D8A9' : '#DCE5D5'}`,
                     borderRadius: 'var(--radius-md, 8px)',
                     padding: '0.85rem 1rem',
                     display: 'flex',
@@ -314,13 +314,13 @@ export function ScheduleSettingsModal({
                       id={`cb-${cid}`}
                       checked={cfg.enabled}
                       onChange={() => handleCohortOverrideToggle(cid)}
-                      style={{ cursor: 'pointer', width: '1rem', height: '1rem', accentColor: 'var(--emerald-500, #10b981)' }}
+                      style={{ cursor: 'pointer', width: '1rem', height: '1rem', accentColor: '#5B8C51' }}
                     />
                     <div>
-                      <label htmlFor={`cb-${cid}`} style={{ fontWeight: 600, fontSize: '0.9rem', cursor: 'pointer' }}>
+                      <label htmlFor={`cb-${cid}`} style={{ fontWeight: 600, fontSize: '0.9rem', cursor: 'pointer', color: '#294635' }}>
                         {cid}
                       </label>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary, #94a3b8)' }}>
+                      <div style={{ fontSize: '0.75rem', color: '#526B57' }}>
                         Semester {semKey === '1' ? 'I' : semKey === '2' ? 'II' : 'III'}
                       </div>
                     </div>
@@ -335,9 +335,9 @@ export function ScheduleSettingsModal({
                           fontWeight: 600,
                           padding: '0.2rem 0.5rem',
                           borderRadius: 'var(--radius-sm, 4px)',
-                          background: 'rgba(16, 185, 129, 0.2)',
-                          color: 'var(--emerald-400, #34d399)',
-                          border: '1px solid rgba(16, 185, 129, 0.4)',
+                          background: '#EDF5E8',
+                          color: '#5B8C51',
+                          border: '1px solid #B7D8A9',
                         }}
                       >
                         ✓ Custom Override
@@ -349,9 +349,9 @@ export function ScheduleSettingsModal({
                           fontWeight: 500,
                           padding: '0.2rem 0.5rem',
                           borderRadius: 'var(--radius-sm, 4px)',
-                          background: 'rgba(148, 163, 184, 0.12)',
-                          color: 'var(--text-secondary, #94a3b8)',
-                          border: '1px solid rgba(148, 163, 184, 0.2)',
+                          background: '#EDF5E8',
+                          color: '#526B57',
+                          border: '1px solid #DCE5D5',
                         }}
                       >
                         Inheriting Sem {semKey} Default ({inheritedDef.startTime}–{inheritedDef.endTime})
@@ -367,25 +367,25 @@ export function ScheduleSettingsModal({
                       value={cfg.enabled ? cfg.interval.startTime : inheritedDef.startTime}
                       onChange={(e) => handleCohortTimeChange(cid, 'startTime', e.target.value)}
                       style={{
-                        background: cfg.enabled ? 'var(--navy-900, #0f1e36)' : 'rgba(15, 30, 54, 0.4)',
-                        border: `1px solid ${cfg.enabled ? 'rgba(16, 185, 129, 0.3)' : 'rgba(148, 163, 184, 0.15)'}`,
-                        color: cfg.enabled ? 'inherit' : 'var(--text-secondary, #94a3b8)',
+                        background: cfg.enabled ? '#FFFFFF' : '#EAEFE6',
+                        border: `1px solid ${cfg.enabled ? '#B7D8A9' : '#DCE5D5'}`,
+                        color: cfg.enabled ? '#294635' : '#526B57',
                         padding: '0.35rem 0.5rem',
                         borderRadius: 'var(--radius-sm, 4px)',
                         fontSize: '0.8rem',
                         cursor: cfg.enabled ? 'text' : 'not-allowed',
                       }}
                     />
-                    <span style={{ color: 'var(--text-secondary, #94a3b8)', fontSize: '0.75rem' }}>to</span>
+                    <span style={{ color: '#526B57', fontSize: '0.75rem' }}>to</span>
                     <input
                       type="time"
                       disabled={!cfg.enabled}
                       value={cfg.enabled ? cfg.interval.endTime : inheritedDef.endTime}
                       onChange={(e) => handleCohortTimeChange(cid, 'endTime', e.target.value)}
                       style={{
-                        background: cfg.enabled ? 'var(--navy-900, #0f1e36)' : 'rgba(15, 30, 54, 0.4)',
-                        border: `1px solid ${cfg.enabled ? 'rgba(16, 185, 129, 0.3)' : 'rgba(148, 163, 184, 0.15)'}`,
-                        color: cfg.enabled ? 'inherit' : 'var(--text-secondary, #94a3b8)',
+                        background: cfg.enabled ? '#FFFFFF' : '#EAEFE6',
+                        border: `1px solid ${cfg.enabled ? '#B7D8A9' : '#DCE5D5'}`,
+                        color: cfg.enabled ? '#294635' : '#526B57',
                         padding: '0.35rem 0.5rem',
                         borderRadius: 'var(--radius-sm, 4px)',
                         fontSize: '0.8rem',
@@ -400,7 +400,7 @@ export function ScheduleSettingsModal({
         </div>
 
         {/* Action Buttons */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.75rem', borderTop: '1px solid rgba(148, 163, 184, 0.15)', paddingTop: '1.25rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.75rem', borderTop: '1px solid #DCE5D5', paddingTop: '1.25rem' }}>
           <button
             type="button"
             onClick={onClose}
@@ -408,8 +408,8 @@ export function ScheduleSettingsModal({
             style={{
               padding: '0.5rem 1.25rem',
               background: 'transparent',
-              border: '1px solid rgba(148, 163, 184, 0.3)',
-              color: 'var(--text-secondary, #94a3b8)',
+              border: '1px solid #DCE5D5',
+              color: '#526B57',
               borderRadius: 'var(--radius-md, 8px)',
               fontWeight: 500,
               fontSize: '0.85rem',
@@ -424,9 +424,9 @@ export function ScheduleSettingsModal({
             disabled={saving}
             style={{
               padding: '0.5rem 1.5rem',
-              background: 'var(--emerald-500, #10b981)',
+              background: '#5B8C51',
               border: 'none',
-              color: 'var(--navy-950, #050b14)',
+              color: '#FFFFFF',
               borderRadius: 'var(--radius-md, 8px)',
               fontWeight: 600,
               fontSize: '0.85rem',
