@@ -1,53 +1,73 @@
 /**
- * SlotShield — Main Application
- * Dashboard with weekly timetable grid, semester filters, and metrics.
- * Renders the actual sample data from bootstrap.json.
+ * SlotShield College Academic Timetable System
+ *
+ * Integrated 4-Screen Layout for Computer Engineering:
+ * 1. Master Timetable Screen
+ * 2. Generate Timetable Screen
+ * 3. Disruption Simulator Screen
+ * 4. Repair Proposal Screen
+ *
+ * Fully connected to authoritative backend routes, contracts, and validation.
  */
-import { useState, useEffect, useCallback } from 'react';
-import type { BootstrapPayload, TimetableEntry, ScheduleSettings, TimetableResult } from './lib/api.ts';
-import { getBootstrap, ApiError } from './lib/api.ts';
-import { TimetableGrid } from './components/TimetableGrid.tsx';
-import { SemesterFilter } from './components/SemesterFilter.tsx';
-import { MetricsPanel } from './components/MetricsPanel.tsx';
-import { ScheduleSettingsModal } from './components/ScheduleSettingsModal.tsx';
-import { GenerateTimetableModal } from './components/GenerateTimetableModal.tsx';
 
-type AppState = 'loading' | 'ready' | 'error';
+import React, { useState, useEffect, useCallback } from 'react';
+import type {
+  BootstrapPayload,
+  TimetableResult,
+  ScheduleSettings,
+  RepairProposal,
+} from './lib/api';
+import { getBootstrap, getHealthCheck, validateTimetable, ApiError } from './lib/api';
+import { Header, type ScreenId } from './components/Header';
+import { Footer } from './components/Footer';
+import { BackendStatusModal } from './components/BackendStatusModal';
+import { MasterTimetableScreen } from './components/screens/MasterTimetableScreen';
+import { GenerateTimetableScreen } from './components/screens/GenerateTimetableScreen';
+import { DisruptionSimulatorScreen } from './components/screens/DisruptionSimulatorScreen';
+import { RepairProposalScreen } from './components/screens/RepairProposalScreen';
+import { Icon } from './components/Icon';
 
 export function App() {
-  const [state, setState] = useState<AppState>('loading');
-  const [data, setData] = useState<BootstrapPayload | null>(null);
-  const [error, setError] = useState<string>('');
-  const [selectedSemesters, setSelectedSemesters] = useState<Set<number>>(
-    new Set([1, 2, 3])
-  );
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isGenerateOpen, setIsGenerateOpen] = useState(false);
+  const [activeScreen, setActiveScreen] = useState<ScreenId>('master-timetable');
+  const [backendConnected, setBackendConnected] = useState<boolean>(false);
+  const [isBackendModalOpen, setIsBackendModalOpen] = useState<boolean>(false);
 
-  const handleSettingsUpdated = useCallback((updated: ScheduleSettings) => {
-    setData((prev) => (prev ? { ...prev, scheduleSettings: updated } : prev));
-  }, []);
+  const [bootstrapData, setBootstrapData] = useState<BootstrapPayload | null>(null);
+  const [currentTimetable, setCurrentTimetable] = useState<TimetableResult | null>(null);
+  const [currentProposal, setCurrentProposal] = useState<RepairProposal | null>(null);
 
-  const handleTimetableGenerated = useCallback((generated: TimetableResult) => {
-    setData((prev) => (prev ? { ...prev, sampleTimetable: generated } : prev));
-  }, []);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [isValidating, setIsValidating] = useState<boolean>(false);
 
+  // Probe health & fetch bootstrap data
   const loadData = useCallback(async () => {
-    setState('loading');
-    setError('');
+    setIsLoading(true);
+    setLoadError(null);
     try {
-      const bootstrap = await getBootstrap();
-      setData(bootstrap);
-      setState('ready');
-    } catch (err) {
-      const message =
+      // 1. Health check
+      try {
+        const health = await getHealthCheck();
+        setBackendConnected(Boolean(health?.ok));
+      } catch {
+        setBackendConnected(false);
+      }
+
+      // 2. Bootstrap data
+      const data = await getBootstrap();
+      setBootstrapData(data);
+      setCurrentTimetable(data.sampleTimetable);
+    } catch (err: unknown) {
+      const msg =
         err instanceof ApiError
           ? err.message
           : err instanceof Error
-            ? err.message
-            : 'Failed to load data';
-      setError(message);
-      setState('error');
+          ? err.message
+          : 'Failed to connect to SlotShield backend';
+      setLoadError(msg);
+      setBackendConnected(false);
+    } finally {
+      setIsLoading(false);
     }
   }, []);
 
@@ -55,299 +75,188 @@ export function App() {
     loadData();
   }, [loadData]);
 
-  const handleSemesterToggle = useCallback((semester: number) => {
-    setSelectedSemesters((prev) => {
-      const next = new Set(prev);
-      if (next.has(semester)) {
-        // Don't allow deselecting all
-        if (next.size > 1) {
-          next.delete(semester);
-        }
-      } else {
-        next.add(semester);
-      }
-      return next;
-    });
+  // Timetable generated handler
+  const handleTimetableGenerated = useCallback(
+    (generated: TimetableResult, updatedSettings: ScheduleSettings) => {
+      setCurrentTimetable(generated);
+      setBootstrapData((prev) =>
+        prev
+          ? {
+              ...prev,
+              scheduleSettings: updatedSettings,
+              sampleTimetable: generated,
+            }
+          : prev
+      );
+    },
+    []
+  );
+
+  // Validation handler
+  const handleValidate = useCallback(async () => {
+    if (!currentTimetable) return;
+    setIsValidating(true);
+    try {
+      const val = await validateTimetable(currentTimetable.timetableId, currentTimetable.entries);
+      setCurrentTimetable((prev) => (prev ? { ...prev, validation: val } : prev));
+    } catch (err: unknown) {
+      console.error('Validation error:', err);
+    } finally {
+      setIsValidating(false);
+    }
+  }, [currentTimetable]);
+
+  // Disruption simulation completed -> proceed to repair
+  const handleProceedToRepair = useCallback((proposal: RepairProposal) => {
+    setCurrentProposal(proposal);
+    setActiveScreen('repair-proposal');
   }, []);
 
-  const handleSelectAll = useCallback(() => {
-    setSelectedSemesters(new Set([1, 2, 3]));
+  // Repair applied successfully
+  const handleApplyRepairSuccess = useCallback((updatedTimetable: TimetableResult) => {
+    setCurrentTimetable(updatedTimetable);
   }, []);
 
-  // Filter entries by selected semesters
-  const filteredEntries: TimetableEntry[] = data
-    ? data.sampleTimetable.entries.filter((e) =>
-        selectedSemesters.has(e.semester)
-      )
-    : [];
-
-  // Build course name lookup
-  const courseNameMap: Record<string, string> = {};
-  const courseCodeMap: Record<string, string> = {};
-  if (data) {
-    for (const c of data.courses) {
-      courseNameMap[c.courseId] = c.courseName;
-      courseCodeMap[c.courseId] = c.courseCode;
-    }
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#0c1322] text-[#dce2f7] flex flex-col items-center justify-center p-4">
+        <div className="flex flex-col items-center gap-3">
+          <Icon name="sync" className="text-[32px] text-[#4edea3] animate-spin" />
+          <h2 className="text-[16px] font-mono font-semibold text-[#dce2f7]">
+            Initializing SlotShield Academic Engine...
+          </h2>
+          <p className="text-[12px] text-[#bbcabf] font-mono">
+            Loading curriculum, faculty directory, and room constraints
+          </p>
+        </div>
+      </div>
+    );
   }
 
-  // Build teacher name lookup
-  const teacherNameMap: Record<string, string> = {};
-  if (data) {
-    for (const t of data.teachers) {
-      // Extract short name: "Demo Faculty 01 — Mathematics" → "Mathematics"
-      const parts = t.displayName.split('—');
-      teacherNameMap[t.teacherId] =
-        parts.length > 1 ? parts[1].trim() : t.displayName;
-    }
+  if (loadError || !bootstrapData || !currentTimetable) {
+    return (
+      <div className="min-h-screen bg-[#0c1322] text-[#dce2f7] flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-md bg-[#141b2b] border border-[#232a3a] p-6 rounded-xl flex flex-col items-center text-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-[#93000a]/30 border border-[#ffb4ab]/30 flex items-center justify-center text-[#ffb4ab]">
+            <Icon name="error" className="text-[24px]" />
+          </div>
+          <div>
+            <h2 className="text-[16px] font-semibold text-[#dce2f7]">
+              Unable to Load Backend Context
+            </h2>
+            <p className="text-[12px] text-[#bbcabf] mt-1 font-mono">
+              {loadError || 'Server returned empty payload.'}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={loadData}
+            className="px-4 py-2 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-semibold text-[13px] font-mono transition-colors cursor-pointer"
+          >
+            Retry Connection
+          </button>
+        </div>
+      </div>
+    );
   }
-
-  // Build room name lookup
-  const roomNameMap: Record<string, string> = {};
-  if (data) {
-    for (const r of data.rooms) {
-      roomNameMap[r.roomId] = r.displayName;
-    }
-  }
-
-  // Determine session type from session ID
-  const getSessionType = (entry: TimetableEntry): string => {
-    const sid = entry.sessionId;
-    if (sid.includes('-LEC-')) return 'LECTURE';
-    if (sid.includes('-TUT-')) return 'TUTORIAL';
-    if (sid.includes('-PRA-')) return 'PRACTICAL';
-    return 'LECTURE';
-  };
 
   return (
-    <div className="app-layout">
-      {/* ─── Header ──────────────────────────────────────────── */}
-      <header className="app-header">
-        <div className="app-header__left">
-          <div className="app-header__logo">
-            <div className="app-header__icon">S</div>
-            <div>
-              <div className="app-header__title">SlotShield</div>
-              <div className="app-header__subtitle">
-                Self-Healing Timetable
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="app-header__right">
-          <div className="demo-badge">
-            <span className="demo-badge__dot" />
-            Demo Data
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-[#0c1322] text-[#dce2f7] flex flex-col selection:bg-[#10b981] selection:text-[#00422b]">
+      {/* Top Header */}
+      <Header
+        activeScreen={activeScreen}
+        onNavigate={(screen) => setActiveScreen(screen)}
+        backendConnected={backendConnected}
+        onOpenBackendStatusModal={() => setIsBackendModalOpen(true)}
+        facultyCount={bootstrapData.teachers.length}
+        totalSessionsCount={currentTimetable.entries.length}
+      />
 
-      {/* ─── Main Content ────────────────────────────────────── */}
-      <main className="app-main">
-        {state === 'loading' && <LoadingState />}
-        {state === 'error' && (
-          <ErrorState message={error} onRetry={loadData} />
+      {/* Main Screen Content */}
+      <main className="w-full pt-16 flex-1 flex flex-col">
+        {activeScreen === 'master-timetable' && (
+          <MasterTimetableScreen
+            timetable={currentTimetable}
+            courses={bootstrapData.courses}
+            teachers={bootstrapData.teachers}
+            rooms={bootstrapData.rooms}
+            timeSlots={bootstrapData.timeSlots}
+            scheduleSettings={bootstrapData.scheduleSettings}
+            onOpenGenerate={() => setActiveScreen('generate-timetable')}
+            onOpenDisruption={() => setActiveScreen('disruption-simulator')}
+            onValidate={handleValidate}
+            isValidating={isValidating}
+          />
         )}
-        {state === 'ready' && data && (
-          <>
-            {/* Dashboard Title & Actions */}
-            <div className="dashboard-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
+
+        {activeScreen === 'generate-timetable' && (
+          <GenerateTimetableScreen
+            scheduleSettings={bootstrapData.scheduleSettings}
+            summary={bootstrapData.summary}
+            onClose={() => setActiveScreen('master-timetable')}
+            onNavigateToMaster={() => setActiveScreen('master-timetable')}
+            onNavigateToDisruption={() => setActiveScreen('disruption-simulator')}
+            onTimetableGenerated={handleTimetableGenerated}
+          />
+        )}
+
+        {activeScreen === 'disruption-simulator' && (
+          <DisruptionSimulatorScreen
+            timetable={currentTimetable}
+            teachers={bootstrapData.teachers}
+            rooms={bootstrapData.rooms}
+            courses={bootstrapData.courses}
+            timeSlots={bootstrapData.timeSlots}
+            onProceedToRepair={handleProceedToRepair}
+          />
+        )}
+
+        {activeScreen === 'repair-proposal' && (
+          currentProposal ? (
+            <RepairProposalScreen
+              proposal={currentProposal}
+              courses={bootstrapData.courses}
+              teachers={bootstrapData.teachers}
+              rooms={bootstrapData.rooms}
+              timeSlots={bootstrapData.timeSlots}
+              onReturnToMaster={() => setActiveScreen('master-timetable')}
+              onApplyRepairSuccess={handleApplyRepairSuccess}
+            />
+          ) : (
+            <div className="w-full max-w-2xl mx-auto my-12 p-8 bg-[#141b2b] border border-[#232a3a] rounded-xl flex flex-col items-center text-center gap-4">
+              <Icon name="info" className="text-[32px] text-[#adc6ff]" />
               <div>
-                <h1 className="dashboard-header__title">
-                  Timetable Dashboard
-                </h1>
-                <p className="dashboard-header__desc">
-                  Computer Engineering — Academic Year 2026–27 — SLRTCE R-2025
-                  Curriculum
+                <h3 className="text-[16px] font-semibold text-[#dce2f7]">
+                  No Active Repair Proposal Staged
+                </h3>
+                <p className="text-[12px] text-[#bbcabf] mt-1 font-mono">
+                  Configure a faculty outage or room closure in the Disruption Simulator to evaluate impact and generate a self-healing repair proposal.
                 </p>
               </div>
-
-              {/* Action Buttons */}
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                <button
-                  type="button"
-                  onClick={() => setIsSettingsOpen(true)}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    padding: '0.55rem 1.1rem',
-                    background: 'rgba(15, 30, 54, 0.9)',
-                    color: 'var(--text-primary)',
-                    border: '1px solid rgba(148, 163, 184, 0.3)',
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--emerald-500)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(148, 163, 184, 0.3)';
-                  }}
-                >
-                  <span>🍱</span>
-                  <span>Lunch Settings</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setIsGenerateOpen(true)}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    padding: '0.55rem 1.25rem',
-                    background: 'var(--emerald-500)',
-                    color: 'var(--navy-950)',
-                    border: 'none',
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: '0.85rem',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    boxShadow: '0 2px 4px rgba(16, 185, 129, 0.25)',
-                    transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'var(--emerald-400)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'var(--emerald-500)';
-                  }}
-                >
-                  <span>⚡</span>
-                  <span>Generate Timetable</span>
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setActiveScreen('disruption-simulator')}
+                className="px-4 py-2 rounded bg-[#10b981] hover:bg-[#4edea3] text-[#003824] font-mono text-[12px] font-semibold transition-colors cursor-pointer"
+              >
+                Go to Disruption Simulator
+              </button>
             </div>
-
-            {/* Info Banner */}
-            <div className="info-banner">
-              <span className="info-banner__icon">ℹ️</span>
-              <span>
-                Displaying pre-validated demo schedule with{' '}
-                {data.sampleTimetable.metrics.scheduledSessionCount} sessions
-                across {Object.keys(data.summary).length} semesters. Teacher
-                assignments and room allocations are synthetic demo data.
-              </span>
-            </div>
-
-            {/* Metrics */}
-            <MetricsPanel
-              metrics={data.sampleTimetable.metrics}
-              validation={data.sampleTimetable.validation}
-              summary={data.summary}
-              selectedSemesters={selectedSemesters}
-              filteredEntryCount={filteredEntries.length}
-            />
-
-            {/* Semester Filter */}
-            <SemesterFilter
-              selected={selectedSemesters}
-              summary={data.summary}
-              onToggle={handleSemesterToggle}
-              onSelectAll={handleSelectAll}
-            />
-
-            {/* Timetable Grid */}
-            {filteredEntries.length === 0 ? (
-              <EmptyState />
-            ) : (
-              <TimetableGrid
-                entries={filteredEntries}
-                timeSlots={data.timeSlots}
-                scheduleSettings={data.scheduleSettings}
-                courseNameMap={courseNameMap}
-                courseCodeMap={courseCodeMap}
-                teacherNameMap={teacherNameMap}
-                roomNameMap={roomNameMap}
-                getSessionType={getSessionType}
-              />
-            )}
-
-            {/* Settings & Generation Modals */}
-            {isSettingsOpen && (
-              <ScheduleSettingsModal
-                isOpen={isSettingsOpen}
-                onClose={() => setIsSettingsOpen(false)}
-                settings={data.scheduleSettings}
-                onSettingsUpdated={handleSettingsUpdated}
-              />
-            )}
-
-            {isGenerateOpen && (
-              <GenerateTimetableModal
-                isOpen={isGenerateOpen}
-                onClose={() => setIsGenerateOpen(false)}
-                settings={data.scheduleSettings}
-                onTimetableGenerated={handleTimetableGenerated}
-              />
-            )}
-          </>
+          )
         )}
       </main>
+
+      {/* Persistent Global Institutional Footer */}
+      <Footer />
+
+      {/* Backend & Solver Diagnostics Modal */}
+      <BackendStatusModal
+        isOpen={isBackendModalOpen}
+        onClose={() => setIsBackendModalOpen(false)}
+        backendConnected={backendConnected}
+        onConnectionChange={setBackendConnected}
+      />
     </div>
   );
 }
 
-// ─── State Components ────────────────────────────────────────────────
-
-function LoadingState() {
-  return (
-    <div className="state-container">
-      <div className="spinner" />
-      <div className="state-container__title">Loading SlotShield</div>
-      <div className="state-container__message">
-        Fetching timetable data and course catalogue…
-      </div>
-    </div>
-  );
-}
-
-function ErrorState({
-  message,
-  onRetry,
-}: {
-  message: string;
-  onRetry: () => void;
-}) {
-  return (
-    <div className="state-container">
-      <div className="state-container__icon">⚠️</div>
-      <div className="state-container__title">Unable to Load Data</div>
-      <div className="state-container__message">{message}</div>
-      <button
-        onClick={onRetry}
-        style={{
-          marginTop: '1rem',
-          padding: '0.5rem 1.5rem',
-          background: 'var(--emerald-500)',
-          color: 'var(--navy-950)',
-          border: 'none',
-          borderRadius: 'var(--radius-md)',
-          fontFamily: 'inherit',
-          fontWeight: 600,
-          fontSize: '0.85rem',
-          cursor: 'pointer',
-        }}
-      >
-        Retry
-      </button>
-    </div>
-  );
-}
-
-function EmptyState() {
-  return (
-    <div className="state-container">
-      <div className="state-container__icon">📅</div>
-      <div className="state-container__title">No Sessions Found</div>
-      <div className="state-container__message">
-        No timetable entries match the current filter. Try selecting a
-        different semester.
-      </div>
-    </div>
-  );
-}
+export default App;
